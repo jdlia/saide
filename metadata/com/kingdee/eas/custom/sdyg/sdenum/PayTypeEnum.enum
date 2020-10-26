@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.sdenum</package>
+    <name>PayTypeEnum</name>
+    <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].alias</alias>
+    <description>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum</className>
+    <enumDataType>INTEGER</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>xianjin</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[xianjin].alias</alias>
+            <userDefined>true</userDefined>
+            <value>1</value>
+        </enumValue>
+        <enumValue>
+            <name>guoneishuaka</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[guoneishuaka].alias</alias>
+            <userDefined>true</userDefined>
+            <value>2</value>
+        </enumValue>
+        <enumValue>
+            <name>weixin</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[weixin].alias</alias>
+            <userDefined>true</userDefined>
+            <value>3</value>
+        </enumValue>
+        <enumValue>
+            <name>gongduigong</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[gongduigong].alias</alias>
+            <userDefined>true</userDefined>
+            <value>4</value>
+        </enumValue>
+        <enumValue>
+            <name>zhipiao</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[zhipiao].alias</alias>
+            <userDefined>true</userDefined>
+            <value>5</value>
+        </enumValue>
+        <enumValue>
+            <name>guowaishuaka</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[guowaishuaka].alias</alias>
+            <userDefined>true</userDefined>
+            <value>6</value>
+        </enumValue>
+        <enumValue>
+            <name>yibao</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[yibao].alias</alias>
+            <userDefined>true</userDefined>
+            <value>7</value>
+        </enumValue>
+        <enumValue>
+            <name>tiaozhang</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[tiaozhang].alias</alias>
+            <userDefined>true</userDefined>
+            <value>8</value>
+        </enumValue>
+        <enumValue>
+            <name>yue</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[yue].alias</alias>
+            <userDefined>true</userDefined>
+            <value>9</value>
+        </enumValue>
+        <enumValue>
+            <name>huiyuanka</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[huiyuanka].alias</alias>
+            <userDefined>true</userDefined>
+            <value>11</value>
+        </enumValue>
+        <enumValue>
+            <name>zhifubao</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[zhifubao].alias</alias>
+            <userDefined>true</userDefined>
+            <value>15</value>
+        </enumValue>
+        <enumValue>
+            <name>tuikuanZFB</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[tuikuanZFB].alias</alias>
+            <userDefined>true</userDefined>
+            <value>16</value>
+        </enumValue>
+        <enumValue>
+            <name>baoxian</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[baoxian].alias</alias>
+            <userDefined>true</userDefined>
+            <value>18</value>
+        </enumValue>
+        <enumValue>
+            <name>qudao</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[qudao].alias</alias>
+            <userDefined>true</userDefined>
+            <value>21</value>
+        </enumValue>
+        <enumValue>
+            <name>fenqi</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[fenqi].alias</alias>
+            <userDefined>true</userDefined>
+            <value>22</value>
+        </enumValue>
+        <enumValue>
+            <name>tuikuanXJ</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[tuikuanXJ].alias</alias>
+            <userDefined>true</userDefined>
+            <value>31</value>
+        </enumValue>
+        <enumValue>
+            <name>tuikuanWX</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[tuikuanWX].alias</alias>
+            <userDefined>true</userDefined>
+            <value>33</value>
+        </enumValue>
+        <enumValue>
+            <name>tuikuanGDG</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[tuikuanGDG].alias</alias>
+            <userDefined>true</userDefined>
+            <value>34</value>
+        </enumValue>
+        <enumValue>
+            <name>tuikuanQD</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[tuikuanQD].alias</alias>
+            <userDefined>true</userDefined>
+            <value>38</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款方式枚举" />
+            <lang locale="zh_HK" value="付款方式枚舉" />
+            <lang locale="zh_TW" value="付款方式枚舉" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[baoxian].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="保险" />
+            <lang locale="zh_HK" value="保險" />
+            <lang locale="zh_TW" value="保險" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[fenqi].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分期付款" />
+            <lang locale="zh_HK" value="分期付款" />
+            <lang locale="zh_TW" value="分期付款" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[gongduigong].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公对公转账" />
+            <lang locale="zh_HK" value="公對公轉賬" />
+            <lang locale="zh_TW" value="公對公轉賬" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[guoneishuaka].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="国内刷卡" />
+            <lang locale="zh_HK" value="國內刷卡" />
+            <lang locale="zh_TW" value="國內刷卡" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[guowaishuaka].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="国外刷卡" />
+            <lang locale="zh_HK" value="國外刷卡" />
+            <lang locale="zh_TW" value="國外刷卡" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[huiyuanka].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="会员卡" />
+            <lang locale="zh_HK" value="會員卡" />
+            <lang locale="zh_TW" value="會員卡" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[qudao].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="渠道付款" />
+            <lang locale="zh_HK" value="渠道付款" />
+            <lang locale="zh_TW" value="渠道付款" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[tiaozhang].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="调账" />
+            <lang locale="zh_HK" value="調賬" />
+            <lang locale="zh_TW" value="調賬" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[tuikuanGDG].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="退款公对公转账" />
+            <lang locale="zh_HK" value="退款公對公轉賬" />
+            <lang locale="zh_TW" value="退款公對公轉賬" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[tuikuanQD].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="退款渠道付款" />
+            <lang locale="zh_HK" value="退款渠道付款" />
+            <lang locale="zh_TW" value="退款渠道付款" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[tuikuanWX].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="退款微信" />
+            <lang locale="zh_HK" value="退款微信" />
+            <lang locale="zh_TW" value="退款微信" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[tuikuanXJ].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="退款现金" />
+            <lang locale="zh_HK" value="退款現金" />
+            <lang locale="zh_TW" value="退款現金" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[tuikuanZFB].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="退款支付宝" />
+            <lang locale="zh_HK" value="退款支付寶" />
+            <lang locale="zh_TW" value="退款支付寶" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[weixin].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="微信" />
+            <lang locale="zh_HK" value="微信" />
+            <lang locale="zh_TW" value="微信" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[xianjin].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="现金" />
+            <lang locale="zh_HK" value="現金" />
+            <lang locale="zh_TW" value="現金" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[yibao].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="医保" />
+            <lang locale="zh_HK" value="醫保" />
+            <lang locale="zh_TW" value="醫保" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[yue].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="余额" />
+            <lang locale="zh_HK" value="餘額" />
+            <lang locale="zh_TW" value="餘額" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[zhifubao].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="支付宝" />
+            <lang locale="zh_HK" value="支付寶" />
+            <lang locale="zh_TW" value="支付寶" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[zhipiao].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="支票" />
+            <lang locale="zh_HK" value="支票" />
+            <lang locale="zh_TW" value="支票" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+
