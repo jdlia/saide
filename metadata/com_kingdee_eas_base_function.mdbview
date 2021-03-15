@@ -124,6 +124,15 @@
         </metaDataBrief>
         <metaDataBrief>
             <packageName />
+            <name>com.kingdee.eas.custom.custom</name>
+            <metaDataType>pack</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.custom].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.custom].description</description>
+            <parent>com.kingdee.eas.eas</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
             <name>com.kingdee.eas.datawarehouse.datawarehouse</name>
             <metaDataType>pack</metaDataType>
             <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.datawarehouse.datawarehouse].alias</alias>
@@ -876,6 +885,15 @@
             <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.csinterface.webservice.model.app.WSBillMappingViewListUIFunction].alias</alias>
             <description>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.csinterface.webservice.model.app.WSBillMappingViewListUIFunction].description</description>
             <parent>com.kingdee.eas.csinterface.csinterface</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.custom.sdyg.sdyg</name>
+            <metaDataType>pack</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.sdyg].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.sdyg].description</description>
+            <parent>com.kingdee.eas.custom.custom</parent>
             <boType />
         </metaDataBrief>
         <metaDataBrief>
@@ -4170,6 +4188,15 @@
             <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.cp.wp.app.MeetingDecideMListUIFunction].alias</alias>
             <description>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.cp.wp.app.MeetingDecideMListUIFunction].description</description>
             <parent>com.kingdee.eas.cp.wp.wp</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.custom.sdyg.mapping.mapping</name>
+            <metaDataType>pack</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.mapping].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.mapping].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.sdyg</parent>
             <boType />
         </metaDataBrief>
         <metaDataBrief>
@@ -11374,6 +11401,24 @@
         </metaDataBrief>
         <metaDataBrief>
             <packageName />
+            <name>com.kingdee.eas.custom.sdyg.mapping.app.OrgmapEditUIFunction</name>
+            <metaDataType>func</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.OrgmapEditUIFunction].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.OrgmapEditUIFunction].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.mapping.mapping</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.custom.sdyg.mapping.app.OrgmapListUIFunction</name>
+            <metaDataType>func</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.OrgmapListUIFunction].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.OrgmapListUIFunction].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.mapping.mapping</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
             <name>com.kingdee.eas.basedata.master.cssp.CustomerFunction</name>
             <metaDataType>func</metaDataType>
             <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.basedata.master.cssp.CustomerFunction].alias</alias>
@@ -17232,6 +17277,56 @@
             <lang locale="zh_TW" value="WSBillMappingView列表功能" />
         </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.csinterface.webservice.model.app.WSBillMappingViewListUIFunction].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.custom].alias">
+            <lang locale="en_US" value="custom" />
+            <lang locale="zh_CN" value="用户自定义" />
+            <lang locale="zh_TW" value="用戶自定義" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.custom].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.OrgmapEditUIFunction].alias">
+            <lang locale="en_US" value="多分录基础单据编辑界面业务功能" />
+            <lang locale="zh_CN" value="Orgmap编辑功能" />
+            <lang locale="zh_TW" value="Orgmap編輯功能" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.OrgmapEditUIFunction].description">
+            <lang locale="en_US" value="多分录基础单据编辑界面业务功能" />
+            <lang locale="zh_CN" value="多分录基础单据编辑界面业务功能" />
+            <lang locale="zh_TW" value="多分錄基礎單據編輯介面業務功能" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.OrgmapListUIFunction].alias">
+            <lang locale="en_US" value="OrgmapListUIFunction" />
+            <lang locale="zh_CN" value="Orgmap列表功能" />
+            <lang locale="zh_TW" value="Orgmap列表功能" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.OrgmapListUIFunction].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.mapping].alias">
+            <lang locale="en_US" value="mapping" />
+            <lang locale="zh_CN" value="映射表" />
+            <lang locale="zh_TW" value="映射表" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.mapping].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.sdyg].alias">
+            <lang locale="en_US" value="sdyg" />
+            <lang locale="zh_CN" value="sdyg" />
+            <lang locale="zh_TW" value="sdyg" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.sdyg].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_TW" value="null" />

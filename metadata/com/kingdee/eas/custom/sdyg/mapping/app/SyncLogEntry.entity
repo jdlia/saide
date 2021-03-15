@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.mapping.app</package>
+    <name>SyncLogEntry</name>
+    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].alias</alias>
+    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].description</description>
+    <userDefined>true</userDefined>
+    <bosType>3575EC2D</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.custom.sdyg.mapping.SyncLogEntry</businessImplName>
+    <businessControllerName>com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntryController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].description</description>
+            <innerID>14cf907e-1037-4981-a156-f863fc5a3bed</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].description</description>
+            <innerID>19998b54-93f7-4b42-b0a7-e84082a88711</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].description</description>
+            <innerID>e49ec847-c605-4c55-9cfc-8de21ef2688a</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].description</description>
+            <innerID>c24db700-31b4-4daf-beae-1dc1945497bc</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].description</description>
+            <innerID>ef315892-06dd-42b6-b0cf-20bcae4ff159</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].description</description>
+            <innerID>e3f7d795-6a5a-4990-9f31-af485b67f598</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.custom.sdyg.mapping.SyncLog</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.framework.app" />
+        <key name="name" value="CoreBillEntryBase" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+        <key name="name" value="CT_MAP_SyncLogEntry" />
+    </table>
+    <properties>
+        <linkProperty>
+            <name>parent</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.linkProperty[parent].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.linkProperty[parent].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FParentID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="R_SyncLog_SyncLogEntry_entrys" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>BizNumber</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>255</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFBizNumber" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>Loginfo</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>1000</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFLoginfo" />
+            </mappingField>
+        </ownProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分录" />
+            <lang locale="zh_HK" value="分錄" />
+            <lang locale="zh_TW" value="分錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].extendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.linkProperty[parent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据头" />
+            <lang locale="zh_HK" value="單據頭" />
+            <lang locale="zh_TW" value="單據頭" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.linkProperty[parent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务编码" />
+            <lang locale="zh_HK" value="業務編碼" />
+            <lang locale="zh_TW" value="業務編碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务编码" />
+            <lang locale="zh_HK" value="業務編碼" />
+            <lang locale="zh_TW" value="業務編碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[BizNumber].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="信息" />
+            <lang locale="zh_HK" value="信息" />
+            <lang locale="zh_TW" value="信息" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Loginfo" />
+            <lang locale="zh_HK" value="Loginfo" />
+            <lang locale="zh_TW" value="Loginfo" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].extendedProperty.bizDataType">
+            <lang locale="en_US" value="NOTE" />
+            <lang locale="zh_CN" value="NOTE" />
+            <lang locale="zh_TW" value="NOTE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEntry].properties.ownProperty[Loginfo].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+

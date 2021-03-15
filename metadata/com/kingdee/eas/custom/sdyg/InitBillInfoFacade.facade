@@ -27,6 +27,92 @@
             <userDefinedLogic />
             <configured>false</configured>
         </method>
+        <method>
+            <name>syncOrg</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncOrg].alias</alias>
+            <description>facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncOrg].description</description>
+            <innerID>9d983e5d-68ed-483d-ac16-44b02698fe81</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>syncFeeitem</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncFeeitem].alias</alias>
+            <description>facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncFeeitem].description</description>
+            <innerID>1325dee3-ebc9-4d71-8d53-a0fb42c9ae78</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>syncOthcustomer</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncOthcustomer].alias</alias>
+            <description>facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncOthcustomer].description</description>
+            <innerID>a936fb4b-6a3e-4d72-8e0c-895a263b49c6</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>syncCustomer</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncCustomer].alias</alias>
+            <description>facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncCustomer].description</description>
+            <innerID>d75be962-5bb9-429d-a727-d06be0442be3</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>syncGetmark</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncGetmark].alias</alias>
+            <description>facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncGetmark].description</description>
+            <innerID>05b0d2ef-07d2-4c57-bac6-60f3611fc1bc</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>id</name>
+                    <alias>facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncGetmark].parameters.parameter[id].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncGetmark].parameters.parameter[id].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
     </methods>
     <resource>
         <rs key="facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].alias">
@@ -56,6 +142,77 @@
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="" />
             <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncCustomer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncCustomer].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="同步客户" />
+            <lang locale="zh_HK" value="同步客戶" />
+            <lang locale="zh_TW" value="同步客戶" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncFeeitem].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncFeeitem].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="治疗项(费用项目)中间表" />
+            <lang locale="zh_HK" value="治療項(費用項目)中間表" />
+            <lang locale="zh_TW" value="治療項(費用項目)中間表" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncGetmark].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncGetmark].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncGetmark].parameters.parameter[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务单据ID" />
+            <lang locale="zh_HK" value="業務單據ID" />
+            <lang locale="zh_TW" value="業務單據ID" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncGetmark].parameters.parameter[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncOrg].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncOrg].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="财务组织" />
+            <lang locale="zh_HK" value="財務組織" />
+            <lang locale="zh_TW" value="財務組織" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncOthcustomer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.sdyg.InitBillInfoFacade].methods.method[syncOthcustomer].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="渠道保险客户中间表" />
+            <lang locale="zh_HK" value="渠道保險客戶中間表" />
+            <lang locale="zh_TW" value="渠道保險客戶中間表" />
         </rs>
     </resource>
 </facade>

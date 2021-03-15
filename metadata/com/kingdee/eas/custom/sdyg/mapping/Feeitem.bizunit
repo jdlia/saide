@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizUnit xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.mapping</package>
+    <name>Feeitem</name>
+    <alias>bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].alias</alias>
+    <description>bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].description</description>
+    <userDefined>true</userDefined>
+    <bizType>BaseData</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.custom.sdyg.mapping.app.Feeitem</entityPK>
+    <queryPK>com.kingdee.eas.custom.sdyg.mapping.app.FeeitemQuery</queryPK>
+    <editUIPK>com.kingdee.eas.custom.sdyg.mapping.client.FeeitemEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.custom.sdyg.mapping.client.FeeitemListUI</listUIPK>
+    <webEditUIPK />
+    <webListUIPK />
+    <entityFunctionPK />
+    <editUIFunctionPK />
+    <listUIFunctionPK />
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>DataBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="费用项目映射" />
+            <lang locale="zh_HK" value="費用項目映射" />
+            <lang locale="zh_TW" value="費用項目映射" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="费用项目到EAS费用项目映射" />
+            <lang locale="zh_HK" value="費用項目到EAS費用項目映射" />
+            <lang locale="zh_TW" value="費用項目到EAS費用項目映射" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.app.FeeitemQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.app.FeeitemQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.app.FeeitemQuery" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.client.FeeitemEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.client.FeeitemEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.FeeitemEditUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].extendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].extendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.client.FeeitemListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.client.FeeitemListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.FeeitemListUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].extendedProperty.maxFieldIndex">
+            <lang locale="en_US" value="11" />
+            <lang locale="zh_CN" value="11" />
+            <lang locale="zh_TW" value="11" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Feeitem].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizUnit>
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.sdenum</package>
+    <name>wlywxt</name>
+    <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.wlywxt].alias</alias>
+    <description>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.wlywxt].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.custom.sdyg.sdenum.wlywxt</className>
+    <enumDataType>INTEGER</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>one</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.wlywxt].enumValues.enumValue[one].alias</alias>
+            <userDefined>true</userDefined>
+            <value>1</value>
+        </enumValue>
+        <enumValue>
+            <name>two</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.wlywxt].enumValues.enumValue[two].alias</alias>
+            <userDefined>true</userDefined>
+            <value>2</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.wlywxt].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料业务形态" />
+            <lang locale="zh_HK" value="物料業務形態" />
+            <lang locale="zh_TW" value="物料業務形態" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.wlywxt].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料业务形态" />
+            <lang locale="zh_HK" value="物料業務形態" />
+            <lang locale="zh_TW" value="物料業務形態" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.wlywxt].enumValues.enumValue[one].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="1" />
+            <lang locale="zh_HK" value="1" />
+            <lang locale="zh_TW" value="1" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.wlywxt].enumValues.enumValue[two].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.wlywxt].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facade xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.MessageToSD</package>
+    <name>SaleIssueBill</name>
+    <alias>facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].alias</alias>
+    <description>facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].description</description>
+    <userDefined>true</userDefined>
+    <bosType>ED0E5EC6</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.custom.MessageToSD.SaleIssueBill</businessImplName>
+    <businessControllerName>com.kingdee.eas.custom.MessageToSD.SaleIssueBillController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>addSaleIssueBillInfo</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[addSaleIssueBillInfo].alias</alias>
+            <description>facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[addSaleIssueBillInfo].description</description>
+            <innerID>0a534a58-ef89-45df-870a-eca03e8d5fef</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>dataInfo</name>
+                    <alias>facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[addSaleIssueBillInfo].parameters.parameter[dataInfo].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[addSaleIssueBillInfo].parameters.parameter[dataInfo].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>delSaleIssueBillInfo</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[delSaleIssueBillInfo].alias</alias>
+            <description>facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[delSaleIssueBillInfo].description</description>
+            <innerID>0a25662f-0fe9-4436-bc8f-43b24acab50e</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pkID</name>
+                    <alias>facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[delSaleIssueBillInfo].parameters.parameter[pkID].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[delSaleIssueBillInfo].parameters.parameter[pkID].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <resource>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出库单新增" />
+            <lang locale="zh_HK" value="出庫單新增" />
+            <lang locale="zh_TW" value="出庫單新增" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].extendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[addSaleIssueBillInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出库单新增" />
+            <lang locale="zh_HK" value="出庫單新增" />
+            <lang locale="zh_TW" value="出庫單新增" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[addSaleIssueBillInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="接口即时接受业务系统多条物料使用信息，通过EAS出库单保存校验、提交校验、审核校验后生成审核通过状态的出库单" />
+            <lang locale="zh_HK" value="介面即時接受業務系統多條物料使用信息，通過EAS出庫單保存校驗、提交校驗、審核校驗後生成審核通過狀態的出庫單" />
+            <lang locale="zh_TW" value="介面即時接受業務系統多條物料使用信息，通過EAS出庫單保存校驗、提交校驗、審核校驗後生成審核通過狀態的出庫單" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[addSaleIssueBillInfo].parameters.parameter[dataInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="数据" />
+            <lang locale="zh_HK" value="數據" />
+            <lang locale="zh_TW" value="數據" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[addSaleIssueBillInfo].parameters.parameter[dataInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="接口即时接受业务系统多条物料使用信息" />
+            <lang locale="zh_HK" value="介面即時接受業務系統多條物料使用信息" />
+            <lang locale="zh_TW" value="介面即時接受業務系統多條物料使用信息" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[delSaleIssueBillInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="其它出库单删除" />
+            <lang locale="zh_HK" value="其他出庫單刪除" />
+            <lang locale="zh_TW" value="其他出庫單刪除" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[delSaleIssueBillInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="删除时调用第三方出库单删除接口" />
+            <lang locale="zh_HK" value="刪除時調用第三方出庫單刪除介面" />
+            <lang locale="zh_TW" value="刪除時調用第三方出庫單刪除介面" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[delSaleIssueBillInfo].parameters.parameter[pkID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="pkID" />
+            <lang locale="zh_HK" value="pkID" />
+            <lang locale="zh_TW" value="pkID" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.SaleIssueBill].methods.method[delSaleIssueBillInfo].parameters.parameter[pkID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</facade>
+

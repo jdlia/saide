@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.mapping.app</package>
+    <name>Test</name>
+    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].alias</alias>
+    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].description</description>
+    <userDefined>true</userDefined>
+    <bosType>7899C176</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.custom.sdyg.mapping.Test</businessImplName>
+    <businessControllerName>com.kingdee.eas.custom.sdyg.mapping.app.TestController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].description</description>
+            <innerID>0a449db6-2314-4ddf-8640-4981850300a8</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.Test</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].description</description>
+            <innerID>0e0cd358-2520-465c-9d59-655ea164205c</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.Test</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].description</description>
+            <innerID>81c59ab9-2d44-4d44-94f8-efe86eaeb0f7</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.Test</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].description</description>
+            <innerID>31e7fc81-a8ed-4ff4-9cd1-cc23745af68c</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.Test</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].description</description>
+            <innerID>a87e9dad-5172-4932-9227-f73a2bb1749b</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.Test</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].description</description>
+            <innerID>bd3c9017-ccc8-4929-9f4e-44dcc25c275a</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.Test</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.custom.sdyg.mapping.Test</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.framework.app" />
+        <key name="name" value="DataBase" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+        <key name="name" value="CT_MAP_Test" />
+    </table>
+    <properties>
+        <linkProperty>
+            <name>BIMUDF0001</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0001].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0001].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="CFBIMUDF0001ID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="R_Test_ExpenseItem_BIMUDF0001" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>BIMUDF0002</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="CFBIMUDF0002ID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="R_Test_ExpenseType_BIMUDF0002" />
+            </relationship>
+        </linkProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <defaultView>
+        <name />
+        <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewalias</alias>
+        <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewdescription</description>
+    </defaultView>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Test" />
+            <lang locale="zh_HK" value="Test" />
+            <lang locale="zh_TW" value="Test" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="單級基礎資料範本" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.app.TestQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.app.TestQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.app.TestQuery" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.client.TestEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.client.TestEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.TestEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].extendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.client.TestListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.client.TestListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.TestListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0001].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="fyxm1" />
+            <lang locale="zh_HK" value="fyxm1" />
+            <lang locale="zh_TW" value="fyxm1" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0001].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="fyxm1" />
+            <lang locale="zh_HK" value="fyxm1" />
+            <lang locale="zh_TW" value="fyxm1" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0001].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0001].extendedProperty.dataField">
+            <lang locale="en_US" value="status" />
+            <lang locale="zh_CN" value="status" />
+            <lang locale="zh_TW" value="status" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0001].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0001].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0001].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0001].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0001].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0001].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0001].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="fylx1" />
+            <lang locale="zh_HK" value="fylx1" />
+            <lang locale="zh_TW" value="fylx1" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="fylx1" />
+            <lang locale="zh_HK" value="fylx1" />
+            <lang locale="zh_TW" value="fylx1" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].extendedProperty.dataField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+

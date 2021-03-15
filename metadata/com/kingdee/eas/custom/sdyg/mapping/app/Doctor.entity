@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.mapping.app</package>
+    <name>Doctor</name>
+    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].alias</alias>
+    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].description</description>
+    <userDefined>true</userDefined>
+    <bosType>9E676503</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.custom.sdyg.mapping.Doctor</businessImplName>
+    <businessControllerName>com.kingdee.eas.custom.sdyg.mapping.app.DoctorController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].description</description>
+            <innerID>415526b3-85c7-4b3d-93e2-4ece25314229</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.Doctor</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].description</description>
+            <innerID>0a776e5b-2ed1-4bfd-983a-a7907f5c45d3</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.Doctor</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].description</description>
+            <innerID>1e9dfbca-c163-49f0-bede-42301188c2b8</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.Doctor</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].description</description>
+            <innerID>a5a51baf-cf74-434a-ad8f-391268c11510</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.Doctor</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].description</description>
+            <innerID>74cbf1c7-5502-4ca0-84ef-2437589f471d</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.Doctor</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].description</description>
+            <innerID>f4858c6e-0094-49b3-92c8-2ed32473d82e</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.mapping.app.Doctor</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.custom.sdyg.mapping.Doctor</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.framework.app" />
+        <key name="name" value="DataBase" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+        <key name="name" value="CT_MAP_Doctor" />
+    </table>
+    <properties>
+        <ownProperty>
+            <name>bizid</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFBizid" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>biznumber</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFBiznumber" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>bizname</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFBizname" />
+            </mappingField>
+        </ownProperty>
+        <linkProperty>
+            <name>person</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.linkProperty[person].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.linkProperty[person].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="CFPersonID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="R_Doctor_Person_person" />
+            </relationship>
+        </linkProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <defaultView>
+        <name />
+        <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].defaultViewalias</alias>
+        <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].defaultViewdescription</description>
+    </defaultView>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="医生员工映射" />
+            <lang locale="zh_HK" value="醫生員工映射" />
+            <lang locale="zh_TW" value="醫生員工映射" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].defaultViewalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].defaultViewdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="單級基礎資料範本" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].extendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.client.DoctorListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.client.DoctorListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.DoctorListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.linkProperty[person].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS员工" />
+            <lang locale="zh_HK" value="EAS員工" />
+            <lang locale="zh_TW" value="EAS員工" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.linkProperty[person].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS员工" />
+            <lang locale="zh_HK" value="EAS員工" />
+            <lang locale="zh_TW" value="EAS員工" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.linkProperty[person].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.linkProperty[person].extendedProperty.dataField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.linkProperty[person].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.linkProperty[person].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.linkProperty[person].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.linkProperty[person].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.linkProperty[person].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.linkProperty[person].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.linkProperty[person].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务系统ID" />
+            <lang locale="zh_HK" value="業務系統ID" />
+            <lang locale="zh_TW" value="業務系統ID" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务系统ID" />
+            <lang locale="zh_HK" value="業務系統ID" />
+            <lang locale="zh_TW" value="業務系統ID" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizid].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务系统名称" />
+            <lang locale="zh_HK" value="業務系統名稱" />
+            <lang locale="zh_TW" value="業務系統名稱" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务系统名称" />
+            <lang locale="zh_HK" value="業務系統名稱" />
+            <lang locale="zh_TW" value="業務系統名稱" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[bizname].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务系统编码" />
+            <lang locale="zh_HK" value="業務系統編碼" />
+            <lang locale="zh_TW" value="業務系統編碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务系统编码" />
+            <lang locale="zh_HK" value="業務系統編碼" />
+            <lang locale="zh_TW" value="業務系統編碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+

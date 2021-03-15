@@ -1,0 +1,1538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.mapping.app</package>
+    <name>OthCustomerQuery</name>
+    <alias>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK>com.kingdee.eas.custom.sdyg.mapping.OthCustomer</bizUnitPK>
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>OthCustomer</name>
+            <alias>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].subObjects.subEntity[OthCustomer].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomer" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>creator</name>
+            <alias>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].subObjects.subEntity[creator].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>lastUpdateUser</name>
+            <alias>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].subObjects.subEntity[lastUpdateUser].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>customer1</name>
+            <alias>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].subObjects.subEntity[customer1].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.master.cssp.app" />
+                <key name="name" value="Customer" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>NewUnit0</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.propertyUnit[NewUnit0].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit0" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="creator" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit1</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.propertyUnit[NewUnit1].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit1" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit2</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.propertyUnit[NewUnit2].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit2" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lastUpdateUser" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit3</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.propertyUnit[NewUnit3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>simpleName</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[simpleName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="simpleName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="simpleName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>description</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>createTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[createTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="createTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="createTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>creator.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="creator.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>creator.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="creator.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lastUpdateTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateUser.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateUser.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateUser.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateUser.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizID</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizID].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c2c7ab4b-5f87-4527-9275-7eaeffba439f</key>
+                    <parentUnit>
+                        <key name="name" value="bizID" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizID" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizNumber</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizNumber].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>251b30e7-2ece-4c88-be41-d1665951a47c</key>
+                    <parentUnit>
+                        <key name="name" value="bizNumber" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizNumber" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizType</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizType].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>3ed0580a-14d5-4117-a87a-8081e0e2cf52</key>
+                    <parentUnit>
+                        <key name="name" value="bizType" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizName</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>8e78ab97-0248-436e-924a-2cd7335171f8</key>
+                    <parentUnit>
+                        <key name="name" value="bizName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizTypeName</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizTypeName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>36c92b76-6b42-43a6-82e2-4eb9e19134b0</key>
+                    <parentUnit>
+                        <key name="name" value="bizTypeName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizTypeName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizDirection</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizDirection].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5269ca82-9458-46fe-af66-8803d12704d2</key>
+                    <parentUnit>
+                        <key name="name" value="bizDirection" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDirection" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>customer1.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[customer1.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e15c02da-82e7-4958-8c36-cb4087e9bba2</key>
+                    <parentUnit>
+                        <key name="name" value="customer1.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="customer1" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>f8b49d0b-aa80-408a-b60a-a2c56f142214</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.propertyUnit[f8b49d0b-aa80-408a-b60a-a2c56f142214].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>77c07746-e46d-40bd-b9a5-26cdddff1b5c</key>
+                    <parentUnit>
+                        <key name="name" value="f8b49d0b-aa80-408a-b60a-a2c56f142214" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OthCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="customer1" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>024391ee-8322-4f0b-ba9b-bb5b3438b170</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.propertyUnit[024391ee-8322-4f0b-ba9b-bb5b3438b170].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>c83a36bf-c675-469a-8cca-9aca472a112f</key>
+                    <parentUnit>
+                        <key name="name" value="024391ee-8322-4f0b-ba9b-bb5b3438b170" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="customer1" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </propertyUnit>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+            <key name="name" value="OthCustomerQuery" />
+        </query>
+    </defaultFilter>
+    <defaultSorters>
+        <querySorterItem>
+            <propertyName>number</propertyName>
+            <sortType>ASC</sortType>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+            <configured>false</configured>
+        </querySorterItem>
+    </defaultSorters>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>NewJoin0</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="OthCustomer" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="creator" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit0" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit1" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin0" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </join>
+        <join>
+            <name>NewJoin1</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="OthCustomer" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="lastUpdateUser" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit2" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit3" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin0" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </join>
+        <join>
+            <name>0e8a2a54-079a-4d1e-8e4a-e41931ad2af9</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="OthCustomer" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="customer1" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>856c026c-107c-479a-83cc-7d53b4621f98</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="f8b49d0b-aa80-408a-b60a-a2c56f142214" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="024391ee-8322-4f0b-ba9b-bb5b3438b170" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="0e8a2a54-079a-4d1e-8e4a-e41931ad2af9" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="OthCustomerQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="渠道保险客户映射" />
+            <lang locale="zh_HK" value="渠道保險客戶映射" />
+            <lang locale="zh_TW" value="渠道保險客戶映射" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].defaultSorters.querySorterItemextendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].defaultSorters.querySorterItemextendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].defaultSorters.querySorterItemextendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].defaultSorters.querySorterItemextendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].defaultSorters.querySorterItemextendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单级基础资料查询" />
+            <lang locale="zh_HK" value="單級基礎資料查詢" />
+            <lang locale="zh_TW" value="單級基礎資料查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].extendedProperty.F7WindowTitle">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.client.MappingResource.OthCustomerQueryF7WindowTitle" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.client.MappingResource.OthCustomerQueryF7WindowTitle" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.MappingResource.OthCustomerQueryF7WindowTitle" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].extendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="渠道保险客户映射" />
+            <lang locale="zh_CN" value="渠道保险客户映射" />
+            <lang locale="zh_TW" value="渠道保险客户映射" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].subObjects.subEntity[OthCustomer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].subObjects.subEntity[creator].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].subObjects.subEntity[customer1].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].subObjects.subEntity[lastUpdateUser].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.propertyUnit[024391ee-8322-4f0b-ba9b-bb5b3438b170].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.propertyUnit[NewUnit0].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.propertyUnit[NewUnit1].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.propertyUnit[NewUnit2].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.propertyUnit[NewUnit3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.propertyUnit[f8b49d0b-aa80-408a-b60a-a2c56f142214].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizDirection].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务系统方向" />
+            <lang locale="zh_HK" value="業務系統方向" />
+            <lang locale="zh_TW" value="業務系統方向" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizDirection].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizDirection].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizID].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务系统ID" />
+            <lang locale="zh_HK" value="業務系統ID" />
+            <lang locale="zh_TW" value="業務系統ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizID].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizID].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务系统名称" />
+            <lang locale="zh_HK" value="業務系統名稱" />
+            <lang locale="zh_TW" value="業務系統名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizName].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizName].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizNumber].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务编码" />
+            <lang locale="zh_HK" value="業務編碼" />
+            <lang locale="zh_TW" value="業務編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizNumber].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizNumber].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizTypeName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务系统类别名称" />
+            <lang locale="zh_HK" value="業務系統類別名稱" />
+            <lang locale="zh_TW" value="業務系統類別名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizTypeName].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizTypeName].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务系统类别" />
+            <lang locale="zh_HK" value="業務系統類別" />
+            <lang locale="zh_TW" value="業務系統類別" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizType].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[bizType].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[createTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[createTime].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[createTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[createTime].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[createTime].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="别名" />
+            <lang locale="zh_HK" value="別名" />
+            <lang locale="zh_TW" value="別名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.name].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户名" />
+            <lang locale="zh_HK" value="用戶名" />
+            <lang locale="zh_TW" value="用戶名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.number].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.number].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[creator.number].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[customer1.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS客户" />
+            <lang locale="zh_HK" value="EAS客戶" />
+            <lang locale="zh_TW" value="EAS客戶" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[customer1.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[customer1.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[customer1.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="描述" />
+            <lang locale="zh_HK" value="描述" />
+            <lang locale="zh_TW" value="描述" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[description].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[description].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[description].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[description].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[description].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[id].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[id].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[id].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[id].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateTime].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateTime].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateTime].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="别名" />
+            <lang locale="zh_HK" value="別名" />
+            <lang locale="zh_TW" value="別名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.name].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户名" />
+            <lang locale="zh_HK" value="用戶名" />
+            <lang locale="zh_TW" value="用戶名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.number].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.number].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[lastUpdateUser.number].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[name].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[number].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[number].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[number].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[simpleName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="简称" />
+            <lang locale="zh_HK" value="簡稱" />
+            <lang locale="zh_TW" value="簡稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[simpleName].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[simpleName].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[simpleName].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[simpleName].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.OthCustomerQuery].units.queryField[simpleName].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</joinQuery>
+

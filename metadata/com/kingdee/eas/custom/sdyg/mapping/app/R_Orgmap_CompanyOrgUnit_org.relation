@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relationship xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.mapping.app</package>
+    <name>R_Orgmap_CompanyOrgUnit_org</name>
+    <alias>relationship[com.kingdee.eas.custom.sdyg.mapping.app.R_Orgmap_CompanyOrgUnit_org].alias</alias>
+    <description>relationship[com.kingdee.eas.custom.sdyg.mapping.app.R_Orgmap_CompanyOrgUnit_org].description</description>
+    <userDefined>true</userDefined>
+    <type>Association</type>
+    <clientCardinality>1</clientCardinality>
+    <supplierCardinality>0..1</supplierCardinality>
+    <xmlNodeRelationship />
+    <clientObject>
+        <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+        <key name="name" value="Orgmap" />
+    </clientObject>
+    <supplierObject>
+        <key name="package" value="com.kingdee.eas.basedata.org.app" />
+        <key name="name" value="CompanyOrgUnit" />
+    </supplierObject>
+    <resource>
+        <rs key="relationship[com.kingdee.eas.custom.sdyg.mapping.app.R_Orgmap_CompanyOrgUnit_org].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="relationship[com.kingdee.eas.custom.sdyg.mapping.app.R_Orgmap_CompanyOrgUnit_org].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</relationship>
+
