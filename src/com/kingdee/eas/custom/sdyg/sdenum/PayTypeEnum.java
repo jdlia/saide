@@ -32,6 +32,11 @@ public class PayTypeEnum extends IntEnum
     public static final int TUIKUANWX_VALUE = 33;//alias=退款微信
     public static final int TUIKUANGDG_VALUE = 34;//alias=退款公对公转账
     public static final int TUIKUANQD_VALUE = 38;//alias=退款渠道付款
+    public static final int GERENZHUANZHANG_VALUE = 14;//alias=个人转账
+    public static final int TUIKUANGR_VALUE = 41;//alias=退款个人转账
+    public static final int TUIKUANGNSK_VALUE = 32;//alias=退款国内刷卡
+    public static final int TUIKUANGWSK_VALUE = 36;//alias=退款国外刷卡
+    public static final int TUIKUANHYK_VALUE = 12;//alias=退款会员卡
 
     public static final PayTypeEnum xianjin = new PayTypeEnum("xianjin", XIANJIN_VALUE);
     public static final PayTypeEnum guoneishuaka = new PayTypeEnum("guoneishuaka", GUONEISHUAKA_VALUE);
@@ -52,6 +57,11 @@ public class PayTypeEnum extends IntEnum
     public static final PayTypeEnum tuikuanWX = new PayTypeEnum("tuikuanWX", TUIKUANWX_VALUE);
     public static final PayTypeEnum tuikuanGDG = new PayTypeEnum("tuikuanGDG", TUIKUANGDG_VALUE);
     public static final PayTypeEnum tuikuanQD = new PayTypeEnum("tuikuanQD", TUIKUANQD_VALUE);
+    public static final PayTypeEnum gerenzhuanzhang = new PayTypeEnum("gerenzhuanzhang", GERENZHUANZHANG_VALUE);
+    public static final PayTypeEnum tuikuanGR = new PayTypeEnum("tuikuanGR", TUIKUANGR_VALUE);
+    public static final PayTypeEnum tuikuanGNSK = new PayTypeEnum("tuikuanGNSK", TUIKUANGNSK_VALUE);
+    public static final PayTypeEnum tuikuanGWSK = new PayTypeEnum("tuikuanGWSK", TUIKUANGWSK_VALUE);
+    public static final PayTypeEnum tuikuanHYK = new PayTypeEnum("tuikuanHYK", TUIKUANHYK_VALUE);
 
     /**
      * construct function
