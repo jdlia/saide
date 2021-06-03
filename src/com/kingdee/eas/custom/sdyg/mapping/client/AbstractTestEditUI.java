@@ -52,12 +52,14 @@ public abstract class AbstractTestEditUI extends com.kingdee.eas.framework.clien
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer4;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contBIMUDF0001;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contBIMUDF0002;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contBIMUDF0003;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtNumber;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox txtName;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtSimpleName;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox txtDescription;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtBIMUDF0001;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtBIMUDF0002;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtBIMUDF0003;
     protected com.kingdee.eas.custom.sdyg.mapping.TestInfo editData = null;
     /**
      * output class constructor
@@ -84,24 +86,28 @@ public abstract class AbstractTestEditUI extends com.kingdee.eas.framework.clien
         this.kDLabelContainer4 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contBIMUDF0001 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contBIMUDF0002 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contBIMUDF0003 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.txtNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtName = new com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox();
         this.txtSimpleName = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtDescription = new com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox();
         this.prmtBIMUDF0001 = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.prmtBIMUDF0002 = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.txtBIMUDF0003 = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.kDLabelContainer1.setName("kDLabelContainer1");
         this.kDLabelContainer2.setName("kDLabelContainer2");
         this.kDLabelContainer3.setName("kDLabelContainer3");
         this.kDLabelContainer4.setName("kDLabelContainer4");
         this.contBIMUDF0001.setName("contBIMUDF0001");
         this.contBIMUDF0002.setName("contBIMUDF0002");
+        this.contBIMUDF0003.setName("contBIMUDF0003");
         this.txtNumber.setName("txtNumber");
         this.txtName.setName("txtName");
         this.txtSimpleName.setName("txtSimpleName");
         this.txtDescription.setName("txtDescription");
         this.prmtBIMUDF0001.setName("prmtBIMUDF0001");
         this.prmtBIMUDF0002.setName("prmtBIMUDF0002");
+        this.txtBIMUDF0003.setName("txtBIMUDF0003");
         // CoreUI		
         this.btnPrint.setVisible(false);		
         this.btnPrintPreview.setVisible(false);		
@@ -135,6 +141,11 @@ public abstract class AbstractTestEditUI extends com.kingdee.eas.framework.clien
         this.contBIMUDF0002.setBoundLabelLength(100);		
         this.contBIMUDF0002.setBoundLabelUnderline(true);		
         this.contBIMUDF0002.setVisible(true);
+        // contBIMUDF0003		
+        this.contBIMUDF0003.setBoundLabelText(resHelper.getString("contBIMUDF0003.boundLabelText"));		
+        this.contBIMUDF0003.setBoundLabelLength(100);		
+        this.contBIMUDF0003.setBoundLabelUnderline(true);		
+        this.contBIMUDF0003.setVisible(true);
         // txtNumber		
         this.txtNumber.setMaxLength(80);
         // txtName
@@ -157,7 +168,12 @@ public abstract class AbstractTestEditUI extends com.kingdee.eas.framework.clien
         this.prmtBIMUDF0002.setEditFormat("$number$");		
         this.prmtBIMUDF0002.setCommitFormat("$number$");		
         this.prmtBIMUDF0002.setRequired(false);
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {prmtBIMUDF0001,prmtBIMUDF0002}));
+        // txtBIMUDF0003		
+        this.txtBIMUDF0003.setVisible(true);		
+        this.txtBIMUDF0003.setHorizontalAlignment(2);		
+        this.txtBIMUDF0003.setMaxLength(100);		
+        this.txtBIMUDF0003.setRequired(false);
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {prmtBIMUDF0001,prmtBIMUDF0002,txtBIMUDF0003}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -197,6 +213,8 @@ public abstract class AbstractTestEditUI extends com.kingdee.eas.framework.clien
         this.add(contBIMUDF0001, null);
         contBIMUDF0002.setBounds(new Rectangle(126, 257, 270, 19));
         this.add(contBIMUDF0002, null);
+        contBIMUDF0003.setBounds(new Rectangle(543, 279, 270, 19));
+        this.add(contBIMUDF0003, null);
         //kDLabelContainer1
         kDLabelContainer1.setBoundEditor(txtNumber);
         //kDLabelContainer2
@@ -209,6 +227,8 @@ public abstract class AbstractTestEditUI extends com.kingdee.eas.framework.clien
         contBIMUDF0001.setBoundEditor(prmtBIMUDF0001);
         //contBIMUDF0002
         contBIMUDF0002.setBoundEditor(prmtBIMUDF0002);
+        //contBIMUDF0003
+        contBIMUDF0003.setBoundEditor(txtBIMUDF0003);
 
     }
 
@@ -324,7 +344,8 @@ public abstract class AbstractTestEditUI extends com.kingdee.eas.framework.clien
 		dataBinder.registerBinding("simpleName", String.class, this.txtSimpleName, "text");
 		dataBinder.registerBinding("description", String.class, this.txtDescription, "_multiLangItem");
 		dataBinder.registerBinding("BIMUDF0001", com.kingdee.eas.basedata.scm.common.ExpenseItemInfo.class, this.prmtBIMUDF0001, "data");
-		dataBinder.registerBinding("BIMUDF0002", com.kingdee.eas.basedata.scm.common.ExpenseTypeInfo.class, this.prmtBIMUDF0002, "data");		
+		dataBinder.registerBinding("BIMUDF0002", com.kingdee.eas.basedata.scm.common.ExpenseTypeInfo.class, this.prmtBIMUDF0002, "data");
+		dataBinder.registerBinding("BIMUDF0003", String.class, this.txtBIMUDF0003, "text");		
 	}
 	//Regiester UI State
 	private void registerUIState(){
@@ -476,7 +497,8 @@ public abstract class AbstractTestEditUI extends com.kingdee.eas.framework.clien
 		getValidateHelper().registerBindProperty("simpleName", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("description", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("BIMUDF0001", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("BIMUDF0002", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("BIMUDF0002", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("BIMUDF0003", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -538,6 +560,7 @@ public abstract class AbstractTestEditUI extends com.kingdee.eas.framework.clien
         	sic.add(new SelectorItemInfo("BIMUDF0002.number"));
         	sic.add(new SelectorItemInfo("BIMUDF0002.name"));
 		}
+        sic.add(new SelectorItemInfo("BIMUDF0003"));
         return sic;
     }        
 

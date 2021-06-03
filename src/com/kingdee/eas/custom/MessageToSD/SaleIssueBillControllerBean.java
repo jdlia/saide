@@ -444,6 +444,12 @@ public class SaleIssueBillControllerBean extends AbstractSaleIssueBillController
 		} catch (EASBizException e) {
 			succ = false;
 			msg = "错误信息：" + e.getMessage();
+			try {
+				OtherIssueBillFactory.getLocalInstance(ctx).delete(addnew);
+			} catch (EASBizException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			e.printStackTrace();
 		}
 		//返回
@@ -473,6 +479,7 @@ public class SaleIssueBillControllerBean extends AbstractSaleIssueBillController
 			//调用业务系统的删除接口
 			String url ="http://192.168.8.120:8388/matused/delete";
 			String res = HttpClientUtil.sendGet(url, "bizNumber="+bizNumber);
+			
 		}
 	}
 	

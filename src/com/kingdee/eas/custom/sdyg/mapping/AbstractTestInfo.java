@@ -39,6 +39,17 @@ public class AbstractTestInfo extends com.kingdee.eas.framework.DataBaseInfo imp
     {
         put("BIMUDF0002", item);
     }
+    /**
+     * Object:Test's 11property 
+     */
+    public String getBIMUDF0003()
+    {
+        return getString("BIMUDF0003");
+    }
+    public void setBIMUDF0003(String item)
+    {
+        setString("BIMUDF0003", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("7899C176");

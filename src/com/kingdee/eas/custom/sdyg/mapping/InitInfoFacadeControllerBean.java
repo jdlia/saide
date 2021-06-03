@@ -627,8 +627,8 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 //    	super._syncCustomer(ctx);
 
 		// 查询数据
-		String sql = "select cus.* from t_customer cus  left join t_baseData baseData  on cus.ID = baseData.ID  where baseData.kdGetMark <> '1' or baseData.kdGetMark is null limit 1,500 " ;
-//		String sql = "select cus.* from t_customer cus  left join t_baseData baseData  on cus.ID = baseData.ID  where baseData.kdGetMark <> '1' or baseData.kdGetMark is null " ;
+//		String sql = "select cus.* from t_customer cus  left join t_baseData baseData  on cus.ID = baseData.ID  where baseData.kdGetMark <> '1' or baseData.kdGetMark is null limit 1,500 " ;
+		String sql = "select cus.* from t_customer cus  left join t_baseData baseData  on cus.ID = baseData.ID  where baseData.kdGetMark <> '1' or baseData.kdGetMark is null " ;
 //		String sql = "select cus.* from t_customer cus  left join t_baseData baseData  on cus.ID = baseData.ID  where  cus.recordNo = 'QL10933' " ;
 		mysqlConnectionUtil util = new mysqlConnectionUtil();
 		System.out.println(sql);
@@ -636,17 +636,14 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		try {
 			connection = util.createConn();
 		} catch (ClassNotFoundException e2) {
-			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		} catch (SQLException e2) {
-			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
 		PreparedStatement pStatement = null;
 		try {
 			pStatement = connection.prepareStatement(sql);
 		} catch (SQLException e2) {
-			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
 		ResultSet resultSet = null;
@@ -685,9 +682,6 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 //				if(isExistscustomerInfo != null){
 //					continue;
 //				}
-				strIDbuff.append("'");
-				strIDbuff.append(bizID);
-				strIDbuff.append("',");
 				CustomerInfo customerInfo = new CustomerInfo();
 				customerInfo.setNumber(resultSet.getString("recordNo"));
 				customerInfo.setName(resultSet.getString("customerName"));
@@ -752,88 +746,87 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 						logEntryInfo.setParent(logInfo);
 						logInfo.getEntrys().add(logEntryInfo);
 					}
-				}
-				
-				CustomerCompanyInfoInfo customerCompanyInfo = new CustomerCompanyInfoInfo();
-				customerCompanyInfo.setCU(customerInfo.getCU());
-				try {
-					customerCompanyInfo.setCompanyOrgUnit(getCompanyOrgUnitInfoF7(ctx, "赛德阳光集团"));
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				try {
-					customerCompanyInfo.setSettlementCurrency(getCurrencyInfoF7(ctx,"BB01" ));
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				customerCompanyInfo.setEffectedStatus(EffectedStatusEnum.getEnum(EffectedStatusEnum.TEMPSTORE_VALUE));
-				customerCompanyInfo.setCustomer(customerInfo);
-				customerCompanyInfo.setUsingStatus(UsingStatusEnum.getEnum(UsingStatusEnum.USING_VALUE));
-				ICustomerCompanyInfo iCustomerCompanyInfo = null;
-				try {
-					iCustomerCompanyInfo = CustomerCompanyInfoFactory.getLocalInstance(ctx);
-				} catch (BOSException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				try {
-					IObjectPK companyInfopk = iCustomerCompanyInfo.save(customerCompanyInfo);
-				} catch (EASBizException e1) {
-					msg = e1.getMessage();
-			    	logEntryInfo = new SyncLogEntryInfo();
-					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
-					logEntryInfo.setLoginfo(customerInfo.getName()+msg);
-					logEntryInfo.setParent(logInfo);
-					logInfo.getEntrys().add(logEntryInfo);
-				} catch (BOSException e1) {
-					msg = e1.getMessage();
-			    	logEntryInfo = new SyncLogEntryInfo();
-					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
-					logEntryInfo.setLoginfo(customerInfo.getName()+msg);
-					logEntryInfo.setParent(logInfo);
-					logInfo.getEntrys().add(logEntryInfo);
-				}
-//				iCustomerCompanyInfo.submit(companyInfopk, customerCompanyInfo);
-				
-				CustomerSaleInfoInfo customerSaleInfoInfo = new CustomerSaleInfoInfo();
-				customerSaleInfoInfo.setCU(customerInfo.getCU());
-				try {
-					customerSaleInfoInfo.setSaleOrgUnit(getSaleOrgUnitInfoF7(ctx,  "赛德阳光集团"));
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				customerSaleInfoInfo.setEffectedStatus(EffectedStatusEnum.getEnum(EffectedStatusEnum.TEMPSTORE_VALUE));
-				customerSaleInfoInfo.setCustomer(customerInfo);
-				customerSaleInfoInfo.setSettlementOrgUnit(customerInfo);
-				customerSaleInfoInfo.setBillingOrgUnit(customerInfo);
-				customerSaleInfoInfo.setDeliverOrgUnit(customerInfo);
-				customerSaleInfoInfo.setUsingStatus(UsingStatusEnum.getEnum(UsingStatusEnum.USING_VALUE));
-				ICustomerSaleInfo iCustomerSaleInfo = null;
-				try {
-					iCustomerSaleInfo = CustomerSaleInfoFactory.getLocalInstance(ctx);
-				} catch (BOSException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				try {
-					iCustomerSaleInfo.save(customerSaleInfoInfo);
-				} catch (EASBizException e) {
-					msg = e.getMessage();
-			    	logEntryInfo = new SyncLogEntryInfo();
-					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
-					logEntryInfo.setLoginfo(customerInfo.getName()+msg);
-					logEntryInfo.setParent(logInfo);
-					logInfo.getEntrys().add(logEntryInfo);
-				} catch (BOSException e) {
-					msg = e.getMessage();
-			    	logEntryInfo = new SyncLogEntryInfo();
-					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
-					logEntryInfo.setLoginfo(customerInfo.getName()+msg);
-					logEntryInfo.setParent(logInfo);
-					logInfo.getEntrys().add(logEntryInfo);
+					//保存成功后，更新中间表数据
+					strIDbuff.append("'");
+					strIDbuff.append(bizID);
+					strIDbuff.append("',");
+					//客户审核完之后进行分配
+					CustomerCompanyInfoInfo customerCompanyInfo = new CustomerCompanyInfoInfo();
+					customerCompanyInfo.setCU(customerInfo.getCU());
+					try {
+						customerCompanyInfo.setCompanyOrgUnit(getCompanyOrgUnitInfoF7(ctx, "赛德阳光集团"));
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					try {
+						customerCompanyInfo.setSettlementCurrency(getCurrencyInfoF7(ctx,"BB01" ));
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					customerCompanyInfo.setEffectedStatus(EffectedStatusEnum.getEnum(EffectedStatusEnum.TEMPSTORE_VALUE));
+					customerCompanyInfo.setCustomer(customerInfo);
+					customerCompanyInfo.setUsingStatus(UsingStatusEnum.getEnum(UsingStatusEnum.USING_VALUE));
+					ICustomerCompanyInfo iCustomerCompanyInfo = null;
+					try {
+						iCustomerCompanyInfo = CustomerCompanyInfoFactory.getLocalInstance(ctx);
+					} catch (BOSException e1) {
+						e1.printStackTrace();
+					}
+					try {
+						IObjectPK companyInfopk = iCustomerCompanyInfo.save(customerCompanyInfo);
+					} catch (EASBizException e1) {
+						msg = e1.getMessage();
+				    	logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(customerInfo.getName()+msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					} catch (BOSException e1) {
+						msg = e1.getMessage();
+				    	logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(customerInfo.getName()+msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					}
+//					iCustomerCompanyInfo.submit(companyInfopk, customerCompanyInfo);
+					
+					CustomerSaleInfoInfo customerSaleInfoInfo = new CustomerSaleInfoInfo();
+					customerSaleInfoInfo.setCU(customerInfo.getCU());
+					try {
+						customerSaleInfoInfo.setSaleOrgUnit(getSaleOrgUnitInfoF7(ctx,  "赛德阳光集团"));
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					customerSaleInfoInfo.setEffectedStatus(EffectedStatusEnum.getEnum(EffectedStatusEnum.TEMPSTORE_VALUE));
+					customerSaleInfoInfo.setCustomer(customerInfo);
+					customerSaleInfoInfo.setSettlementOrgUnit(customerInfo);
+					customerSaleInfoInfo.setBillingOrgUnit(customerInfo);
+					customerSaleInfoInfo.setDeliverOrgUnit(customerInfo);
+					customerSaleInfoInfo.setUsingStatus(UsingStatusEnum.getEnum(UsingStatusEnum.USING_VALUE));
+					ICustomerSaleInfo iCustomerSaleInfo = null;
+					try {
+						iCustomerSaleInfo = CustomerSaleInfoFactory.getLocalInstance(ctx);
+					} catch (BOSException e) {
+						e.printStackTrace();
+					}
+					try {
+						iCustomerSaleInfo.save(customerSaleInfoInfo);
+					} catch (EASBizException e) {
+						msg = e.getMessage();
+				    	logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(customerInfo.getName()+msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					} catch (BOSException e) {
+						msg = e.getMessage();
+				    	logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(customerInfo.getName()+msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					}
 				}
 			}
 		} catch (BOSException e1) {
@@ -943,21 +936,39 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 //    	super._initBillInfo(ctx, numbers);
     	//查询数据
     	System.out.println("进入InitInfoFacadeControllerBean");
-    	//收据
+    	//收据(正常情况)
+//    	StringBuffer sqlbuff = new StringBuffer();
+//    	sqlbuff.append("SELECT bill.ID billid,org.companyName billcompany," );
+//    	sqlbuff.append("	bill.receiptNo billreceiptno,bill.billDate billdate,bill.recTypeNo billrectypeno,");
+//    	sqlbuff.append("	bill.recTypeName billrectypename, bill.account billaccount, bill.bizDate billbizdate,bill.recordCompany billrecordcompany,");
+//    	sqlbuff.append("	bill.sd_channel billchannel,bill.charge_id billchargeid,entry2.aramount billtatalpay,entry2.actualpay billtatalactualpay,bill.VIPNo billVipNo,");
+//    	sqlbuff.append("	entry.entryID entryID,entry.expenseNo entryexpenseno,entry.expenseName entryexpensename,entry.qty entryqty,entry.ARAmount entryaramount,");
+//    	sqlbuff.append("	entry.docNo entrydocno,entry.amount entryamount, entry.type entrytype,entry.VIPRight entryvipright,entry.detailID entrydetailid,entry.receiptNO entryreceiptno,");
+//    	sqlbuff.append("	entry.charge_id entrychargeid,entry.charge_detail_id entrychargedetailid,fee.itemNo feeitemNo,oth.bizType othbizType");
+//    	sqlbuff.append(" FROM t_receipt bill INNER JOIN t_receipt_ety entry ON bill.ID = entry.ID  " );
+//    	sqlbuff.append(" LEFT JOIN ( select id,sum(ARAmount) aramount,sum(amount) actualpay from t_receipt_ety where type = 0 GROUP BY id ) entry2 on bill.ID = entry2.ID  " );
+//    	sqlbuff.append("	left join t_org org on bill.company = org.dgtNo " );
+//    	sqlbuff.append("	left join t_feeitem fee on entry.expenseNo = fee.id " );
+//    	sqlbuff.append("	left join t_othcustomer oth on bill.sd_channel = oth.id " );
+//    	sqlbuff.append(" where bill.bizDate BETWEEN  STR_TO_DATE('2021-01-01','%Y-%m-%d') and STR_TO_DATE('2021-01-31','%Y-%m-%d') and (bill.company = '066' or bill.company = '080') and entry2.aramount >0 " );
+//    	if(numbers != null && numbers.length() > 0){
+//    		sqlbuff.append(" and bill.receiptNo = '"+numbers+"'");
+//    	}
+    	//收据(历史数据情况)
     	StringBuffer sqlbuff = new StringBuffer();
     	sqlbuff.append("SELECT bill.ID billid,org.companyName billcompany," );
-    	sqlbuff.append("	bill.receiptNo billreceiptno,bill.billDate billdate,bill.recTypeNo billrectypeno,");
-    	sqlbuff.append("	bill.recTypeName billrectypename, bill.account billaccount, bill.bizDate billbizdate,bill.recordCompany billrecordcompany,");
-    	sqlbuff.append("	bill.sd_channel billchannel,bill.charge_id billchargeid,entry2.aramount billtatalpay,entry2.actualpay billtatalactualpay,bill.VIPNo billVipNo,");
+    	sqlbuff.append("	bill.receiptNo billreceiptno,entry.orderdate billdate,bill.recTypeNo billrectypeno,");
+    	sqlbuff.append("	bill.recTypeName billrectypename, bill.account billaccount, entry.orderdate billbizdate,bill.recordCompany billrecordcompany,");
+    	sqlbuff.append("	bill.sd_channel billchannel,bill.charge_id billchargeid,entry.aramount billtatalpay,entry.amount billtatalactualpay,bill.VIPNo billVipNo,");
     	sqlbuff.append("	entry.entryID entryID,entry.expenseNo entryexpenseno,entry.expenseName entryexpensename,entry.qty entryqty,entry.ARAmount entryaramount,");
     	sqlbuff.append("	entry.docNo entrydocno,entry.amount entryamount, entry.type entrytype,entry.VIPRight entryvipright,entry.detailID entrydetailid,entry.receiptNO entryreceiptno,");
     	sqlbuff.append("	entry.charge_id entrychargeid,entry.charge_detail_id entrychargedetailid,fee.itemNo feeitemNo,oth.bizType othbizType");
     	sqlbuff.append(" FROM t_receipt bill INNER JOIN t_receipt_ety entry ON bill.ID = entry.ID  " );
-    	sqlbuff.append(" LEFT JOIN ( select id,sum(ARAmount) aramount,sum(amount) actualpay from t_receipt_ety where type = 0 GROUP BY id ) entry2 on bill.ID = entry2.ID  " );
+//    	sqlbuff.append(" LEFT JOIN ( select id,sum(ARAmount) aramount,sum(amount) actualpay from t_receipt_ety where type = 0 GROUP BY id ) entry2 on bill.ID = entry2.ID  " );
     	sqlbuff.append("	left join t_org org on bill.company = org.dgtNo " );
     	sqlbuff.append("	left join t_feeitem fee on entry.expenseNo = fee.id " );
     	sqlbuff.append("	left join t_othcustomer oth on bill.sd_channel = oth.id " );
-    	sqlbuff.append(" where bill.bizDate BETWEEN  STR_TO_DATE('2020-09-01','%Y-%m-%d') and STR_TO_DATE('2020-09-30','%Y-%m-%d') and (bill.company = '066' or bill.company = '080') and entry2.aramount >0 " );
+    	sqlbuff.append(" where entry.orderdate BETWEEN  STR_TO_DATE('2021-01-01','%Y-%m-%d') and STR_TO_DATE('2021-01-31','%Y-%m-%d') and (bill.company = '066' ) and entry.type =0 " );
     	if(numbers != null && numbers.length() > 0){
     		sqlbuff.append(" and bill.receiptNo = '"+numbers+"'");
     	}
@@ -968,7 +979,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
     	duizhangSqlBuff.append(" bill.recordNo billrecordno,org.companyName companyname ,receipt.sd_channel othcustomerid");
     	duizhangSqlBuff.append(" from t_reconciliation bill left join t_org org on bill.company = org.dgtNo ");
     	duizhangSqlBuff.append(" left join t_receipt receipt on bill.bizNo = receipt.receiptNo ");
-    	duizhangSqlBuff.append(" where  bill.bizDate BETWEEN  STR_TO_DATE('2020-09-01','%Y-%m-%d') and STR_TO_DATE('2020-09-30','%Y-%m-%d') and (bill.company = '066' or bill.company = '080')");
+    	duizhangSqlBuff.append(" where  bill.bizDate BETWEEN  STR_TO_DATE('2021-01-01','%Y-%m-%d') and STR_TO_DATE('2021-01-31','%Y-%m-%d') and (bill.company = '066')");
     	if(numbers != null && numbers.length() > 0){
     		duizhangSqlBuff.append(" and bill.bizNo = '"+numbers+"'");
     	}
@@ -986,7 +997,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
     	bjsqlbuff.append("	left join t_org org on bill.company = org.dgtNo " );
     	bjsqlbuff.append("	left join t_feeitem fee on entry.expenseNo = fee.id " );
     	bjsqlbuff.append("	left join t_othcustomer oth on bill.sd_channel = oth.id " );
-    	bjsqlbuff.append(" where bill.bizDate BETWEEN  STR_TO_DATE('2020-09-01','%Y-%m-%d') and STR_TO_DATE('2020-09-30','%Y-%m-%d') and (bill.company = '066' or bill.company = '080') and entry2.actualpay >0 " );
+    	bjsqlbuff.append(" where bill.bizDate BETWEEN  STR_TO_DATE('2021-01-01','%Y-%m-%d') and STR_TO_DATE('2021-01-31','%Y-%m-%d') and (bill.company = '066' ) and entry2.actualpay >0 " );
     	if(numbers != null && numbers.length() > 0){
     		bjsqlbuff.append(" and bill.receiptNo = '"+numbers+"'");
     	}
@@ -1238,6 +1249,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		IOtherBill iob = null;
 		try {
 			iob = OtherBillFactory.getLocalInstance(ctx);
+//			iob = OtherBillFactory.getRemoteInstance();
 		} catch (BOSException e1) {
 			e1.printStackTrace();
 		}
@@ -1524,7 +1536,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
-		    			if(operationTypeInfo.getName().equals("全科")&& (entryInfo.get("etrcharge_detail_id") != null)){
+		    			if(operationTypeInfo.getName().equals("全科") && (entryInfo.get("etrcharge_detail_id") != null)){
 		    				yingshouAmount = yingshouAmount.add(entryInfo.getAmount());
 		    				chargedetailid = entryInfo.get("etrcharge_detail_id").toString();
 		    				//更新分录的值
@@ -1777,6 +1789,10 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
     //应收MAP
     protected void getYingshouMap (Context ctx,ResultSet rs) throws Exception{
     	//*********表头*************
+    	String billid = rs.getString("billid");
+    	String entryID = rs.getString("entryID");
+    	//两者合在一起做唯一标识
+    	String mapid = billid+entryID;
     	//公司
 		String billcompany = rs.getString("billcompany");
 		//业务单据编码
@@ -1839,7 +1855,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		OtherBillInfo otherBillInfo = null;
 		OrgmapInfo orgmapInfo = getOrgmapInfoF7(ctx, billcompany);
 		CompanyOrgUnitInfo companyInfo =  orgmapInfo.getOrg();
-    	if(this.yingshouMap.get(billNo) == null ){
+    	if(this.yingshouMap.get(mapid) == null ){
     		otherBillInfo = new OtherBillInfo(); 
     		//摘要
     		otherBillInfo.setAbstractName(billrectypename);
@@ -1982,7 +1998,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
     		otherBillInfo.put("othcustomer",othcustomerInfo);
     		otherBillInfo.put("charge_id",billchargeid);
     		
-    		this.yingshouMap.put(billNo, otherBillInfo);
+    		this.yingshouMap.put(mapid, otherBillInfo);
 
     		//收款计划
 	    	OtherBillPlanInfo planInfo = new OtherBillPlanInfo();
@@ -2008,7 +2024,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 	    	planInfo.setParent(otherBillInfo);
 	    	otherBillInfo.getRecievePlan().add(planInfo);
     	}else{
-    		otherBillInfo = (OtherBillInfo) yingshouMap.get(billNo);
+    		otherBillInfo = (OtherBillInfo) yingshouMap.get(mapid);
     	}
 //分录
     	OtherBillentryInfo otherBillentryInfo = new OtherBillentryInfo();
@@ -4179,5 +4195,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		}
 		return otherBillInfo;
 	}
+	
+	
 	
 }

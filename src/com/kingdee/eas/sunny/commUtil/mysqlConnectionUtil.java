@@ -25,9 +25,9 @@ public class mysqlConnectionUtil {
 		Class.forName("com.mysql.jdbc.Driver");
 //		String url = "jdbc:mysql://61.135.215.38:10168/mysql?serverTimezone=GMT%2B8";
 		//测试环境134
-		String url = "jdbc:mysql://192.168.8.134:3306/sunny";
+//		String url = "jdbc:mysql://192.168.8.134:3306/sunny";
 		//正式环境125
-//		String url = "jdbc:mysql://192.168.8.125:1212/sunny";
+		String url = "jdbc:mysql://192.168.8.125:1212/sunny";
 		String user = "root";
 		String password = "sunny123";
 		Connection connections = DriverManager.getConnection(url, user, password);
