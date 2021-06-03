@@ -727,6 +727,37 @@
                 <key name="name" value="TestQuery" />
             </query>
         </propertyUnit>
+        <queryField>
+            <name>BIMUDF0003</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.TestQuery].units.queryField[BIMUDF0003].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b9507ca4-5608-4ae0-a46f-6bd9ec9bf4f3</key>
+                    <parentUnit>
+                        <key name="name" value="BIMUDF0003" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Test" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="BIMUDF0003" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="TestQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -1082,6 +1113,22 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.TestQuery].units.queryField[BIMUDF0002.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.TestQuery].units.queryField[BIMUDF0003].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="11" />
+            <lang locale="zh_HK" value="11" />
+            <lang locale="zh_TW" value="11" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.TestQuery].units.queryField[BIMUDF0003].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.TestQuery].units.queryField[BIMUDF0003].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

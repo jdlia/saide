@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facade xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.shr</package>
+    <name>updateadjustfacade</name>
+    <alias>facade[com.kingdee.eas.custom.shr.updateadjustfacade].alias</alias>
+    <description>facade[com.kingdee.eas.custom.shr.updateadjustfacade].description</description>
+    <userDefined>true</userDefined>
+    <bosType>70BBEAFB</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.custom.shr.updateadjustfacade</businessImplName>
+    <businessControllerName>com.kingdee.eas.custom.shr.updateadjustfacadeController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>updateadjust</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.shr.updateadjustfacade].methods.method[updateadjust].alias</alias>
+            <description>facade[com.kingdee.eas.custom.shr.updateadjustfacade].methods.method[updateadjust].description</description>
+            <innerID>225295d6-3d41-4c89-aa3c-0de8dcd947a2</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <resource>
+        <rs key="facade[com.kingdee.eas.custom.shr.updateadjustfacade].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="更新定调薪档案" />
+            <lang locale="zh_HK" value="更新定調薪檔案" />
+            <lang locale="zh_TW" value="更新定調薪檔案" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.shr.updateadjustfacade].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.shr.updateadjustfacade].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.shr.updateadjustfacade].methods.method[updateadjust].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.shr.updateadjustfacade].methods.method[updateadjust].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</facade>
+

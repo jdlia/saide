@@ -61,6 +61,19 @@
                 <key name="name" value="Person" />
             </entityRef>
         </subEntity>
+        <subEntity>
+            <name>stafflevel</name>
+            <alias>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].subObjects.subEntity[stafflevel].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="DoctorQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="DoctorLevel" />
+            </entityRef>
+        </subEntity>
     </subObjects>
     <units>
         <propertyUnit>
@@ -714,6 +727,99 @@
                 <key name="name" value="DoctorQuery" />
             </query>
         </propertyUnit>
+        <queryField>
+            <name>stafflevel.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.queryField[stafflevel.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f5963d59-a118-49b8-9893-85a181c7db13</key>
+                    <parentUnit>
+                        <key name="name" value="stafflevel.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="stafflevel" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="DoctorQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>58f28bb2-b80b-426e-a32c-ef7719301924</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.propertyUnit[58f28bb2-b80b-426e-a32c-ef7719301924].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>195a1987-d356-49fe-9dda-f32b95a31c7c</key>
+                    <parentUnit>
+                        <key name="name" value="58f28bb2-b80b-426e-a32c-ef7719301924" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Doctor" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="stafflevel" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="DoctorQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>5490b322-c549-4f0a-875f-f6858e3b996c</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.propertyUnit[5490b322-c549-4f0a-875f-f6858e3b996c].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>5154cdd9-499f-4ad5-b7c4-400dffae7167</key>
+                    <parentUnit>
+                        <key name="name" value="5490b322-c549-4f0a-875f-f6858e3b996c" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="stafflevel" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="DoctorQuery" />
+            </query>
+        </propertyUnit>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -837,6 +943,36 @@
                 <key name="name" value="DoctorQuery" />
             </query>
         </join>
+        <join>
+            <name>20c132ff-bac6-47fa-a361-60034118b3bb</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="Doctor" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="stafflevel" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>3bfe9412-f369-4e04-a71c-d8eed9cf309f</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="58f28bb2-b80b-426e-a32c-ef7719301924" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="5490b322-c549-4f0a-875f-f6858e3b996c" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="20c132ff-bac6-47fa-a361-60034118b3bb" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="DoctorQuery" />
+            </query>
+        </join>
     </joins>
     <resource>
         <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].alias">
@@ -942,6 +1078,24 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].subObjects.subEntity[person].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].subObjects.subEntity[stafflevel].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.propertyUnit[5490b322-c549-4f0a-875f-f6858e3b996c].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.propertyUnit[58f28bb2-b80b-426e-a32c-ef7719301924].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -1388,6 +1542,27 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.queryField[simpleName].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.queryField[stafflevel.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="员工级别" />
+            <lang locale="zh_HK" value="員工級別" />
+            <lang locale="zh_TW" value="員工級別" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.queryField[stafflevel.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.queryField[stafflevel.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.queryField[stafflevel.name].extendedProperty.isUsingF7">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

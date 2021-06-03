@@ -4201,6 +4201,15 @@
         </metaDataBrief>
         <metaDataBrief>
             <packageName />
+            <name>com.kingdee.eas.custom.sdyg.report.report</name>
+            <metaDataType>pack</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.sdyg</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
             <name>com.kingdee.eas.base.ssc.app.CheckSchemeToSampleFunction</name>
             <metaDataType>func</metaDataType>
             <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.base.ssc.app.CheckSchemeToSampleFunction].alias</alias>
@@ -11419,6 +11428,42 @@
         </metaDataBrief>
         <metaDataBrief>
             <packageName />
+            <name>com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEditUIFunction</name>
+            <metaDataType>func</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEditUIFunction].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEditUIFunction].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.mapping.mapping</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.custom.sdyg.mapping.app.SyncLogListUIFunction</name>
+            <metaDataType>func</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogListUIFunction].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogListUIFunction].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.mapping.mapping</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.custom.sdyg.report.app.TotaldetailEditUIFunction</name>
+            <metaDataType>func</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEditUIFunction].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEditUIFunction].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.report.report</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.custom.sdyg.report.app.TotaldetailListUIFunction</name>
+            <metaDataType>func</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.app.TotaldetailListUIFunction].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.app.TotaldetailListUIFunction].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.report.report</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
             <name>com.kingdee.eas.basedata.master.cssp.CustomerFunction</name>
             <metaDataType>func</metaDataType>
             <alias>metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.basedata.master.cssp.CustomerFunction].alias</alias>
@@ -17311,12 +17356,62 @@
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEditUIFunction].alias">
+            <lang locale="en_US" value="多分录基础单据编辑界面业务功能" />
+            <lang locale="zh_CN" value="中间表同步结果信息编辑功能" />
+            <lang locale="zh_TW" value="中間表同步結果信息編輯功能" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogEditUIFunction].description">
+            <lang locale="en_US" value="多分录基础单据编辑界面业务功能" />
+            <lang locale="zh_CN" value="多分录基础单据编辑界面业务功能" />
+            <lang locale="zh_TW" value="多分錄基礎單據編輯介面業務功能" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogListUIFunction].alias">
+            <lang locale="en_US" value="SyncLogListUIFunction" />
+            <lang locale="zh_CN" value="中间表同步结果信息列表功能" />
+            <lang locale="zh_TW" value="中間表同步結果信息列表功能" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.SyncLogListUIFunction].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.mapping].alias">
             <lang locale="en_US" value="mapping" />
             <lang locale="zh_CN" value="映射表" />
             <lang locale="zh_TW" value="映射表" />
         </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.mapping].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEditUIFunction].alias">
+            <lang locale="en_US" value="多分录基础单据编辑界面业务功能" />
+            <lang locale="zh_CN" value="合计明细编辑功能" />
+            <lang locale="zh_TW" value="合計明細編輯功能" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEditUIFunction].description">
+            <lang locale="en_US" value="多分录基础单据编辑界面业务功能" />
+            <lang locale="zh_CN" value="多分录基础单据编辑界面业务功能" />
+            <lang locale="zh_TW" value="多分錄基礎單據編輯介面業務功能" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.app.TotaldetailListUIFunction].alias">
+            <lang locale="en_US" value="TotaldetailListUIFunction" />
+            <lang locale="zh_CN" value="合计明细列表功能" />
+            <lang locale="zh_TW" value="合計明細列表功能" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.app.TotaldetailListUIFunction].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].alias">
+            <lang locale="en_US" value="report" />
+            <lang locale="zh_CN" value="财务报表" />
+            <lang locale="zh_TW" value="財務報表" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_function].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_TW" value="null" />

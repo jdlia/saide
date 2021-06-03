@@ -1690,6 +1690,15 @@
         </metaDataBrief>
         <metaDataBrief>
             <packageName />
+            <name>com.kingdee.eas.custom.sdyg.report.report</name>
+            <metaDataType>pack</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_param].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_param].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.sdyg</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
             <name>com.kingdee.eas.basedata.cm.cm</name>
             <metaDataType>pack</metaDataType>
             <alias>metaDataBriefView[.com_kingdee_eas_base_param].metaDataBriefs.metaDataBrief[com.kingdee.eas.basedata.cm.cm].alias</alias>
@@ -3299,6 +3308,16 @@
             <lang locale="zh_TW" value="映射表" />
         </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_param].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.mapping].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_param].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].alias">
+            <lang locale="en_US" value="report" />
+            <lang locale="zh_CN" value="财务报表" />
+            <lang locale="zh_TW" value="財務報表" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_param].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_TW" value="null" />

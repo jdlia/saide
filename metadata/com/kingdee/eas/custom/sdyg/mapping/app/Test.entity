@@ -206,6 +206,26 @@
                 <key name="name" value="R_Test_ExpenseType_BIMUDF0002" />
             </relationship>
         </linkProperty>
+        <ownProperty>
+            <name>BIMUDF0003</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFBIMUDF0003" />
+            </mappingField>
+        </ownProperty>
     </properties>
     <logicalKey>
         <name>id</name>
@@ -242,6 +262,56 @@
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewextendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewextendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewextendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewextendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.app.TestQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.app.TestQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.app.TestQuery" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewextendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.client.TestEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.client.TestEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.TestEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewextendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewextendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewextendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewextendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].defaultViewextendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.client.TestListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.client.TestListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.TestListUI" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].description">
             <lang locale="en_US" value="null" />
@@ -504,6 +574,74 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.linkProperty[BIMUDF0002].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="11" />
+            <lang locale="zh_HK" value="11" />
+            <lang locale="zh_TW" value="11" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="11" />
+            <lang locale="zh_HK" value="11" />
+            <lang locale="zh_TW" value="11" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Test].properties.ownProperty[BIMUDF0003].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

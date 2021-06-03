@@ -8,14 +8,12 @@
     <resource>
         <rs key="package[com.kingdee.eas.custom.sdyg.sdenum.sdenum].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_CN" value="赛德常量池" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="package[com.kingdee.eas.custom.sdyg.sdenum.sdenum].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_CN" value="" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="package[com.kingdee.eas.custom.sdyg.sdenum.sdenum].extendedProperty.userDefined">

@@ -37,7 +37,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>120,44,270,19</constraints>
+            <constraints>150,44,270,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -79,7 +79,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>120,81,270,19</constraints>
+            <constraints>150,85,270,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -121,7 +121,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>120,118,270,19</constraints>
+            <constraints>150,126,270,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -163,7 +163,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>120,155,270,19</constraints>
+            <constraints>150,167,270,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -219,7 +219,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>120,193,270,19</constraints>
+            <constraints>150,208,270,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -268,7 +268,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>120,238,270,19</constraints>
+            <constraints>150,249,270,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -317,7 +317,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>120,273,270,19</constraints>
+            <constraints>150,290,270,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -366,7 +366,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>126,324,270,19</constraints>
+            <constraints>150,331,270,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -401,6 +401,55 @@
                     <name>visible</name>
                     <type>boolean</type>
                     <value>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[contperson].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>contstafflevel</name>
+            <alias>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[contstafflevel].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>150,376,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[contstafflevel].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[contstafflevel].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[contstafflevel].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[contstafflevel].properties.property[visible].value</value>
                     <isMultiLan>false</isMultiLan>
                     <userDefined>true</userDefined>
                 </property>
@@ -805,6 +854,84 @@
             </propertyBindings>
         </component>
         <component>
+            <name>prmtstafflevel</name>
+            <alias>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>15</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>queryInfo</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[queryInfo].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>editable</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[editable].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>displayFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[displayFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>editFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[editFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>commitFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[commitFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contstafflevel" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>data</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>stafflevel</bindingField>
+                    <fieldType>com.kingdee.eas.custom.sdyg.mapping.DoctorLevelInfo</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
             <name>btnPrint</name>
             <alias>uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[btnPrint].alias</alias>
             <userDefined>false</userDefined>
@@ -1170,6 +1297,36 @@
             <lang locale="zh_HK" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
+        <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[contstafflevel].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[contstafflevel].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[contstafflevel].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="员工级别" />
+            <lang locale="zh_HK" value="員工級別" />
+            <lang locale="zh_TW" value="員工級別" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[contstafflevel].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[contstafflevel].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[kDLabelContainer1].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -1345,6 +1502,54 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtperson].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="员工级别" />
+            <lang locale="zh_HK" value="員工級別" />
+            <lang locale="zh_TW" value="員工級別" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[commitFormat].value">
+            <lang locale="en_US" value="$number$" />
+            <lang locale="zh_CN" value="$number$" />
+            <lang locale="zh_HK" value="$number$" />
+            <lang locale="zh_TW" value="$number$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[displayFormat].value">
+            <lang locale="en_US" value="$name$" />
+            <lang locale="zh_CN" value="$name$" />
+            <lang locale="zh_HK" value="$name$" />
+            <lang locale="zh_TW" value="$name$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[editFormat].value">
+            <lang locale="en_US" value="$number$" />
+            <lang locale="zh_CN" value="$number$" />
+            <lang locale="zh_HK" value="$number$" />
+            <lang locale="zh_TW" value="$number$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[editable].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[queryInfo].value">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.app.DoctorLevelQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.app.DoctorLevelQuery" />
+            <lang locale="zh_HK" value="com.kingdee.eas.custom.sdyg.mapping.app.DoctorLevelQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.app.DoctorLevelQuery" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[required].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI].components.component[prmtstafflevel].properties.property[visible].value">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_HK" value="true" />

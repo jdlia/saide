@@ -75,6 +75,11 @@
             <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI" />
             <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.DoctorEditUI" />
         </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Doctor].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
         <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Doctor].extendedProperty.isAsstAcctType">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
@@ -96,9 +101,9 @@
             <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.DoctorListUI" />
         </rs>
         <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Doctor].extendedProperty.maxFieldIndex">
-            <lang locale="en_US" value="7" />
-            <lang locale="zh_CN" value="7" />
-            <lang locale="zh_TW" value="7" />
+            <lang locale="en_US" value="10" />
+            <lang locale="zh_CN" value="10" />
+            <lang locale="zh_TW" value="10" />
         </rs>
         <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Doctor].extendedProperty.userDefined">
             <lang locale="en_US" value="true" />

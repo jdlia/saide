@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.report.app</package>
+    <name>TotaldetailEntry</name>
+    <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].alias</alias>
+    <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].description</description>
+    <userDefined>true</userDefined>
+    <bosType>0FF3154D</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.custom.sdyg.report.TotaldetailEntry</businessImplName>
+    <businessControllerName>com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntryController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].description</description>
+            <innerID>a63c1d60-1b6b-4c90-a0d2-641a3ae8e569</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].description</description>
+            <innerID>0579633f-0ce5-4ab7-932f-261b996ddda3</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].description</description>
+            <innerID>c0c0975e-112e-42a5-b819-5f186474e3d9</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].description</description>
+            <innerID>8a0863ac-5bdd-4f04-ad53-e910d753ef12</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].description</description>
+            <innerID>a3841c60-c213-499a-9c39-20b924124c2c</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].description</description>
+            <innerID>2dceb9eb-b515-4edf-b07b-d1eae592e0af</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.custom.sdyg.report.Totaldetail</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.framework.app" />
+        <key name="name" value="CoreBillEntryBase" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.custom.sdyg.report.app" />
+        <key name="name" value="CT_SD_TotaldetailEntry" />
+    </table>
+    <properties>
+        <linkProperty>
+            <name>parent</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[parent].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[parent].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FParentID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.report.app" />
+                <key name="name" value="R_Totaldetail_TotaldetailEntry_entrys" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>DEntrys</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[DEntrys].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[DEntrys].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.report.app" />
+                <key name="name" value="R_TotaldetailEntry_TotaldetailEntryDEntry_DEntrys" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>subject</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[subject].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[subject].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="CFSubjectID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.report.app" />
+                <key name="name" value="R_TotaldetailEntry_AccountView_subject" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>subjectname</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>80</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFSubjectname" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>debt</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.fi.gl.EntryDC</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>80</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFDebt" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>add</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.sdenum.jiajian</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>80</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFAdd" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>kmqsfl</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.custom.sdyg.sdenum.kmqslx</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>80</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFKmqsfl" />
+            </mappingField>
+        </ownProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <defaultView>
+        <name />
+        <alias>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].defaultViewalias</alias>
+        <description>entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].defaultViewdescription</description>
+    </defaultView>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分录" />
+            <lang locale="zh_HK" value="分錄" />
+            <lang locale="zh_TW" value="分錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].defaultViewalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].defaultViewdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].defaultViewextendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].extendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[DEntrys].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="明细分录" />
+            <lang locale="zh_HK" value="明細分錄" />
+            <lang locale="zh_TW" value="明細分錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[DEntrys].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分录的子分录" />
+            <lang locale="zh_HK" value="分錄的子分錄" />
+            <lang locale="zh_TW" value="分錄的子分錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[parent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据头" />
+            <lang locale="zh_HK" value="單據頭" />
+            <lang locale="zh_TW" value="單據頭" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[parent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[subject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="科目" />
+            <lang locale="zh_HK" value="科目" />
+            <lang locale="zh_TW" value="科目" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[subject].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="科目" />
+            <lang locale="zh_HK" value="科目" />
+            <lang locale="zh_TW" value="科目" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[subject].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[subject].extendedProperty.dataField">
+            <lang locale="en_US" value="number" />
+            <lang locale="zh_CN" value="number" />
+            <lang locale="zh_TW" value="number" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[subject].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[subject].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[subject].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[subject].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[subject].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.linkProperty[subject].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="加减" />
+            <lang locale="zh_HK" value="加減" />
+            <lang locale="zh_TW" value="加減" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="JIA" />
+            <lang locale="zh_HK" value="JIA" />
+            <lang locale="zh_TW" value="JIA" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="加减" />
+            <lang locale="zh_HK" value="加減" />
+            <lang locale="zh_TW" value="加減" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].extendedProperty.defaultValue">
+            <lang locale="en_US" value="JIA" />
+            <lang locale="zh_CN" value="JIA" />
+            <lang locale="zh_TW" value="JIA" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[add].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="借贷" />
+            <lang locale="zh_HK" value="借貸" />
+            <lang locale="zh_TW" value="借貸" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DEBIT" />
+            <lang locale="zh_HK" value="DEBIT" />
+            <lang locale="zh_TW" value="DEBIT" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="借贷" />
+            <lang locale="zh_HK" value="借貸" />
+            <lang locale="zh_TW" value="借貸" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].extendedProperty.defaultValue">
+            <lang locale="en_US" value="DEBIT" />
+            <lang locale="zh_CN" value="DEBIT" />
+            <lang locale="zh_TW" value="DEBIT" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[debt].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="科目取数类型" />
+            <lang locale="zh_HK" value="科目取數類型" />
+            <lang locale="zh_TW" value="科目取數類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="QICHU" />
+            <lang locale="zh_HK" value="QICHU" />
+            <lang locale="zh_TW" value="QICHU" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="科目取数类型" />
+            <lang locale="zh_HK" value="科目取數類型" />
+            <lang locale="zh_TW" value="科目取數類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].extendedProperty.defaultValue">
+            <lang locale="en_US" value="QICHU" />
+            <lang locale="zh_CN" value="QICHU" />
+            <lang locale="zh_TW" value="QICHU" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[kmqsfl].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="科目名称" />
+            <lang locale="zh_HK" value="科目名稱" />
+            <lang locale="zh_TW" value="科目名稱" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="科目名称" />
+            <lang locale="zh_HK" value="科目名稱" />
+            <lang locale="zh_TW" value="科目名稱" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].extendedProperty.DataField">
+            <lang locale="en_US" value="entrys.subject.name" />
+            <lang locale="zh_CN" value="entrys.subject.name" />
+            <lang locale="zh_TW" value="entrys.subject.name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].extendedProperty.DataSourceType">
+            <lang locale="en_US" value="BASEDATAEXT" />
+            <lang locale="zh_CN" value="BASEDATAEXT" />
+            <lang locale="zh_TW" value="BASEDATAEXT" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.report.app.TotaldetailEntry].properties.ownProperty[subjectname].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+

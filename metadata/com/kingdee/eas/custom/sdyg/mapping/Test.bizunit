@@ -75,6 +75,11 @@
             <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.client.TestEditUI" />
             <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.TestEditUI" />
         </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Test].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
         <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Test].extendedProperty.isAsstAcctType">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
@@ -96,9 +101,9 @@
             <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.TestListUI" />
         </rs>
         <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Test].extendedProperty.maxFieldIndex">
-            <lang locale="en_US" value="4" />
-            <lang locale="zh_CN" value="4" />
-            <lang locale="zh_TW" value="4" />
+            <lang locale="en_US" value="5" />
+            <lang locale="zh_CN" value="5" />
+            <lang locale="zh_TW" value="5" />
         </rs>
         <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Test].extendedProperty.userDefined">
             <lang locale="en_US" value="true" />

@@ -6154,6 +6154,15 @@
         </metaDataBrief>
         <metaDataBrief>
             <packageName />
+            <name>com.kingdee.eas.custom.sdyg.report.report</name>
+            <metaDataType>pack</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.sdyg</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
             <name>com.kingdee.eas.base.ssc.AssignRule</name>
             <metaDataType>bzut</metaDataType>
             <alias>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.base.ssc.AssignRule].alias</alias>
@@ -15055,6 +15064,15 @@
         </metaDataBrief>
         <metaDataBrief>
             <packageName />
+            <name>com.kingdee.eas.custom.sdyg.mapping.Doctor</name>
+            <metaDataType>bzut</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.Doctor].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.Doctor].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.mapping.mapping</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
             <name>com.kingdee.eas.custom.sdyg.mapping.Feeitem</name>
             <metaDataType>bzut</metaDataType>
             <alias>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.Feeitem].alias</alias>
@@ -15078,6 +15096,42 @@
             <alias>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.OthCustomer].alias</alias>
             <description>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.OthCustomer].description</description>
             <parent>com.kingdee.eas.custom.sdyg.mapping.mapping</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.custom.sdyg.mapping.SyncLog</name>
+            <metaDataType>bzut</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.SyncLog].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.SyncLog].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.mapping.mapping</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.custom.sdyg.mapping.Test</name>
+            <metaDataType>bzut</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.Test].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.Test].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.mapping.mapping</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.custom.sdyg.report.Totaldetail</name>
+            <metaDataType>bzut</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.Totaldetail].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.Totaldetail].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.report.report</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.custom.sdyg.report.Totalrange</name>
+            <metaDataType>bzut</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.Totalrange].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.Totalrange].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.report.report</parent>
             <boType />
         </metaDataBrief>
         <metaDataBrief>
@@ -22738,6 +22792,16 @@
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.Doctor].alias">
+            <lang locale="en_US" value="Doctor" />
+            <lang locale="zh_CN" value="医生员工映射" />
+            <lang locale="zh_TW" value="醫生員工映射" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.Doctor].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.Feeitem].alias">
             <lang locale="en_US" value="Feeitem" />
             <lang locale="zh_CN" value="费用项目映射" />
@@ -22768,12 +22832,62 @@
             <lang locale="zh_CN" value="渠道保险客户中间表到EAS映射" />
             <lang locale="zh_TW" value="渠道保險客戶中間表到EAS映射" />
         </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.SyncLog].alias">
+            <lang locale="en_US" value="SyncLog" />
+            <lang locale="zh_CN" value="中间表同步结果信息" />
+            <lang locale="zh_TW" value="中間表同步結果信息" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.SyncLog].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.Test].alias">
+            <lang locale="en_US" value="Test" />
+            <lang locale="zh_CN" value="Test" />
+            <lang locale="zh_TW" value="Test" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.Test].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.mapping].alias">
             <lang locale="en_US" value="mapping" />
             <lang locale="zh_CN" value="映射表" />
             <lang locale="zh_TW" value="映射表" />
         </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.mapping].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.Totaldetail].alias">
+            <lang locale="en_US" value="Totaldetail" />
+            <lang locale="zh_CN" value="合计明细" />
+            <lang locale="zh_TW" value="合計明細" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.Totaldetail].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.Totalrange].alias">
+            <lang locale="en_US" value="Totalrange" />
+            <lang locale="zh_CN" value="合计范围" />
+            <lang locale="zh_TW" value="合計範圍" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.Totalrange].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].alias">
+            <lang locale="en_US" value="report" />
+            <lang locale="zh_CN" value="财务报表" />
+            <lang locale="zh_TW" value="財務報表" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_bizunit].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_TW" value="null" />
