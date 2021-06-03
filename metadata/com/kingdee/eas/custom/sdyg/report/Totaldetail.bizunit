@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizUnit xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.report</package>
+    <name>Totaldetail</name>
+    <alias>bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].alias</alias>
+    <description>bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].description</description>
+    <userDefined>true</userDefined>
+    <bizType>BusinessBill</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.custom.sdyg.report.app.Totaldetail</entityPK>
+    <queryPK>com.kingdee.eas.custom.sdyg.report.app.TotaldetailQuery</queryPK>
+    <editUIPK>com.kingdee.eas.custom.sdyg.report.client.TotaldetailEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.custom.sdyg.report.client.TotaldetailListUI</listUIPK>
+    <webEditUIPK />
+    <webListUIPK />
+    <entityFunctionPK />
+    <editUIFunctionPK>com.kingdee.eas.custom.sdyg.report.app.TotaldetailEditUIFunction</editUIFunctionPK>
+    <listUIFunctionPK>com.kingdee.eas.custom.sdyg.report.app.TotaldetailListUIFunction</listUIFunctionPK>
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>MCoreBillBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合计明细" />
+            <lang locale="zh_HK" value="合計明細" />
+            <lang locale="zh_TW" value="合計明細" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.report.app.TotaldetailQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.report.app.TotaldetailQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.report.app.TotaldetailQuery" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.report.client.TotaldetailEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.report.client.TotaldetailEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.report.client.TotaldetailEditUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.isUseCodeRule">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.isUseCurDateAsDef">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.report.client.TotaldetailListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.report.client.TotaldetailListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.report.client.TotaldetailListUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.maxFieldIndex">
+            <lang locale="en_US" value="25" />
+            <lang locale="zh_CN" value="25" />
+            <lang locale="zh_TW" value="25" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.report.Totaldetail].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizUnit>
+

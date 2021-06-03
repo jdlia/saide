@@ -3265,6 +3265,15 @@
         </metaDataBrief>
         <metaDataBrief>
             <packageName />
+            <name>com.kingdee.eas.custom.sdyg.report.report</name>
+            <metaDataType>pack</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.sdyg</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
             <name>com.kingdee.eas.base.ssc.app.CoustomBill</name>
             <metaDataType>enty</metaDataType>
             <alias>metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.base.ssc.app.CoustomBill].alias</alias>
@@ -8404,6 +8413,24 @@
         </metaDataBrief>
         <metaDataBrief>
             <packageName />
+            <name>com.kingdee.eas.custom.sdyg.mapping.app.SyncLog</name>
+            <metaDataType>enty</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.SyncLog].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.SyncLog].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.mapping.mapping</parent>
+            <boType>59A5EF45</boType>
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.custom.sdyg.report.app.Totaldetail</name>
+            <metaDataType>enty</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.app.Totaldetail].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.app.Totaldetail].description</description>
+            <parent>com.kingdee.eas.custom.sdyg.report.report</parent>
+            <boType>DF9B9225</boType>
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
             <name>com.kingdee.eas.base.xtsync.xtsync</name>
             <metaDataType>pack</metaDataType>
             <alias>metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.base.xtsync.xtsync].alias</alias>
@@ -11713,12 +11740,42 @@
             <lang locale="zh_CN" value="组织映射" />
             <lang locale="zh_TW" value="組織映射" />
         </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.SyncLog].alias">
+            <lang locale="en_US" value="SyncLog" />
+            <lang locale="zh_CN" value="中间表同步结果信息" />
+            <lang locale="zh_TW" value="中間表同步結果信息" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.app.SyncLog].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="多分錄基礎單據範本" />
+        </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.mapping].alias">
             <lang locale="en_US" value="mapping" />
             <lang locale="zh_CN" value="映射表" />
             <lang locale="zh_TW" value="映射表" />
         </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.mapping.mapping].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.app.Totaldetail].alias">
+            <lang locale="en_US" value="Totaldetail" />
+            <lang locale="zh_CN" value="合计明细" />
+            <lang locale="zh_TW" value="合計明細" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.app.Totaldetail].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="多分錄基礎單據範本" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].alias">
+            <lang locale="en_US" value="report" />
+            <lang locale="zh_CN" value="财务报表" />
+            <lang locale="zh_TW" value="財務報表" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_botp].metaDataBriefs.metaDataBrief[com.kingdee.eas.custom.sdyg.report.report].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_TW" value="null" />

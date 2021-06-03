@@ -52,6 +52,16 @@
             <value>i18nResource[com.kingdee.eas.custom.sdyg.mapping.client.MappingResource].resourceItems.resourceItem[DoctorQueryF7WindowTitle].value</value>
             <userDefined>true</userDefined>
         </resourceItem>
+        <resourceItem>
+            <name>Test1QueryF7WindowTitle</name>
+            <value>i18nResource[com.kingdee.eas.custom.sdyg.mapping.client.MappingResource].resourceItems.resourceItem[Test1QueryF7WindowTitle].value</value>
+            <userDefined>true</userDefined>
+        </resourceItem>
+        <resourceItem>
+            <name>TwQueryF7WindowTitle</name>
+            <value>i18nResource[com.kingdee.eas.custom.sdyg.mapping.client.MappingResource].resourceItems.resourceItem[TwQueryF7WindowTitle].value</value>
+            <userDefined>true</userDefined>
+        </resourceItem>
     </resourceItems>
     <resource>
         <rs key="i18nResource[com.kingdee.eas.custom.sdyg.mapping.client.MappingResource].alias">
@@ -108,11 +118,23 @@
             <lang locale="zh_HK" value="同步結果信息" />
             <lang locale="zh_TW" value="同步結果信息" />
         </rs>
+        <rs key="i18nResource[com.kingdee.eas.custom.sdyg.mapping.client.MappingResource].resourceItems.resourceItem[Test1QueryF7WindowTitle].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Test1" />
+            <lang locale="zh_HK" value="Test1" />
+            <lang locale="zh_TW" value="Test1" />
+        </rs>
         <rs key="i18nResource[com.kingdee.eas.custom.sdyg.mapping.client.MappingResource].resourceItems.resourceItem[TestQueryF7WindowTitle].value">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="Test" />
             <lang locale="zh_HK" value="Test" />
             <lang locale="zh_TW" value="Test" />
+        </rs>
+        <rs key="i18nResource[com.kingdee.eas.custom.sdyg.mapping.client.MappingResource].resourceItems.resourceItem[TwQueryF7WindowTitle].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Tw" />
+            <lang locale="zh_HK" value="Tw" />
+            <lang locale="zh_TW" value="Tw" />
         </rs>
         <rs key="i18nResource[com.kingdee.eas.custom.sdyg.mapping.client.MappingResource].resourceItems.resourceItem[WafQueryF7WindowTitle].value">
             <lang locale="en_US" value="null" />

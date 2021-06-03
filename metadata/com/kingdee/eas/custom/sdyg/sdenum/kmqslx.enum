@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.sdenum</package>
+    <name>kmqslx</name>
+    <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].alias</alias>
+    <description>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.custom.sdyg.sdenum.kmqslx</className>
+    <enumDataType>INTEGER</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>QICHU</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].enumValues.enumValue[QICHU].alias</alias>
+            <userDefined>true</userDefined>
+            <value>1</value>
+        </enumValue>
+        <enumValue>
+            <name>QICHUFASHENG</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].enumValues.enumValue[QICHUFASHENG].alias</alias>
+            <userDefined>true</userDefined>
+            <value>5</value>
+        </enumValue>
+        <enumValue>
+            <name>FASHENG</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].enumValues.enumValue[FASHENG].alias</alias>
+            <userDefined>true</userDefined>
+            <value>3</value>
+        </enumValue>
+        <enumValue>
+            <name>QIMO</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].enumValues.enumValue[QIMO].alias</alias>
+            <userDefined>true</userDefined>
+            <value>2</value>
+        </enumValue>
+        <enumValue>
+            <name>QIMOFASHENG</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].enumValues.enumValue[QIMOFASHENG].alias</alias>
+            <userDefined>true</userDefined>
+            <value>4</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="科目取数类型" />
+            <lang locale="zh_HK" value="科目取數類型" />
+            <lang locale="zh_TW" value="科目取數類型" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].enumValues.enumValue[FASHENG].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发生" />
+            <lang locale="zh_HK" value="發生" />
+            <lang locale="zh_TW" value="發生" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].enumValues.enumValue[QICHUFASHENG].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="期初_总发生额" />
+            <lang locale="zh_HK" value="期初_總發生額" />
+            <lang locale="zh_TW" value="期初_總發生額" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].enumValues.enumValue[QICHU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="期初_初始期初" />
+            <lang locale="zh_HK" value="期初_初始期初" />
+            <lang locale="zh_TW" value="期初_初始期初" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].enumValues.enumValue[QIMOFASHENG].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="期末_总发生额" />
+            <lang locale="zh_HK" value="期末_總發生額" />
+            <lang locale="zh_TW" value="期末_總發生額" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].enumValues.enumValue[QIMO].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="期末_初始期初" />
+            <lang locale="zh_HK" value="期末_初始期初" />
+            <lang locale="zh_TW" value="期末_初始期初" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.kmqslx].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

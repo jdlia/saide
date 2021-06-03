@@ -175,6 +175,20 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFBIMUDF0003</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Test].columns.column[CFBIMUDF0003].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Test].columns.column[CFBIMUDF0003].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_MAP_TestIDdstb</name>
@@ -316,6 +330,18 @@
             <lang locale="zh_CN" value="fylx1" />
             <lang locale="zh_HK" value="fylx1" />
             <lang locale="zh_TW" value="fylx1" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Test].columns.column[CFBIMUDF0003].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="11" />
+            <lang locale="zh_HK" value="11" />
+            <lang locale="zh_TW" value="11" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Test].columns.column[CFBIMUDF0003].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="11" />
+            <lang locale="zh_HK" value="11" />
+            <lang locale="zh_TW" value="11" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Test].columns.column[FControlUnitID].alias">
             <lang locale="en_US" value="null" />

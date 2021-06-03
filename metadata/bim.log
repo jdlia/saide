@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log xmlns="com.kingdee.bos.metadata">
+    <package />
+    <name>bim</name>
+    <alias>log[.bim].alias</alias>
+    <description>log[.bim].description</description>
+    <resource>
+        <rs key="log[.bim].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="bim" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="log[.bim].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</log>
+
