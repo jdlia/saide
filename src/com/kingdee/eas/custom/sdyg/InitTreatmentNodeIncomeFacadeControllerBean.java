@@ -746,7 +746,8 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
     						 ratio = new BigDecimal(incomeRation.getString("ratio")).divide(new BigDecimal("100"),4,BigDecimal.ROUND_HALF_UP);
     					 }
     				     totalPay = specialAmount.multiply(ratio).setScale(2,BigDecimal.ROUND_HALF_UP);
-    				     
+    				     //计算基础
+    				     otherBillInfo.put("jsjc", specialAmount);
     				     //重新给company相关的字段赋值
 	    				 try {
 							orgmapInfo = InfoF7Util.getOrgmapInfoF7(ctx, cdCompany);
@@ -777,6 +778,8 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 	    						 ratio = new BigDecimal(incomeRation.getString("ratio")).divide(new BigDecimal("100"),4,BigDecimal.ROUND_HALF_UP);
 	    					 }
 	    				     totalPay = specialAmount.multiply(ratio).setScale(2,BigDecimal.ROUND_HALF_UP);
+	    				     //计算基础
+	    				     otherBillInfo.put("jsjc", specialAmount);
 	    				     //重新给company相关的字段赋值
 		    				 try {
 								orgmapInfo = InfoF7Util.getOrgmapInfoF7(ctx, cdCompany);
@@ -801,6 +804,8 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
     						//5.bizDate>=bcqBizDate
     						 //100%
     						 totalPay = specialAmount.multiply(new BigDecimal("1").setScale(2,BigDecimal.ROUND_HALF_UP));
+	    				     //计算基础
+	    				     otherBillInfo.put("jsjc", specialAmount);
     						 
 	    				     //重新给company相关的字段赋值
 		    				 try {
@@ -835,6 +840,8 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 					
 	    			if(easNodeTypeCode.equals("A01")){//初戴	
 	    				totalPay = ((amountOne.add(amountTwo)).add(amountThree)).multiply(ratio).setScale(2,BigDecimal.ROUND_HALF_UP);
+	   				     //计算基础
+	   				     otherBillInfo.put("jsjc", (amountOne.add(amountTwo)).add(amountThree));
 						//治疗阶段
 						otherBillInfo.put("zljd",expenseID + ":初戴");
 	    			}else if(easNodeTypeCode.equals("A02")){//保持器
@@ -890,6 +897,8 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 	    					logInfo.getEntrys().add(logEntryInfo);
 						}
 						totalPay = ((amountOne.add(amountTwo)).add(amountThree)).subtract(EASAmount);
+	   				     //计算基础
+	   				     otherBillInfo.put("jsjc", (amountOne.add(amountTwo)).add(amountThree));
 	    				//生成保持器特殊减免金额应收单
 	    				if(jmjBizDate !=null && jmjBizDate.getTime()<bizDate.getTime()){	 	    					 
 	    					 incomeRation = DbUtil.executeQuery(ctx, getSql(sqlbuff,bcqNode,bcqFeeTypeDetail));
@@ -1048,8 +1057,6 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
     	otherBillInfo.getEntry().get(0).setRecievePayAmountLocal(totalPay);
     	//应收（付）金额
     	otherBillInfo.getEntry().get(0).setRecievePayAmount(totalPay);
-    	//计算基础
-    	otherBillInfo.put("jsjc", totalPay);
 		//应收单保存、提交、审核
 		IOtherBillUtil.creatIOtherBill(ctx, otherBillInfo, totalPay,logInfo,bizDate,beginDate); 
 		
