@@ -25,7 +25,7 @@ public class OUListUICTEx extends OUListUI{
 		
 //		com.kingdee.eas.ma.budget.IBudgetCtrlFacade ibf = com.kingdee.eas.ma.budget.BudgetCtrlFacadeFactory.getRemoteInstance();
 //		ibf = ibf;
-		System.out.println("重写币别刷新方法1");
+//		System.out.println("重写币别刷新方法1");
 //		IInitInfoFacade  aa = InitInfoFacadeFactory.getRemoteInstance();
 //		aa.initBillInfo("");
 //		aa.syncCustomerCompanyinfo();
