@@ -61,6 +61,17 @@ public class AbstractDoctorInfo extends com.kingdee.eas.framework.DataBaseInfo i
     {
         put("person", item);
     }
+    /**
+     * Object: 医生员工映射 's 员工级别 property 
+     */
+    public com.kingdee.eas.custom.sdyg.mapping.DoctorLevelInfo getStafflevel()
+    {
+        return (com.kingdee.eas.custom.sdyg.mapping.DoctorLevelInfo)get("stafflevel");
+    }
+    public void setStafflevel(com.kingdee.eas.custom.sdyg.mapping.DoctorLevelInfo item)
+    {
+        put("stafflevel", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("9E676503");

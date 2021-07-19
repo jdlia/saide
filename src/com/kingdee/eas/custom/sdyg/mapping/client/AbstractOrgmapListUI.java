@@ -103,6 +103,8 @@ public abstract class AbstractOrgmapListUI extends com.kingdee.eas.framework.cli
         this.tblMain.checkParsed();
         this.tblMain.getGroupManager().setGroup(true);		
         this.separatorFW2.setVisible(true);		
+        this.btnWorkFlowList.setVisible(true);		
+        this.btnWorkFlowList.setEnabled(true);		
         this.btnAuditResult.setVisible(false);		
         this.menuItemCopyTo.setVisible(false);		
         this.kDSeparator4.setVisible(false);		

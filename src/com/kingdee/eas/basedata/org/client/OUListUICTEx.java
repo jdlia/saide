@@ -4,6 +4,8 @@ import java.awt.event.ActionEvent;
 
 import com.kingdee.eas.custom.MessageToSD.ISaleIssueBill;
 import com.kingdee.eas.custom.MessageToSD.SaleIssueBillFactory;
+import com.kingdee.eas.custom.sdyg.IInitTreatmentNodeIncomeFacade;
+import com.kingdee.eas.custom.sdyg.InitTreatmentNodeIncomeFacadeFactory;
 import com.kingdee.eas.custom.sdyg.mapping.IInitInfoFacade;
 import com.kingdee.eas.custom.sdyg.mapping.InitInfoFacadeFactory;
 import com.kingdee.eas.custom.shr.Iupdateadjustfacade;
@@ -47,6 +49,9 @@ public class OUListUICTEx extends OUListUI{
 		
 		Iupdateadjustfacade ad = updateadjustfacadeFactory.getRemoteInstance();
 		ad.updateadjust();
+//		
+//		IInitTreatmentNodeIncomeFacade trenode = InitTreatmentNodeIncomeFacadeFactory.getRemoteInstance();
+//		trenode.initTreatmentInfo();
 		
 		
 	}

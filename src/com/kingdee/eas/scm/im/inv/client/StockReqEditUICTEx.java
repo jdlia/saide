@@ -61,10 +61,13 @@ public class StockReqEditUICTEx extends StockReqEditUI {
 		// TODO Auto-generated method stub
 		BigDecimal jiage = BigDecimal.ZERO;
 		StringBuffer sql = new StringBuffer();
-		sql.append(" select top 1  supplyInfo.FPRICE  FROM T_SM_SupplyInfo supplyInfo left join T_BD_Supplier supplier on supplyInfo.FSUPPLIERID = supplier.FID ");
-		sql.append(" left join T_ORG_BaseUnit baseUnit on supplier.FINTERNALCOMPANYID = baseUnit.FID  ");
-		sql.append(" where  baseUnit.FID ='"+supplyStorageID+"'");
-		sql.append(" and supplyInfo.FMATERIALITEMID = '"+materialid+"' order by supplyInfo.FEFFECTUALDATE desc");
+//		sql.append(" select top 1  supplyInfo.FPRICE  FROM T_SM_SupplyInfo supplyInfo left join T_BD_Supplier supplier on supplyInfo.FSUPPLIERID = supplier.FID ");
+//		sql.append(" left join T_ORG_BaseUnit baseUnit on supplier.FINTERNALCOMPANYID = baseUnit.FID  ");
+//		sql.append(" where  baseUnit.FID ='"+supplyStorageID+"'");
+//		sql.append(" and supplyInfo.FMATERIALITEMID = '"+materialid+"' order by supplyInfo.FEFFECTUALDATE desc");
+		sql.append(" select top 1 entry.FPRICE  FROM T_SCM_PricePolicyEntry entry left join T_SCM_PricePolicy pol on entry.FPARENTID = pol.FID ");
+		sql.append(" where  pol.FSALEORGUNITID ='"+supplyStorageID+"'");
+		sql.append(" and entry.FMATERIALID = '"+materialid+"' order by entry.FEFFECTIVEDATE desc");
 		System.out.println(sql.toString());
 		SQLDataAccessFacade sqlFacade = new SQLDataAccessFacade();
 		IRowSet rowSet = null;

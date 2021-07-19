@@ -2,6 +2,7 @@ package com.kingdee.eas.custom.shr;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -22,6 +23,9 @@ import com.kingdee.eas.basedata.org.HROrgUnitInfo;
 import com.kingdee.eas.basedata.org.PositionInfo;
 import com.kingdee.eas.basedata.person.PersonInfo;
 import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.custom.sdyg.mapping.SyncLogEntryInfo;
+import com.kingdee.eas.custom.sdyg.mapping.SyncLogFactory;
+import com.kingdee.eas.custom.sdyg.mapping.SyncLogInfo;
 import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.shr.cmpdesign.AdjustSalaryCauseFactory;
 import com.kingdee.shr.cmpdesign.AdjustSalaryCauseInfo;
@@ -42,7 +46,7 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
         Logger.getLogger("com.kingdee.eas.custom.shr.updateadjustfacadeControllerBean");
     
     @Override
-	protected void _updateadjust(Context ctx) throws BOSException,
+	protected void _updateadjust(Context ctx) throws 
 			EASBizException {
 		StringBuilder str = new StringBuilder();
 		str.append(" /*dialect*/ select tt.FID personId, tt.FName_l2 personName, tt.FNumber personNumber,t0.Fid adjustEmpId, t0.FEffectDate effdt, t0.FLeffectDate leffdt, t1.FAssignType, ");
@@ -55,12 +59,28 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 		str.append(" inner join T_ORG_Admin t2 on t1.FAdminOrgID = t2.fid ");
 		str.append(" inner join T_ORG_Position t3 on t1.FPositionId = t3.fid ");
 		str.append(" inner join T_HR_EmpEnrollBizBillEntry t4 on t4.FPERSONID = tt.FID  ");
-		str.append(new StringBuilder().append(" where t4.CFISUPDATE = 0 and t4.FENROLLAGAIN = 0 "));
+		str.append(new StringBuilder().append(" where t4.CFISUPDATE = 0 and t4.FENROLLAGAIN = 0 and tt.FID not in (select FPERSONID from T_HR_SFIXADJUSTSALARY )"));
 		str.append(" order by t1.FAssignType, t0.FEffectDate ");
-		IRowSet rowSet = CmpSQLUtil.executeQuery(ctx, str.toString());
+		SyncLogInfo logInfo = new SyncLogInfo();
+    	logInfo.setId(BOSUuid.create("59A5EF45"));
+    	//日志业务日期
+    	logInfo.setBizDate(new Date());
+    	logInfo.setDescription("入职单反写定调薪档案信息。");
+    	//日志创建时间
+    	logInfo.setCreateTime(new Timestamp(Calendar.getInstance().getTimeInMillis()));
+    	SyncLogEntryInfo logEntryInfo = null;
+    	String msg ="";
+		IRowSet rowSet = null;
+		try {
+			rowSet = CmpSQLUtil.executeQuery(ctx, str.toString());
+		} catch (BOSException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		try {
 			while (rowSet.next()) {
 				String personId = rowSet.getString("personId");
+				String personName = rowSet.getString("personName");
 				String orgId = rowSet.getString("orgId");
 				String positionId = rowSet.getString("positionId");
 				String empEnrollId = rowSet.getString("empEnrollFid");
@@ -70,7 +90,7 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				map.put("orgId", orgId);
 				map.put("positionId", positionId);
 				map.put("adjustEmpId", adjustEmpId);
-				/**
+/**
 				1、转正前基本工资 = 入职单查询的转正前基本工资 生效日期 = 入职日期	失效日期 = 预计调薪日期的前一天
 				2、技能工资 = 入职单查询的技能工资 生效日期 = 入职日期	失效日期 = 2199-12-31
 				3、绩效基数 = 入职单查询的绩效基数 生效日期 = 入职日期	失效日期 = 2199-12-31
@@ -79,14 +99,14 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				6、转正前合同工资 = 入职单查询的转正前合同工资 生效日期 = 入职日期	失效日期 = 预计调薪日期的前一天
 				7、转正后基本工资 = 入职单查询的转正后基本工资 生效日期 = 预计调薪日期	失效日期 = 2199-12-31
 				8、转正后合同工资 = 入职单查询的转正后合同工资 生效日期 = 预计调薪日期	失效日期 = 2199-12-31
-	t4.CFBEFOREBASICSALARY beforebasicsalary ,
-	t4.CFBEFORESKILLSALARY beforeskillsalary, 
-	t4.CFBEFOREMERITSSALARY beforeremeritssalary,
-	t4.CFBEFOREPOSITIONSALARY beforepositionsalary,");
-	t4.CFFIXSALARY  fixsalary, 
-	t4.CFBEFORESUMAMOUNT beforesumamount, 
-	t4.CFAFTERBASICSALARY afterbasicsalary,
-	t4.CFAFTERSUMAMOUNT aftersumamount,
+				t4.CFBEFOREBASICSALARY beforebasicsalary ,
+				t4.CFBEFORESKILLSALARY beforeskillsalary, 
+				t4.CFBEFOREMERITSSALARY beforeremeritssalary,
+				t4.CFBEFOREPOSITIONSALARY beforepositionsalary,");
+				t4.CFFIXSALARY  fixsalary, 
+				t4.CFBEFORESUMAMOUNT beforesumamount, 
+				t4.CFAFTERBASICSALARY afterbasicsalary,
+				t4.CFAFTERSUMAMOUNT aftersumamount,
 */
 				FixAdjustSalaryInfo beforebasicsalaryInfo = getFixAdjustSalaryInfo(map, ctx);
 				FixAdjustSalaryInfo beforeskillsalaryInfo = getFixAdjustSalaryInfo(map, ctx);
@@ -99,6 +119,15 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				FixAdjustSalaryExecute execute = new FixAdjustSalaryExecuteCommon();
 				//预计调薪日期
 				Date planformaldate = rowSet.getDate("planformaldate");
+				if(planformaldate == null){
+					msg = personName + " 预计调薪日未填写！";
+					logEntryInfo = new SyncLogEntryInfo();
+					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+					logEntryInfo.setLoginfo(msg);
+					logEntryInfo.setParent(logInfo);
+					logInfo.getEntrys().add(logEntryInfo);
+					continue;
+				}
 				//预计调薪日期前一天
 				Calendar c = Calendar.getInstance();
 				c.setTime(planformaldate);
@@ -118,10 +147,19 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				beforebasicsalaryInfo.setCmpItem(getCmpItemInfo("8i0AAAALAOr8tJCX"));
 				beforebasicsalaryInfo.setEffectDay(enrolldate);
 				beforebasicsalaryInfo.setLeffectDay(planbeforeone);
-				beforebasicsalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("001",ctx));
+				beforebasicsalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("DX001",ctx));
 				if(beforebasicsalaryInfo.getMoney().longValue() > 0 ){
 //					beforesalaryID = FixAdjustSalaryFactory.getLocalInstance(ctx).save(beforebasicsalaryInfo);
-					beforesalaryID = new ObjectUuidPK(execute.save(ctx, beforebasicsalaryInfo));
+					try {
+						beforesalaryID = new ObjectUuidPK(execute.save(ctx, beforebasicsalaryInfo));
+					} catch (Exception e) {
+						msg = personName + e.getMessage();
+						logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					}
 				}
 				//技能工资
 				String beforeskillsalary = rowSet.getString("beforeskillsalary");
@@ -131,7 +169,7 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				beforeskillsalaryInfo.setCmpItem(getCmpItemInfo("8i0AAAALAOz8tJCX"));
 				beforeskillsalaryInfo.setEffectDay(enrolldate);
 				beforeskillsalaryInfo.setLeffectDay(getLeffectDay());
-				beforeskillsalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("001",ctx));
+				beforeskillsalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("DX001",ctx));
 				//绩效基数
 				String beforeremeritssalary = rowSet.getString("beforeremeritssalary");
 				if (CmpStrUtil.isNotEmpty(beforeremeritssalary)) {
@@ -140,7 +178,7 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				beforeremeritssalaryInfo.setCmpItem(getCmpItemInfo("8i0AAAALAPT8tJCX"));
 				beforeremeritssalaryInfo.setEffectDay(enrolldate);
 				beforeremeritssalaryInfo.setLeffectDay(getLeffectDay());
-				beforeremeritssalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("001",ctx));
+				beforeremeritssalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("DX001",ctx));
 				//岗位工资
 				String beforepositionsalary = rowSet.getString("beforepositionsalary");
 				if (CmpStrUtil.isNotEmpty(beforepositionsalary)) {
@@ -149,7 +187,7 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				beforepositionsalaryInfo.setCmpItem(getCmpItemInfo("8i0AAAALAO78tJCX"));
 				beforepositionsalaryInfo.setEffectDay(enrolldate);
 				beforepositionsalaryInfo.setLeffectDay(getLeffectDay());
-				beforepositionsalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("001",ctx));
+				beforepositionsalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("DX001",ctx));
 				//固定补贴
 				String fixsalary = rowSet.getString("fixsalary");
 				if (CmpStrUtil.isNotEmpty(fixsalary)) {
@@ -158,7 +196,7 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				fixsalaryInfo.setCmpItem(getCmpItemInfo("8i0AAAALAP78tJCX"));
 				fixsalaryInfo.setEffectDay(enrolldate);
 				fixsalaryInfo.setLeffectDay(getLeffectDay());
-				fixsalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("001",ctx));
+				fixsalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("DX001",ctx));
 				//转正前合同工资
 				String beforesumamount = rowSet.getString("beforesumamount");
 				if (CmpStrUtil.isNotEmpty(beforesumamount)) {
@@ -167,10 +205,19 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				beforesumamountInfo.setCmpItem(getCmpItemInfo("8i0AAAALAOj8tJCX"));
 				beforesumamountInfo.setEffectDay(enrolldate);
 				beforesumamountInfo.setLeffectDay(planbeforeone);
-				beforesumamountInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("001",ctx));
+				beforesumamountInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("DX001",ctx));
 				if(beforesumamountInfo.getMoney().longValue() > 0 ){
 //					beforesumamountID = FixAdjustSalaryFactory.getLocalInstance(ctx).save(beforesumamountInfo);
-					beforesumamountID = new ObjectUuidPK(execute.save(ctx, beforesumamountInfo));
+					try {
+						beforesumamountID = new ObjectUuidPK(execute.save(ctx, beforesumamountInfo));
+					} catch (Exception e) {
+						msg = personName + e.getMessage();
+						logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					}
 				}
 				//转正后基本工资
 				String afterbasicsalary = rowSet.getString("afterbasicsalary");
@@ -180,9 +227,18 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				afterbasicsalaryInfo.setCmpItem(getCmpItemInfo("8i0AAAALAOr8tJCX"));
 				afterbasicsalaryInfo.setEffectDay(planformaldate);
 				afterbasicsalaryInfo.setLeffectDay(getLeffectDay());
-				afterbasicsalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("002",ctx));
+				afterbasicsalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("DX002",ctx));
 				if(beforesalaryID != null){
-					afterbasicsalaryInfo.setOldFixAdjustSalary(FixAdjustSalaryFactory.getLocalInstance(ctx).getFixAdjustSalaryInfo(beforesalaryID));
+					try {
+						afterbasicsalaryInfo.setOldFixAdjustSalary(FixAdjustSalaryFactory.getLocalInstance(ctx).getFixAdjustSalaryInfo(beforesalaryID));
+					} catch (Exception e) {
+						msg = personName + e.getMessage();
+						logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					}
 				}
 				//转正后合同工资
 				String aftersumamount = rowSet.getString("aftersumamount");
@@ -192,42 +248,115 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				aftersumamountInfo.setCmpItem(getCmpItemInfo("8i0AAAALAOj8tJCX"));
 				aftersumamountInfo.setEffectDay(planformaldate);
 				aftersumamountInfo.setLeffectDay(getLeffectDay());
-				aftersumamountInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("002",ctx));
+				aftersumamountInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("DX002",ctx));
 				if(beforesumamountID != null){
-					aftersumamountInfo.setOldFixAdjustSalary(FixAdjustSalaryFactory.getLocalInstance(ctx).getFixAdjustSalaryInfo(beforesumamountID));
+					try {
+						aftersumamountInfo.setOldFixAdjustSalary(FixAdjustSalaryFactory.getLocalInstance(ctx).getFixAdjustSalaryInfo(beforesumamountID));
+					} catch (Exception e) {
+						msg = personName + e.getMessage();
+						logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					}
 				}
 				if(beforeskillsalaryInfo.getMoney().longValue() > 0 ){
 //					FixAdjustSalaryFactory.getLocalInstance(ctx).save(beforeskillsalaryInfo);
-					execute.save(ctx, beforeskillsalaryInfo);
+					try {
+						execute.save(ctx, beforeskillsalaryInfo);
+					} catch (Exception e) {
+						msg = personName + e.getMessage();
+						logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					}
 				}
 				if(beforeremeritssalaryInfo.getMoney().longValue() > 0 ){
 //					FixAdjustSalaryFactory.getLocalInstance(ctx).save(beforeremeritssalaryInfo);
-					execute.save(ctx, beforeremeritssalaryInfo);
+					try {
+						execute.save(ctx, beforeremeritssalaryInfo);
+					} catch (Exception e) {
+						msg = personName + e.getMessage();
+						logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					}
 				}
 				if(beforepositionsalaryInfo.getMoney().longValue() > 0 ){
 //					FixAdjustSalaryFactory.getLocalInstance(ctx).save(beforepositionsalaryInfo);
-					execute.save(ctx, beforepositionsalaryInfo);
+					try {
+						execute.save(ctx, beforepositionsalaryInfo);
+					} catch (Exception e) {
+						msg = personName + e.getMessage();
+						logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					}
 				}
 				if(fixsalaryInfo.getMoney().longValue() > 0 ){
 //					FixAdjustSalaryFactory.getLocalInstance(ctx).save(fixsalaryInfo);
-					execute.save(ctx, fixsalaryInfo);
+					try {
+						execute.save(ctx, fixsalaryInfo);
+					} catch (Exception e) {
+						msg = personName + e.getMessage();
+						logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					}
 				}
 				if(afterbasicsalaryInfo.getMoney().longValue() > 0 ){
 //					FixAdjustSalaryFactory.getLocalInstance(ctx).save(afterbasicsalaryInfo);
-					execute.save(ctx, afterbasicsalaryInfo);
+					try {
+						execute.save(ctx, afterbasicsalaryInfo);
+					} catch (Exception e) {
+						msg = personName + e.getMessage();
+						logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					}
 				}
 				if(aftersumamountInfo.getMoney().longValue() > 0 ){
 //					FixAdjustSalaryFactory.getLocalInstance(ctx).save(aftersumamountInfo);
-					execute.save(ctx, aftersumamountInfo);
+					try {
+						execute.save(ctx, aftersumamountInfo);
+					} catch (Exception e) {
+						msg = personName + e.getMessage();
+						logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					}
 				}
 				updateIsUpdatearchives(empEnrollId, ctx);
+			}
+			
+			//保存msg
+			if(logInfo != null){
+				try {
+					SyncLogFactory.getLocalInstance(ctx).save(logInfo);
+				} catch (EASBizException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (BOSException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 			logger.error(e);
-		} catch (EASBizException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 	/**

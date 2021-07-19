@@ -113,6 +113,10 @@ import com.kingdee.eas.cp.bc.ExpenseTypeInfo;
 import com.kingdee.eas.cp.bc.OperationTypeCollection;
 import com.kingdee.eas.cp.bc.OperationTypeFactory;
 import com.kingdee.eas.cp.bc.OperationTypeInfo;
+import com.kingdee.eas.csinterface.syncdatabase.ConnectionFactory;
+import com.kingdee.eas.csinterface.syncdatabase.ConnectionInfo;
+import com.kingdee.eas.csinterface.utils.DataBaseType;
+import com.kingdee.eas.csinterface.utils.KSQLUtil;
 import com.kingdee.eas.custom.sdyg.mapping.FeeitemCollection;
 import com.kingdee.eas.custom.sdyg.mapping.FeeitemFactory;
 import com.kingdee.eas.custom.sdyg.mapping.FeeitemInfo;
@@ -196,6 +200,24 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		String sql = "select dentist.* from t_dentist dentist  left join t_baseData baseData  on dentist.ID = baseData.ID  where baseData.kdGetMark <> '1' or baseData.kdGetMark is null ";
 		mysqlConnectionUtil util = new mysqlConnectionUtil();
 		Connection connection = null;
+//		ConnectionInfo connectionInfo = ConnectionFactory.getLocalInstance(ctx).getConnectionInfo(" where name = '中间表连接'");
+//		String DBtype = connectionInfo.getDBType().getName().toString();
+//		DataBaseType dataBaseType = DataBaseType.getInstance(DBtype);
+//		String IP = connectionInfo.getIP();
+//		String DB = connectionInfo.getInstance();
+//		int port = connectionInfo.getPort();
+//		String username = connectionInfo.getUsername();
+//		String password = connectionInfo.getPassword();
+//		try {
+//			connection = KSQLUtil.getKSQLConnection(dataBaseType, IP, port, DB,
+//						username, password);
+//		} catch (SQLException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		} catch (ClassNotFoundException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
 		try {
 			connection = util.createConn();
 		} catch (ClassNotFoundException e) {

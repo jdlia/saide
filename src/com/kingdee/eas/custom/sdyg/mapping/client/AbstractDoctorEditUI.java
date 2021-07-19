@@ -54,6 +54,7 @@ public abstract class AbstractDoctorEditUI extends com.kingdee.eas.framework.cli
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contbiznumber;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contbizname;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contperson;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contstafflevel;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtNumber;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox txtName;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtSimpleName;
@@ -62,6 +63,7 @@ public abstract class AbstractDoctorEditUI extends com.kingdee.eas.framework.cli
     protected com.kingdee.bos.ctrl.swing.KDTextField txtbiznumber;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtbizname;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtperson;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtstafflevel;
     protected com.kingdee.eas.custom.sdyg.mapping.DoctorInfo editData = null;
     /**
      * output class constructor
@@ -90,6 +92,7 @@ public abstract class AbstractDoctorEditUI extends com.kingdee.eas.framework.cli
         this.contbiznumber = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contbizname = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contperson = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contstafflevel = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.txtNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtName = new com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox();
         this.txtSimpleName = new com.kingdee.bos.ctrl.swing.KDTextField();
@@ -98,6 +101,7 @@ public abstract class AbstractDoctorEditUI extends com.kingdee.eas.framework.cli
         this.txtbiznumber = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtbizname = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.prmtperson = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.prmtstafflevel = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDLabelContainer1.setName("kDLabelContainer1");
         this.kDLabelContainer2.setName("kDLabelContainer2");
         this.kDLabelContainer3.setName("kDLabelContainer3");
@@ -106,6 +110,7 @@ public abstract class AbstractDoctorEditUI extends com.kingdee.eas.framework.cli
         this.contbiznumber.setName("contbiznumber");
         this.contbizname.setName("contbizname");
         this.contperson.setName("contperson");
+        this.contstafflevel.setName("contstafflevel");
         this.txtNumber.setName("txtNumber");
         this.txtName.setName("txtName");
         this.txtSimpleName.setName("txtSimpleName");
@@ -114,6 +119,7 @@ public abstract class AbstractDoctorEditUI extends com.kingdee.eas.framework.cli
         this.txtbiznumber.setName("txtbiznumber");
         this.txtbizname.setName("txtbizname");
         this.prmtperson.setName("prmtperson");
+        this.prmtstafflevel.setName("prmtstafflevel");
         // CoreUI		
         this.btnPrint.setVisible(false);		
         this.btnPrintPreview.setVisible(false);		
@@ -157,6 +163,11 @@ public abstract class AbstractDoctorEditUI extends com.kingdee.eas.framework.cli
         this.contperson.setBoundLabelLength(100);		
         this.contperson.setBoundLabelUnderline(true);		
         this.contperson.setVisible(true);
+        // contstafflevel		
+        this.contstafflevel.setBoundLabelText(resHelper.getString("contstafflevel.boundLabelText"));		
+        this.contstafflevel.setBoundLabelLength(100);		
+        this.contstafflevel.setBoundLabelUnderline(true);		
+        this.contstafflevel.setVisible(true);
         // txtNumber		
         this.txtNumber.setMaxLength(80);
         // txtName
@@ -186,7 +197,15 @@ public abstract class AbstractDoctorEditUI extends com.kingdee.eas.framework.cli
         this.prmtperson.setEditFormat("$number$");		
         this.prmtperson.setCommitFormat("$number$");		
         this.prmtperson.setRequired(false);
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtbizid,txtbiznumber,txtbizname,prmtperson}));
+        // prmtstafflevel		
+        this.prmtstafflevel.setQueryInfo("com.kingdee.eas.custom.sdyg.mapping.app.DoctorLevelQuery");		
+        this.prmtstafflevel.setVisible(true);		
+        this.prmtstafflevel.setEditable(true);		
+        this.prmtstafflevel.setDisplayFormat("$name$");		
+        this.prmtstafflevel.setEditFormat("$number$");		
+        this.prmtstafflevel.setCommitFormat("$number$");		
+        this.prmtstafflevel.setRequired(false);
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtbizid,txtbiznumber,txtbizname,prmtperson,prmtstafflevel}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -214,22 +233,24 @@ public abstract class AbstractDoctorEditUI extends com.kingdee.eas.framework.cli
     {
         this.setBounds(new Rectangle(0, 0, 1013, 629));
         this.setLayout(null);
-        kDLabelContainer1.setBounds(new Rectangle(120, 44, 270, 19));
+        kDLabelContainer1.setBounds(new Rectangle(150, 44, 270, 19));
         this.add(kDLabelContainer1, null);
-        kDLabelContainer2.setBounds(new Rectangle(120, 81, 270, 19));
+        kDLabelContainer2.setBounds(new Rectangle(150, 85, 270, 19));
         this.add(kDLabelContainer2, null);
-        kDLabelContainer3.setBounds(new Rectangle(120, 118, 270, 19));
+        kDLabelContainer3.setBounds(new Rectangle(150, 126, 270, 19));
         this.add(kDLabelContainer3, null);
-        kDLabelContainer4.setBounds(new Rectangle(120, 155, 270, 19));
+        kDLabelContainer4.setBounds(new Rectangle(150, 167, 270, 19));
         this.add(kDLabelContainer4, null);
-        contbizid.setBounds(new Rectangle(120, 193, 270, 19));
+        contbizid.setBounds(new Rectangle(150, 208, 270, 19));
         this.add(contbizid, null);
-        contbiznumber.setBounds(new Rectangle(120, 238, 270, 19));
+        contbiznumber.setBounds(new Rectangle(150, 249, 270, 19));
         this.add(contbiznumber, null);
-        contbizname.setBounds(new Rectangle(120, 273, 270, 19));
+        contbizname.setBounds(new Rectangle(150, 290, 270, 19));
         this.add(contbizname, null);
-        contperson.setBounds(new Rectangle(126, 324, 270, 19));
+        contperson.setBounds(new Rectangle(150, 331, 270, 19));
         this.add(contperson, null);
+        contstafflevel.setBounds(new Rectangle(150, 376, 270, 19));
+        this.add(contstafflevel, null);
         //kDLabelContainer1
         kDLabelContainer1.setBoundEditor(txtNumber);
         //kDLabelContainer2
@@ -246,6 +267,8 @@ public abstract class AbstractDoctorEditUI extends com.kingdee.eas.framework.cli
         contbizname.setBoundEditor(txtbizname);
         //contperson
         contperson.setBoundEditor(prmtperson);
+        //contstafflevel
+        contstafflevel.setBoundEditor(prmtstafflevel);
 
     }
 
@@ -363,7 +386,8 @@ public abstract class AbstractDoctorEditUI extends com.kingdee.eas.framework.cli
 		dataBinder.registerBinding("bizid", String.class, this.txtbizid, "text");
 		dataBinder.registerBinding("biznumber", String.class, this.txtbiznumber, "text");
 		dataBinder.registerBinding("bizname", String.class, this.txtbizname, "text");
-		dataBinder.registerBinding("person", com.kingdee.eas.basedata.person.PersonInfo.class, this.prmtperson, "data");		
+		dataBinder.registerBinding("person", com.kingdee.eas.basedata.person.PersonInfo.class, this.prmtperson, "data");
+		dataBinder.registerBinding("stafflevel", com.kingdee.eas.custom.sdyg.mapping.DoctorLevelInfo.class, this.prmtstafflevel, "data");		
 	}
 	//Regiester UI State
 	private void registerUIState(){
@@ -517,7 +541,8 @@ public abstract class AbstractDoctorEditUI extends com.kingdee.eas.framework.cli
 		getValidateHelper().registerBindProperty("bizid", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("biznumber", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("bizname", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("person", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("person", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("stafflevel", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -571,6 +596,15 @@ public abstract class AbstractDoctorEditUI extends com.kingdee.eas.framework.cli
         	sic.add(new SelectorItemInfo("person.id"));
         	sic.add(new SelectorItemInfo("person.number"));
         	sic.add(new SelectorItemInfo("person.name"));
+		}
+		if(selectorAll.equalsIgnoreCase("true"))
+		{
+			sic.add(new SelectorItemInfo("stafflevel.*"));
+		}
+		else{
+        	sic.add(new SelectorItemInfo("stafflevel.id"));
+        	sic.add(new SelectorItemInfo("stafflevel.number"));
+        	sic.add(new SelectorItemInfo("stafflevel.name"));
 		}
         return sic;
     }        
