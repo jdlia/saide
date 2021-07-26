@@ -60,7 +60,11 @@ public class IOtherBillUtil {
     	IObjectPK pk = null;
 //		try {
 			//业务日期早于启用期间，生成期初应收单，后台期初标志字段，状态为保存
+<<<<<<< HEAD
 			if(bizDate.compareTo(beginDate) < 0 ){
+=======
+			if(bizDate.compareTo(beginDate) <= 0 ){
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 				otherBillInfo.setIsInitializeBill(true);
 				pk = iob.save(otherBillInfo);
 			}else{

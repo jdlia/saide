@@ -148,12 +148,20 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 			e2.printStackTrace();
 		}    		
 
+<<<<<<< HEAD
     	//查询正畸中间表数据t_ortho   todo 2021.07.08 去掉and t.company in ('066','080') and t.bizDate != STR_TO_DATE  and t.bizDate >= STR_TO_DATE('2020-01-01 00:00:00','%Y-%m-%d %H:%i:%s')
+=======
+    	//查询正畸中间表数据t_ortho   todo 2021.07.08 去掉 t.isHandled IS NULL   and t.company in ('066','080') and t.bizDate != STR_TO_DATE  and t.bizDate >= STR_TO_DATE('2020-01-01 00:00:00','%Y-%m-%d %H:%i:%s')
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 		sqlbuff = new StringBuffer();
 		sqlbuff.append("select t.* ,t1.bizDate cdBizDate,t2.bizDate bcqBizDate,t1.node cdNode,t2.node bcqNode,t1.feeTypeDetail cdfeeTypeDetail,t2.feeTypeDetail bcqfeeTypeDetail,");
 		sqlbuff.append(" t3.specialAmount jmjSpecialAmount ,t3.bizDate jmjBizDate,t1.company cdCompany ,t2.company bcqCompany,chudai.discountAmount chudaiamount,jieshu.discountAmount jieshuamount");  
 		sqlbuff.append(" ,chudai.expenseNo chudaiexpenseNo ,jieshu.expenseNo jieshuexpenseNo");  
+<<<<<<< HEAD
 		sqlbuff.append(" FROM ( select * from t_ortho t where t.isHandled IS NULL AND ( t.company <> '' OR t.isSpecial = '1') and t.bizDate is not null )t ");
+=======
+		sqlbuff.append(" FROM ( select * from t_ortho t where  t.isHandled != '1' AND ( t.company <> '' OR t.isSpecial = '1') and t.bizDate is not null and t.docNo !='' )t ");
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 		sqlbuff.append(" left join ( select * from t_ortho  where isSpecial != '1' and feeTypeDetail in("+cdFeeTypeDetails+") and node in ("+cdnodes+") and company <> '' ) t1 on t.expenseID = t1.expenseID");
 	    sqlbuff.append(" left join ( select * from t_ortho  where isSpecial != '1' and feeTypeDetail in("+bcqFeeTypeDetails+") and node in ("+bcqnodes+") and company <> '' ) t2 on t.expenseID = t2.expenseID");
 	    sqlbuff.append(" left join ( select * from t_ortho  where isSpecial = '1' ) t3  on t.expenseID = t3.expenseID");
@@ -214,12 +222,33 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 		//遍历结果集开始，封装成应收单
 		try {
 			while(rs.next()){
+<<<<<<< HEAD
 				
 				//取出正畸中间表所有字段
 				
 				//主表id
 				//业务日期
 				Date bizDate = rs.getTimestamp("bizDate");
+=======
+				try{
+				//取出正畸中间表所有字段
+				
+				//主表id
+				String bizID = rs.getString("ID");
+				//业务日期
+				Date bizDate = null;
+				if(rs.getTimestamp("bizDate")!=null){
+					bizDate = rs.getTimestamp("bizDate");
+				}else{
+					msg = "中间表ID："+bizID+" 没有业务日期！";
+			    	logEntryInfo = new SyncLogEntryInfo();
+					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+					logEntryInfo.setLoginfo(msg);
+					logEntryInfo.setParent(logInfo);
+					logInfo.getEntrys().add(logEntryInfo);
+					continue;
+				}
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 				DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 				String billbizdateStr = "";
 				int year = 0;
@@ -227,7 +256,10 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 				billbizdateStr = sdf.format(bizDate);
 				year = Integer.parseInt(billbizdateStr.substring(0,4));
 				month = Integer.parseInt(billbizdateStr.substring(5,7));
+<<<<<<< HEAD
 			
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 
 				//门诊
 				String company = rs.getString("company");
@@ -251,19 +283,42 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 				try {
 					doctorInfo = InfoF7Util.getDoctorInfoF7(ctx, docNo);
 				} catch (Exception e) {
+<<<<<<< HEAD
 					// TODO Auto-generated catch block
 					msg = e.getMessage();
+=======
+					msg = "中间表ID：" + bizID +" "+ e.getMessage();
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 					logEntryInfo = new SyncLogEntryInfo();
 					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
 					logEntryInfo.setLoginfo(msg);
 					logEntryInfo.setParent(logInfo);
 					logInfo.getEntrys().add(logEntryInfo);
+<<<<<<< HEAD
 				}
 				if(doctorInfo!=null){
 					
 				}
 				//医生级别编码
 				String levelId = doctorInfo.getStafflevel().getId().toString();
+=======
+					continue;
+				}
+				//医生级别编码
+				String levelId = "";
+				if(doctorInfo.getStafflevel().getId()!= null ){
+					levelId = doctorInfo.getStafflevel().getId().toString();
+				}
+				if(levelId == "" || levelId == null){
+					msg = "中间表ID：" + bizID +" 的医生未设置对应的级别！";
+					logEntryInfo = new SyncLogEntryInfo();
+					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+					logEntryInfo.setLoginfo(msg);
+					logEntryInfo.setParent(logInfo);
+					logInfo.getEntrys().add(logEntryInfo);
+					continue;
+				}
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 				//费用金额1
 				BigDecimal amountOne = rs.getBigDecimal("amountOne")==null?new BigDecimal("0"):rs.getBigDecimal("amountOne");
 				//费用金额2
@@ -318,13 +373,20 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 					try {
 						orgmapInfo = InfoF7Util.getOrgmapInfoF7(ctx, company);
 					} catch (Exception e) {
+<<<<<<< HEAD
 						// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 						msg = e.getMessage();
 						logEntryInfo = new SyncLogEntryInfo();
 						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
 						logEntryInfo.setLoginfo(msg);
 						logEntryInfo.setParent(logInfo);
 						logInfo.getEntrys().add(logEntryInfo);
+<<<<<<< HEAD
+=======
+						continue;
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 					}
 					companyInfo =  orgmapInfo.getOrg();
 					//管理单元
@@ -335,15 +397,28 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 	    		//根据财务组织找应收的启用期间
 	    		Date beginDate = null;
 	    		try {
+<<<<<<< HEAD
 					beginDate = InfoF7Util.getBeginDate(ctx, companyInfo.getId().toString(), 12);
 				} catch (Exception e4) {
 					// TODO Auto-generated catch block
+=======
+	    			if(isSpecial.equals("1")){
+	    				beginDate = bizDate;
+	    			}else{
+	    				beginDate = InfoF7Util.getBeginDate(ctx, companyInfo.getId().toString(), 12);
+	    			}
+				} catch (Exception e4) {
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 					msg = e4.getMessage();
 					logEntryInfo = new SyncLogEntryInfo();
 					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
 					logEntryInfo.setLoginfo(msg);
 					logEntryInfo.setParent(logInfo);
 					logInfo.getEntrys().add(logEntryInfo);
+<<<<<<< HEAD
+=======
+					continue;
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 				}
 	    		//业务日期
 	    		otherBillInfo.setBizDate(bizDate);
@@ -351,7 +426,10 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 	    		try {
 					otherBillInfo.setCurrency(InfoF7Util.getCurrencyInfoF7(ctx,"BB01"));
 				} catch (Exception e) {
+<<<<<<< HEAD
 					// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 					e.printStackTrace();
 				}
 	    		//单据日期
@@ -364,7 +442,10 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 	    		try {
 					otherBillInfo.setAsstActType(InfoF7Util.getAsstActTypeInfoF7(ctx,"客户"));
 				} catch (Exception e) {
+<<<<<<< HEAD
 					// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 					e.printStackTrace();
 				}
 	    		//客户
@@ -378,15 +459,24 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 		    		//往来户编码
 		    		otherBillInfo.setAsstActNumber(customer.getNumber());
 				} catch (Exception e) {
+<<<<<<< HEAD
 					// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 					msg = e.getMessage();
 					logEntryInfo = new SyncLogEntryInfo();
 					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
 					logEntryInfo.setLoginfo(msg);
 					logEntryInfo.setParent(logInfo);
 					logInfo.getEntrys().add(logEntryInfo);
+<<<<<<< HEAD
 				}
 				otherBillInfo.setDescription(rs.getString("ID"));
+=======
+					continue;
+				}
+				otherBillInfo.setDescription(bizID);
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 	    		//是否已生成开票申请单（机动车）
 	    		otherBillInfo.setIsVehicleInvoiceReq(false);
 	    		//不参与坏账计提
@@ -467,7 +557,10 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 	    		try {
 					otherBillInfo.setPaymentType(InfoF7Util.getPaymentTypeInfoF7(ctx,"赊销"));
 				} catch (Exception e) {
+<<<<<<< HEAD
 					// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 					e.printStackTrace();
 				}
 	    		//人员todo 暂放
@@ -482,6 +575,10 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 					logEntryInfo.setLoginfo(msg);
 					logEntryInfo.setParent(logInfo);
 					logInfo.getEntrys().add(logEntryInfo);
+<<<<<<< HEAD
+=======
+					continue;
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 				}
 	    		//是否是导入单据
 	    		otherBillInfo.setIsImportBill(false);
@@ -513,7 +610,10 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 	    		try {
 					otherBillInfo.setLastUpdateUser(InfoF7Util.getUserInfoF7(ctx,"user"));
 				} catch (Exception e2) {
+<<<<<<< HEAD
 					// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 					e2.printStackTrace();
 				}
 	    		//创建时间
@@ -522,7 +622,10 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 	    		try {
 					otherBillInfo.setCreator(InfoF7Util.getUserInfoF7(ctx,"user"));
 				} catch (Exception e) {
+<<<<<<< HEAD
 					// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 					e.printStackTrace();
 				}	    		
 //收款计划
@@ -572,7 +675,10 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 			    	//订货客户
 			    	otherBillentryInfo.setOrderCustomer(customerInfo);
 				} catch (Exception e) {
+<<<<<<< HEAD
 					// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 					msg = e.getMessage();
 					logEntryInfo = new SyncLogEntryInfo();
 					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
@@ -586,7 +692,10 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 		    	try {
 					otherBillentryInfo.setRecAsstActType(InfoF7Util.getAsstActTypeInfoF7(ctx,"客户"));
 				} catch (Exception e) {
+<<<<<<< HEAD
 					// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 					e.printStackTrace();
 				}
 		    	//计提坏帐准备金额本位币
@@ -623,7 +732,10 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 		    		bosUuid = companyInfo.getId().toString();
 		    	}
 		    	otherBillentryInfo.setCompany(bosUuid);
+<<<<<<< HEAD
 
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 		    	//已冲回基本数量
 		    	otherBillentryInfo.setReversedBaseQty(zero);
 		    	//已分摊金额本位币
@@ -756,13 +868,20 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 	    				 try {
 							orgmapInfo = InfoF7Util.getOrgmapInfoF7(ctx, cdCompany);
 						} catch (Exception e) {
+<<<<<<< HEAD
 							// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 							msg = e.getMessage();
 							logEntryInfo = new SyncLogEntryInfo();
 							logEntryInfo.setId(BOSUuid.create("3575EC2D"));
 							logEntryInfo.setLoginfo(msg);
 							logEntryInfo.setParent(logInfo);
 							logInfo.getEntrys().add(logEntryInfo);
+<<<<<<< HEAD
+=======
+							continue;
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 						}
 	    				 companyInfo =  orgmapInfo.getOrg();
     		    		 //财务组织
@@ -788,13 +907,20 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 		    				 try {
 								orgmapInfo = InfoF7Util.getOrgmapInfoF7(ctx, cdCompany);
 							} catch (Exception e) {
+<<<<<<< HEAD
 								// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 								msg = e.getMessage();
 								logEntryInfo = new SyncLogEntryInfo();
 								logEntryInfo.setId(BOSUuid.create("3575EC2D"));
 								logEntryInfo.setLoginfo(msg);
 								logEntryInfo.setParent(logInfo);
 								logInfo.getEntrys().add(logEntryInfo);
+<<<<<<< HEAD
+=======
+								continue;
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 							}
 		    				 companyInfo =  orgmapInfo.getOrg();
 	    		    		 //财务组织
@@ -810,18 +936,28 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
     						 totalPay = specialAmount.multiply(new BigDecimal("1").setScale(2,BigDecimal.ROUND_HALF_UP));
 	    				     //计算基础
 	    				     otherBillInfo.put("jsjc", specialAmount);
+<<<<<<< HEAD
     						 
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 	    				     //重新给company相关的字段赋值
 		    				 try {
 								orgmapInfo = InfoF7Util.getOrgmapInfoF7(ctx, bcqCompany);
 							} catch (Exception e) {
+<<<<<<< HEAD
 								// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 								msg = e.getMessage();
 								logEntryInfo = new SyncLogEntryInfo();
 								logEntryInfo.setId(BOSUuid.create("3575EC2D"));
 								logEntryInfo.setLoginfo(msg);
 								logEntryInfo.setParent(logInfo);
 								logInfo.getEntrys().add(logEntryInfo);
+<<<<<<< HEAD
+=======
+								continue;
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 							}
 		    				 companyInfo =  orgmapInfo.getOrg();
 	    		    		 //财务组织
@@ -834,14 +970,20 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
     				 }
 	    		}else if(isSpecial.equals("0")){//非特殊减免金
 			    	//医生级别todo
+<<<<<<< HEAD
 
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 					IRowSet incomeRation = DbUtil.executeQuery(ctx, getSql(sqlbuff,node,feeTypeDetail));
 					while(incomeRation.next()){
 			    		easNodeTypeCode = incomeRation.getString("easNodeCode");
 			    		String ratioStr = incomeRation.getString("ratio");
 						ratio = new BigDecimal(incomeRation.getString("ratio")).divide(new BigDecimal("100"),4,BigDecimal.ROUND_HALF_UP);
 					}
+<<<<<<< HEAD
 					
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 	    			if(easNodeTypeCode.equals("A01")){//初戴	
 	    				totalPay = ((amountOne.add(amountTwo)).add(amountThree)).multiply(ratio).setScale(2,BigDecimal.ROUND_HALF_UP);
 	   				     //计算基础
@@ -929,7 +1071,10 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 							//是否有治疗同意书
 							otherBillInfo.put("zltys",true);
 						} catch (Exception e) {
+<<<<<<< HEAD
 							// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 							msg = e.getMessage();
 							logEntryInfo = new SyncLogEntryInfo();
 							logEntryInfo.setId(BOSUuid.create("3575EC2D"));
@@ -945,7 +1090,10 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 							//是否有治疗同意书
 							otherBillInfo.put("zltys",true);
 						} catch (Exception e) {
+<<<<<<< HEAD
 							// TODO Auto-generated catch block
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 							msg = e.getMessage();
 							logEntryInfo = new SyncLogEntryInfo();
 							logEntryInfo.setId(BOSUuid.create("3575EC2D"));
@@ -957,6 +1105,17 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
     			}
     			creatIOtherBill(ctx,otherBillInfo,totalPay,logInfo,bizDate,beginDate); 
     		}
+<<<<<<< HEAD
+=======
+			}catch (Exception e){
+				msg = e.getMessage();
+				logEntryInfo = new SyncLogEntryInfo();
+				logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+				logEntryInfo.setLoginfo(msg);
+				logEntryInfo.setParent(logInfo);
+				logInfo.getEntrys().add(logEntryInfo);
+			}
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 		}
 
 		} catch (NumberFormatException e1){

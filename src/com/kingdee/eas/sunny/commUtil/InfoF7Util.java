@@ -155,7 +155,11 @@ public class InfoF7Util {
 	   DoctorInfo doctorInfo = new DoctorInfo();
 	   try {
 	     DoctorCollection doctorCollection = DoctorFactory.getLocalInstance(ctx).getDoctorCollection( " where bizid = '"+number+"'");
+<<<<<<< HEAD
 	    if (!doctorCollection.isEmpty()) {
+=======
+	   if (!doctorCollection.isEmpty()) {
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 	     doctorInfo = doctorCollection.get(0);
 	    } else {
 	     throw new Exception("医生编码："+number+"未在EAS中找到对应的员工");
@@ -177,10 +181,17 @@ public class InfoF7Util {
 		PersonInfo personInfo = new PersonInfo();
 	   try {
 		   PersonCollection personCollection = PersonFactory.getLocalInstance(ctx).getPersonCollection( " where id = '"+number+"'");
+<<<<<<< HEAD
 	    if (!personCollection.isEmpty()) {
 	    	personInfo = personCollection.get(0);
 	    } else {
 	     throw new Exception("人员编码："+number+"未在EAS中找到对应的人员");
+=======
+	    if ((personCollection.size()>0) && (personCollection.get(0) != null)) {
+	    	personInfo = personCollection.get(0);
+	    } else {
+	     throw new Exception("医生ID："+number+"未在EAS中找到对应的人员");
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 	    }
 	   } catch (BOSException e) {
 	    e.printStackTrace();
@@ -307,9 +318,15 @@ public class InfoF7Util {
 		}
 		IRowSet rowSet = DbUtil.executeQuery(ctx, sql);
 		while (rowSet.next()) {
+<<<<<<< HEAD
 			beginDate = rowSet.getTimestamp("FBEGINDATE");
 		}
 		if(beginDate == null){
+=======
+			beginDate = rowSet.getDate("FBEGINDATE");
+		}
+		if(beginDate == null ){
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 			throw new Exception("EAS中公司的应收启用期间未设置。");
 		}
 		return beginDate;
