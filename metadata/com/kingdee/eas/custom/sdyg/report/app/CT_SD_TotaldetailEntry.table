@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.report.app</package>
+    <name>CT_SD_TotaldetailEntry</name>
+    <alias>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].alias</alias>
+    <description>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].description</description>
+    <userDefined>true</userDefined>
+    <bizUnitPK />
+    <columns>
+        <column>
+            <name>FSeq</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[FSeq].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[FSeq].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FID</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[FID].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[FID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>44</precision>
+        </column>
+        <column>
+            <name>FParentID</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[FParentID].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[FParentID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>44</precision>
+        </column>
+        <column>
+            <name>CFSubjectID</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFSubjectID].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFSubjectID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFSubjectname</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFSubjectname].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFSubjectname].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFDebt</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFDebt].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFDebt].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>0</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFAdd</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFAdd].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFAdd].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>0</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFKmqsfl</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFKmqsfl].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFKmqsfl].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>0</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+    </columns>
+    <primaryKey>
+        <name>CPK_SD_TtldtlEIec4</name>
+        <userDefined>true</userDefined>
+        <primaryKeyColumns>
+            <primaryKeyColumn>
+                <indexID>0</indexID>
+                <sortType>ASC</sortType>
+                <column>
+                    <key name="name" value="FID" />
+                </column>
+            </primaryKeyColumn>
+        </primaryKeyColumns>
+    </primaryKey>
+    <foreignKeys>
+        <foreignKey>
+            <name>CFK_SD_SDTEPrntIec</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.report.app" />
+                <key name="name" value="CT_SD_Totaldetail" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FParentID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_SD_SDTEUbjec7t</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.master.account" />
+                <key name="name" value="T_BD_AccountView" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFSubjectID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+    </foreignKeys>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分录" />
+            <lang locale="zh_HK" value="分錄" />
+            <lang locale="zh_TW" value="分錄" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFAdd].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="加减" />
+            <lang locale="zh_HK" value="加減" />
+            <lang locale="zh_TW" value="加減" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFAdd].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="加减" />
+            <lang locale="zh_HK" value="加減" />
+            <lang locale="zh_TW" value="加減" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFDebt].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="借贷" />
+            <lang locale="zh_HK" value="借貸" />
+            <lang locale="zh_TW" value="借貸" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFDebt].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="借贷" />
+            <lang locale="zh_HK" value="借貸" />
+            <lang locale="zh_TW" value="借貸" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFKmqsfl].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="科目取数类型" />
+            <lang locale="zh_HK" value="科目取數類型" />
+            <lang locale="zh_TW" value="科目取數類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFKmqsfl].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="科目取数类型" />
+            <lang locale="zh_HK" value="科目取數類型" />
+            <lang locale="zh_TW" value="科目取數類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFSubjectID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="科目" />
+            <lang locale="zh_HK" value="科目" />
+            <lang locale="zh_TW" value="科目" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFSubjectID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="科目" />
+            <lang locale="zh_HK" value="科目" />
+            <lang locale="zh_TW" value="科目" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFSubjectname].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="科目名称" />
+            <lang locale="zh_HK" value="科目名稱" />
+            <lang locale="zh_TW" value="科目名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[CFSubjectname].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="科目名称" />
+            <lang locale="zh_HK" value="科目名稱" />
+            <lang locale="zh_TW" value="科目名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[FID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[FID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[FParentID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[FParentID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[FSeq].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号" />
+            <lang locale="zh_HK" value="單據分錄序列號" />
+            <lang locale="zh_TW" value="單據分錄序列號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].columns.column[FSeq].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号（定义为序列属性即使用{seq}）" />
+            <lang locale="zh_HK" value="單據分錄序列號（定義為序列屬性即使用{seq}）" />
+            <lang locale="zh_TW" value="單據分錄序列號（定義為序列屬性即使用{seq}）" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.report.app.CT_SD_TotaldetailEntry].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</dataTable>
+

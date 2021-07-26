@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relationship xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.mapping.app</package>
+    <name>R_TreatmentNodeCoding_TreatmentType_TrestmentType</name>
+    <alias>relationship[com.kingdee.eas.custom.sdyg.mapping.app.R_TreatmentNodeCoding_TreatmentType_TrestmentType].alias</alias>
+    <description>relationship[com.kingdee.eas.custom.sdyg.mapping.app.R_TreatmentNodeCoding_TreatmentType_TrestmentType].description</description>
+    <userDefined>true</userDefined>
+    <type>Association</type>
+    <clientCardinality>1</clientCardinality>
+    <supplierCardinality>0..1</supplierCardinality>
+    <xmlNodeRelationship />
+    <clientObject>
+        <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+        <key name="name" value="TreatmentNodeCoding" />
+    </clientObject>
+    <supplierObject>
+        <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+        <key name="name" value="TreatmentType" />
+    </supplierObject>
+    <resource>
+        <rs key="relationship[com.kingdee.eas.custom.sdyg.mapping.app.R_TreatmentNodeCoding_TreatmentType_TrestmentType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="relationship[com.kingdee.eas.custom.sdyg.mapping.app.R_TreatmentNodeCoding_TreatmentType_TrestmentType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</relationship>
+

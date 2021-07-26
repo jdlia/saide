@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizUnit xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.mapping</package>
+    <name>Orgmap</name>
+    <alias>bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].alias</alias>
+    <description>bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].description</description>
+    <userDefined>true</userDefined>
+    <bizType>BusinessBill</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.custom.sdyg.mapping.app.Orgmap</entityPK>
+    <queryPK>com.kingdee.eas.custom.sdyg.mapping.app.OrgmapQuery</queryPK>
+    <editUIPK>com.kingdee.eas.custom.sdyg.mapping.client.OrgmapEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.custom.sdyg.mapping.client.OrgmapListUI</listUIPK>
+    <webEditUIPK />
+    <webListUIPK />
+    <entityFunctionPK />
+    <editUIFunctionPK>com.kingdee.eas.custom.sdyg.mapping.app.OrgmapEditUIFunction</editUIFunctionPK>
+    <listUIFunctionPK>com.kingdee.eas.custom.sdyg.mapping.app.OrgmapListUIFunction</listUIFunctionPK>
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>MCoreBillBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Orgmap" />
+            <lang locale="zh_HK" value="Orgmap" />
+            <lang locale="zh_TW" value="Orgmap" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="组织映射" />
+            <lang locale="zh_HK" value="組織映射" />
+            <lang locale="zh_TW" value="組織映射" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.app.OrgmapQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.app.OrgmapQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.app.OrgmapQuery" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.client.OrgmapEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.client.OrgmapEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.OrgmapEditUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.custom.sdyg.mapping.client.OrgmapListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.sdyg.mapping.client.OrgmapListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.sdyg.mapping.client.OrgmapListUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].extendedProperty.maxFieldIndex">
+            <lang locale="en_US" value="5" />
+            <lang locale="zh_CN" value="5" />
+            <lang locale="zh_TW" value="5" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.custom.sdyg.mapping.Orgmap].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizUnit>
+

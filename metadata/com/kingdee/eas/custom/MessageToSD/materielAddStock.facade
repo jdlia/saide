@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facade xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.MessageToSD</package>
+    <name>materielAddStock</name>
+    <alias>facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].alias</alias>
+    <description>facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].description</description>
+    <userDefined>true</userDefined>
+    <bosType>AC247BAB</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.custom.MessageToSD.materielAddStock</businessImplName>
+    <businessControllerName>com.kingdee.eas.custom.MessageToSD.materielAddStockController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getMaterielMag</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getMaterielMag].alias</alias>
+            <description>facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getMaterielMag].description</description>
+            <innerID>22893ca8-42f0-49e8-baad-9b56f7f15964</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>orgCode</name>
+                    <alias>facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getMaterielMag].parameters.parameter[orgCode].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getMaterielMag].parameters.parameter[orgCode].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getStockMag</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getStockMag].alias</alias>
+            <description>facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getStockMag].description</description>
+            <innerID>c055cd8b-4e20-49c1-95d5-5163a484a42d</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>number</name>
+                    <alias>facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getStockMag].parameters.parameter[number].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getStockMag].parameters.parameter[number].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <resource>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料及库存同步" />
+            <lang locale="zh_HK" value="物料及庫存同步" />
+            <lang locale="zh_TW" value="物料及庫存同步" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料及库存同步" />
+            <lang locale="zh_HK" value="物料及庫存同步" />
+            <lang locale="zh_TW" value="物料及庫存同步" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getMaterielMag].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="获取物料信息" />
+            <lang locale="zh_HK" value="獲取物料信息" />
+            <lang locale="zh_TW" value="獲取物料信息" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getMaterielMag].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="根据传入业务系统门诊代码（及EAS中组织编码），查询返回相关物料信息" />
+            <lang locale="zh_HK" value="根據傳入業務系統門診代碼（及EAS中組織編碼），查詢返回相關物料信息" />
+            <lang locale="zh_TW" value="根據傳入業務系統門診代碼（及EAS中組織編碼），查詢返回相關物料信息" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getMaterielMag].parameters.parameter[orgCode].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS中组织编码" />
+            <lang locale="zh_HK" value="EAS中組織編碼" />
+            <lang locale="zh_TW" value="EAS中組織編碼" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getMaterielMag].parameters.parameter[orgCode].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="传入业务系统门诊代码（及EAS中组织编码）。" />
+            <lang locale="zh_HK" value="傳入業務系統門診代碼（及EAS中組織編碼）。" />
+            <lang locale="zh_TW" value="傳入業務系統門診代碼（及EAS中組織編碼）。" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getStockMag].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="获取库存信息" />
+            <lang locale="zh_HK" value="獲取庫存信息" />
+            <lang locale="zh_TW" value="獲取庫存信息" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getStockMag].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="入参物料编码，返回该物料的库存信息" />
+            <lang locale="zh_HK" value="入參物料編碼，返回該物料的庫存信息" />
+            <lang locale="zh_TW" value="入參物料編碼，返回該物料的庫存信息" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getStockMag].parameters.parameter[number].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.MessageToSD.materielAddStock].methods.method[getStockMag].parameters.parameter[number].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="入参物料编码" />
+            <lang locale="zh_HK" value="入參物料編碼" />
+            <lang locale="zh_TW" value="入參物料編碼" />
+        </rs>
+    </resource>
+</facade>
+

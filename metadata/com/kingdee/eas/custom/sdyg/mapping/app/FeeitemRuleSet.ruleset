@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.mapping.app</package>
+    <name>FeeitemRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>7f55c35d-c68e-426e-a2fe-2d560835db7f</id>
+            <parentID />
+            <source>expenseNumber=expenseType.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>22e85556-c8e0-433d-921a-a08134a83c30</id>
+            <parentID>7f55c35d-c68e-426e-a2fe-2d560835db7f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>59c1f82e-ec12-49ea-a817-edca9c29733c</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>59c1f82e-ec12-49ea-a817-edca9c29733c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtexpenseNumber</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f10385b2-08e5-49eb-8db4-a6383398a29a</id>
+            <parentID>7f55c35d-c68e-426e-a2fe-2d560835db7f</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>318780a4-4155-43c4-ba05-f6eec6e2e197</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>34460f07-3f88-4afe-8340-eb6d56462945</id>
+                        <expressionID>df2ecbfb-6e00-4b51-b20f-1089a3756d01</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>905453f9-c13d-4be5-a1c5-dc8e8f545b63</id>
+                        <expressionID>d55c2ddf-400d-4982-91ad-af6d2d03b0ae</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>318780a4-4155-43c4-ba05-f6eec6e2e197</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>df2ecbfb-6e00-4b51-b20f-1089a3756d01</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>ce4a2f53-dbcb-4193-bcfe-3ee296155088</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ce4a2f53-dbcb-4193-bcfe-3ee296155088</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtexpenseType</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d55c2ddf-400d-4982-91ad-af6d2d03b0ae</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>0c830c6e-97e1-4bd0-9922-1a00427a9b59</id>
+            <parentID />
+            <source>expenseName=expenseType.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>14a1a8da-aa61-433a-937a-e80ef75474eb</id>
+            <parentID>0c830c6e-97e1-4bd0-9922-1a00427a9b59</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>e486d560-70dd-4a70-8a28-fa4053e494cb</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e486d560-70dd-4a70-8a28-fa4053e494cb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtexpenseName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5a4b0055-0afe-413f-8dd9-f81ed93c470a</id>
+            <parentID>0c830c6e-97e1-4bd0-9922-1a00427a9b59</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>856c6763-6578-4acf-9b34-d0dd447dcd64</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ab523be1-c88b-412a-88ec-e081cc4e7b43</id>
+                        <expressionID>2b644b64-4b8b-42aa-96e8-2f1ec86b31cb</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>bb2d5771-3cee-440a-a062-fdda2cd7a5f5</id>
+                        <expressionID>d743fa15-988c-4dd8-81ee-103cda7c8b9c</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>856c6763-6578-4acf-9b34-d0dd447dcd64</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2b644b64-4b8b-42aa-96e8-2f1ec86b31cb</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>0ed8b3ff-e61a-48a7-b48b-5da48cb577a0</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0ed8b3ff-e61a-48a7-b48b-5da48cb577a0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtexpenseType</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d743fa15-988c-4dd8-81ee-103cda7c8b9c</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>6dd6816b-470e-4fe7-8319-abfc9559d654</id>
+            <name>Feeitem_expenseNumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].actions.action[Feeitem_expenseNumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].actions.action[Feeitem_expenseNumber_ActionInfo].description</description>
+            <expressionID>7f55c35d-c68e-426e-a2fe-2d560835db7f</expressionID>
+        </action>
+        <action>
+            <id>0101978e-6d4d-4327-9753-edb9c2de0208</id>
+            <name>Feeitem_expenseName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].actions.action[Feeitem_expenseName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].actions.action[Feeitem_expenseName_ActionInfo].description</description>
+            <expressionID>0c830c6e-97e1-4bd0-9922-1a00427a9b59</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>Feeitem_expenseNumber_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].rules.conditionRule[Feeitem_expenseNumber_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].rules.conditionRule[Feeitem_expenseNumber_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="6dd6816b-470e-4fe7-8319-abfc9559d654" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>Feeitem_expenseName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].rules.conditionRule[Feeitem_expenseName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].rules.conditionRule[Feeitem_expenseName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="0101978e-6d4d-4327-9753-edb9c2de0208" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].actions.action[Feeitem_expenseName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].actions.action[Feeitem_expenseName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].actions.action[Feeitem_expenseNumber_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].actions.action[Feeitem_expenseNumber_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].rules.conditionRule[Feeitem_expenseName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].rules.conditionRule[Feeitem_expenseName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].rules.conditionRule[Feeitem_expenseName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="expenseType" />
+            <lang locale="zh_CN" value="expenseType" />
+            <lang locale="zh_TW" value="expenseType" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].rules.conditionRule[Feeitem_expenseName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].rules.conditionRule[Feeitem_expenseNumber_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].rules.conditionRule[Feeitem_expenseNumber_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].rules.conditionRule[Feeitem_expenseNumber_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="expenseType" />
+            <lang locale="zh_CN" value="expenseType" />
+            <lang locale="zh_TW" value="expenseType" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.FeeitemRuleSet].rules.conditionRule[Feeitem_expenseNumber_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.mapping.app</package>
+    <name>CT_MAP_Feeitem</name>
+    <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].alias</alias>
+    <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].description</description>
+    <userDefined>true</userDefined>
+    <bizUnitPK>com.kingdee.eas.custom.sdyg.mapping.Feeitem</bizUnitPK>
+    <columns>
+        <column>
+            <name>FName</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FName].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FName].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>true</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>255</precision>
+        </column>
+        <column>
+            <name>FNumber</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FNumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FNumber].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>80</precision>
+        </column>
+        <column>
+            <name>FDescription</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FDescription].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FDescription].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>true</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>255</precision>
+        </column>
+        <column>
+            <name>FSimpleName</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FSimpleName].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FSimpleName].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>80</precision>
+        </column>
+        <column>
+            <name>FID</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FID].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>44</precision>
+        </column>
+        <column>
+            <name>FCreatorID</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FCreatorID].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FCreatorID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCreateTime</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FCreateTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FCreateTime].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FLastUpdateUserID</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FLastUpdateUserID].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FLastUpdateUserID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FLastUpdateTime</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FLastUpdateTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FLastUpdateTime].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FControlUnitID</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FControlUnitID].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FControlUnitID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>'11111111-1111-1111-1111-111111111111CCE7AED4'</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFBizID</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFBizID].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFBizID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFItemName</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFItemName].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFItemName].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFItemNo</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFItemNo].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFItemNo].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFUseCompany</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFUseCompany].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFUseCompany].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFExpenseTypeID</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFExpenseTypeID].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFExpenseTypeID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFExpenseNumber</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFExpenseNumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFExpenseNumber].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFExpenseName</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFExpenseName].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFExpenseName].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+    </columns>
+    <primaryKey>
+        <name>CPK_MAP_Feeitemltm</name>
+        <userDefined>true</userDefined>
+        <primaryKeyColumns>
+            <primaryKeyColumn>
+                <indexID>0</indexID>
+                <sortType>ASC</sortType>
+                <column>
+                    <key name="name" value="FID" />
+                </column>
+            </primaryKeyColumn>
+        </primaryKeyColumns>
+    </primaryKey>
+    <foreignKeys>
+        <foreignKey>
+            <name>CFK_MAP_MAPFCrtrlt</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FCreatorID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_MAP_MAPFLsUUlt</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FLastUpdateUserID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_MAP_MAPFCntUlt</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.org" />
+                <key name="name" value="T_ORG_OUPartCtrl" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FUnitID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FControlUnitID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_MAP_MAPFSpns7o</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.scm.common.app" />
+                <key name="name" value="T_SCM_ExpenseItem" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFExpenseTypeID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+    </foreignKeys>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="费用项目映射" />
+            <lang locale="zh_HK" value="費用項目映射" />
+            <lang locale="zh_TW" value="費用項目映射" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFBizID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="治疗项ID" />
+            <lang locale="zh_HK" value="治療項ID" />
+            <lang locale="zh_TW" value="治療項ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFBizID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="治疗项ID" />
+            <lang locale="zh_HK" value="治療項ID" />
+            <lang locale="zh_TW" value="治療項ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFExpenseName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="费用项目名称" />
+            <lang locale="zh_HK" value="費用項目名稱" />
+            <lang locale="zh_TW" value="費用項目名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFExpenseName].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="费用项目名称" />
+            <lang locale="zh_HK" value="費用項目名稱" />
+            <lang locale="zh_TW" value="費用項目名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFExpenseNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="费用项目编码" />
+            <lang locale="zh_HK" value="費用項目編碼" />
+            <lang locale="zh_TW" value="費用項目編碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFExpenseNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="费用项目编码" />
+            <lang locale="zh_HK" value="費用項目編碼" />
+            <lang locale="zh_TW" value="費用項目編碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFExpenseTypeID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS费用项目" />
+            <lang locale="zh_HK" value="EAS費用項目" />
+            <lang locale="zh_TW" value="EAS費用項目" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFExpenseTypeID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS费用项目" />
+            <lang locale="zh_HK" value="EAS費用項目" />
+            <lang locale="zh_TW" value="EAS費用項目" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFItemName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="治疗项名称" />
+            <lang locale="zh_HK" value="治療項名稱" />
+            <lang locale="zh_TW" value="治療項名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFItemName].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="治疗项名称" />
+            <lang locale="zh_HK" value="治療項名稱" />
+            <lang locale="zh_TW" value="治療項名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFItemNo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFItemNo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFUseCompany].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="使用门诊（文本）" />
+            <lang locale="zh_HK" value="使用門診（文本）" />
+            <lang locale="zh_TW" value="使用門診（文本）" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[CFUseCompany].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="使用门诊（文本）" />
+            <lang locale="zh_HK" value="使用門診（文本）" />
+            <lang locale="zh_TW" value="使用門診（文本）" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FControlUnitID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单元" />
+            <lang locale="zh_HK" value="控制單元" />
+            <lang locale="zh_TW" value="控制單元" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FControlUnitID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单元" />
+            <lang locale="zh_HK" value="控制單元" />
+            <lang locale="zh_TW" value="控制單元" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FCreateTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FCreateTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FCreatorID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FCreatorID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FDescription].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="描述" />
+            <lang locale="zh_HK" value="描述" />
+            <lang locale="zh_TW" value="描述" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FDescription].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="描述" />
+            <lang locale="zh_HK" value="描述" />
+            <lang locale="zh_TW" value="描述" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FLastUpdateTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FLastUpdateTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FLastUpdateUserID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FLastUpdateUserID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FName].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FSimpleName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="简称" />
+            <lang locale="zh_HK" value="簡稱" />
+            <lang locale="zh_TW" value="簡稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].columns.column[FSimpleName].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="简称" />
+            <lang locale="zh_HK" value="簡稱" />
+            <lang locale="zh_TW" value="簡稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Feeitem].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="费用项目到EAS费用项目映射" />
+            <lang locale="zh_HK" value="費用項目到EAS費用項目映射" />
+            <lang locale="zh_TW" value="費用項目到EAS費用項目映射" />
+        </rs>
+    </resource>
+</dataTable>
+

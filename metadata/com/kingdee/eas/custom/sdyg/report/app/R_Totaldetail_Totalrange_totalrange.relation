@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relationship xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.report.app</package>
+    <name>R_Totaldetail_Totalrange_totalrange</name>
+    <alias>relationship[com.kingdee.eas.custom.sdyg.report.app.R_Totaldetail_Totalrange_totalrange].alias</alias>
+    <description>relationship[com.kingdee.eas.custom.sdyg.report.app.R_Totaldetail_Totalrange_totalrange].description</description>
+    <userDefined>true</userDefined>
+    <type>Association</type>
+    <clientCardinality>1</clientCardinality>
+    <supplierCardinality>0..1</supplierCardinality>
+    <xmlNodeRelationship />
+    <clientObject>
+        <key name="package" value="com.kingdee.eas.custom.sdyg.report.app" />
+        <key name="name" value="Totaldetail" />
+    </clientObject>
+    <supplierObject>
+        <key name="package" value="com.kingdee.eas.custom.sdyg.report.app" />
+        <key name="name" value="Totalrange" />
+    </supplierObject>
+    <resource>
+        <rs key="relationship[com.kingdee.eas.custom.sdyg.report.app.R_Totaldetail_Totalrange_totalrange].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="relationship[com.kingdee.eas.custom.sdyg.report.app.R_Totaldetail_Totalrange_totalrange].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</relationship>
+
