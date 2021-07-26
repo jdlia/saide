@@ -47,11 +47,11 @@ public class OUListUICTEx extends OUListUI{
 //		ImaterielAddStock im = materielAddStockFactory.getRemoteInstance();
 //		im.getMaterielMag(orgcode);
 		
-		Iupdateadjustfacade ad = updateadjustfacadeFactory.getRemoteInstance();
-		ad.updateadjust();
+//		Iupdateadjustfacade ad = updateadjustfacadeFactory.getRemoteInstance();
+//		ad.updateadjust();
 //		
-//		IInitTreatmentNodeIncomeFacade trenode = InitTreatmentNodeIncomeFacadeFactory.getRemoteInstance();
-//		trenode.initTreatmentInfo();
+		IInitTreatmentNodeIncomeFacade trenode = InitTreatmentNodeIncomeFacadeFactory.getRemoteInstance();
+		trenode.initTreatmentInfo();
 		
 		
 	}

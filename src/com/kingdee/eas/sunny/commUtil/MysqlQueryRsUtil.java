@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Set;
 
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.Context;
@@ -32,6 +33,18 @@ public class MysqlQueryRsUtil {
     	mysqlConnectionUtil sqlutil = new mysqlConnectionUtil();
     	rs = sqlutil.onlyquery(ctx,conn,ps,query);
 		return rs;
+    }
+	/** 
+	 * 根据SQL更新中间库数据
+	 * @param conn
+	 * @param sql
+	 * @return
+	 * @throws SQLException
+	 * @throws ClassNotFoundException
+	 */
+	public static void updateRs (Connection conn,String sql) throws SQLException, ClassNotFoundException{
+		PreparedStatement pStatement = conn.prepareStatement(sql);
+		pStatement.executeUpdate();//TODO 更新失败数据如何处理
     }
 	public static IRowSet getIncomeRation (Context ctx,String query) throws SQLException, ClassNotFoundException{
 		IRowSet incomeRation = null;

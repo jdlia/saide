@@ -155,7 +155,7 @@ public class InfoF7Util {
 	   DoctorInfo doctorInfo = new DoctorInfo();
 	   try {
 	     DoctorCollection doctorCollection = DoctorFactory.getLocalInstance(ctx).getDoctorCollection( " where bizid = '"+number+"'");
-	    if (!doctorCollection.isEmpty()) {
+	   if (!doctorCollection.isEmpty()) {
 	     doctorInfo = doctorCollection.get(0);
 	    } else {
 	     throw new Exception("医生编码："+number+"未在EAS中找到对应的员工");
@@ -177,10 +177,10 @@ public class InfoF7Util {
 		PersonInfo personInfo = new PersonInfo();
 	   try {
 		   PersonCollection personCollection = PersonFactory.getLocalInstance(ctx).getPersonCollection( " where id = '"+number+"'");
-	    if (!personCollection.isEmpty()) {
+	    if ((personCollection.size()>0) && (personCollection.get(0) != null)) {
 	    	personInfo = personCollection.get(0);
 	    } else {
-	     throw new Exception("人员编码："+number+"未在EAS中找到对应的人员");
+	     throw new Exception("医生ID："+number+"未在EAS中找到对应的人员");
 	    }
 	   } catch (BOSException e) {
 	    e.printStackTrace();
@@ -307,9 +307,9 @@ public class InfoF7Util {
 		}
 		IRowSet rowSet = DbUtil.executeQuery(ctx, sql);
 		while (rowSet.next()) {
-			beginDate = rowSet.getTimestamp("FBEGINDATE");
+			beginDate = rowSet.getDate("FBEGINDATE");
 		}
-		if(beginDate == null){
+		if(beginDate == null ){
 			throw new Exception("EAS中公司的应收启用期间未设置。");
 		}
 		return beginDate;

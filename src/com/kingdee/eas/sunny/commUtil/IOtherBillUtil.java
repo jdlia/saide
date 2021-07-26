@@ -33,9 +33,11 @@ public class IOtherBillUtil {
 	 * @param logInfo
 	 * @param bizDate		单据的业务日期
 	 * @param beginDate		应收系统的启用期间
+	 * @throws BOSException 
+	 * @throws EASBizException 
 	 * 
 	 */
-    public static void creatIOtherBill(Context ctx,OtherBillInfo otherBillInfo,BigDecimal totalPay,SyncLogInfo logInfo,Date bizDate,Date beginDate ){
+    public static void creatIOtherBill(Context ctx,OtherBillInfo otherBillInfo,BigDecimal totalPay,SyncLogInfo logInfo,Date bizDate,Date beginDate ) throws EASBizException, BOSException{
     	SyncLogEntryInfo logEntryInfo  = null;
     	String msg = "";
     	
@@ -56,9 +58,9 @@ public class IOtherBillUtil {
 		}				
     	//保存应收单
     	IObjectPK pk = null;
-		try {
+//		try {
 			//业务日期早于启用期间，生成期初应收单，后台期初标志字段，状态为保存
-			if(bizDate.compareTo(beginDate) < 0 ){
+			if(bizDate.compareTo(beginDate) <= 0 ){
 				otherBillInfo.setIsInitializeBill(true);
 				pk = iob.save(otherBillInfo);
 			}else{
@@ -68,7 +70,9 @@ public class IOtherBillUtil {
 				//审核
 				iob.audit(pk);
 			}
-		} catch (EASBizException e) {
+/**
+ * 		} catch (EASBizException e) {
+
 			msg = "生成应收单出错  "+otherBillInfo.getCompany().getName()+ " 错误信息："+e.getMessage()+"\n";
 	    	logEntryInfo = new SyncLogEntryInfo();
 			logEntryInfo.setId(BOSUuid.create("3575EC2D"));
@@ -83,7 +87,7 @@ public class IOtherBillUtil {
 			logEntryInfo.setParent(logInfo);
 			logInfo.getEntrys().add(logEntryInfo);
 		}
-		
+ */		
     	
     }
 
