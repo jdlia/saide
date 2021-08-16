@@ -98,11 +98,12 @@ public class InitInfoFacade extends AbstractBizCtrl implements IInitInfoFacade
     /**
      *同步业务数据-User defined method
      *@param numbers 中间表业务单据编码
+     *@param companynumber 中间表门诊编码
      */
-    public void initBillInfo(String numbers) throws BOSException, EASBizException
+    public void initBillInfo(String numbers, String companynumber) throws BOSException, EASBizException
     {
         try {
-            getController().initBillInfo(getContext(), numbers);
+            getController().initBillInfo(getContext(), numbers, companynumber);
         }
         catch(RemoteException err) {
             throw new EJBRemoteException(err);

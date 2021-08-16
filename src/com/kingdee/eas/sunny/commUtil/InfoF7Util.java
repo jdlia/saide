@@ -271,7 +271,7 @@ public class InfoF7Util {
 		if((list.size()>0) && (list.get(0) != null)){
 			 expenseTypeInfo =  ExpenseTypeFactory.getLocalInstance(ctx).getExpenseTypeInfo("where id = '"+list.get(0).toString()+"'");
 		}else {
-			throw new Exception("EAS中未找到对应的费用项目，请检查。");
+			throw new Exception("EAS中未找到对应的费用项目，请检查。业务系统费用项目ID："+id);
 		}
 //		FeeitemInfo feeitemInfo = new FeeitemInfo();
 //		try {

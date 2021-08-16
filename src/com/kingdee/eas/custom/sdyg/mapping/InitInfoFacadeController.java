@@ -23,6 +23,6 @@ public interface InitInfoFacadeController extends BizController
     public void syncOthcustomer(Context ctx) throws BOSException, EASBizException, RemoteException;
     public void syncCustomer(Context ctx) throws BOSException, EASBizException, RemoteException;
     public void syncGetmark(Context ctx, String id) throws BOSException, EASBizException, RemoteException;
-    public void initBillInfo(Context ctx, String numbers) throws BOSException, EASBizException, RemoteException;
+    public void initBillInfo(Context ctx, String numbers, String companynumber) throws BOSException, EASBizException, RemoteException;
     public void syncDoctor(Context ctx) throws BOSException, EASBizException, RemoteException;
 }

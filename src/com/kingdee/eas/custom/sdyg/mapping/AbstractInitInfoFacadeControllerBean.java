@@ -146,13 +146,13 @@ public abstract class AbstractInitInfoFacadeControllerBean extends AbstractBizCo
         return;
     }
 
-    public void initBillInfo(Context ctx, String numbers) throws BOSException, EASBizException
+    public void initBillInfo(Context ctx, String numbers, String companynumber) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("5d4fc1a1-9f58-447e-9165-1fc9cbf6caec"), new Object[]{ctx, numbers});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("5d4fc1a1-9f58-447e-9165-1fc9cbf6caec"), new Object[]{ctx, numbers, companynumber});
             invokeServiceBefore(svcCtx);
               if(!svcCtx.invokeBreak()) {
-            _initBillInfo(ctx, numbers);
+            _initBillInfo(ctx, numbers, companynumber);
             }
             invokeServiceAfter(svcCtx);
         } catch (BOSException ex) {
@@ -163,7 +163,7 @@ public abstract class AbstractInitInfoFacadeControllerBean extends AbstractBizCo
             super.cleanUpServiceState();
         }
     }
-    protected void _initBillInfo(Context ctx, String numbers) throws BOSException, EASBizException
+    protected void _initBillInfo(Context ctx, String numbers, String companynumber) throws BOSException, EASBizException
     {    	
         return;
     }

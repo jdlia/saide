@@ -954,7 +954,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
     }
     
     @Override
-    protected void _initBillInfo(Context ctx,String numbers) {
+    protected void _initBillInfo(Context ctx,String numbers,String companynumber) {
 //    	super._initBillInfo(ctx, numbers);
     	//查询数据
     	System.out.println("进入InitInfoFacadeControllerBean");
@@ -976,6 +976,10 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 //    	if(numbers != null && numbers.length() > 0){
 //    		sqlbuff.append(" and bill.receiptNo = '"+numbers+"'");
 //    	}
+//    	if(companynumber != null && companynumber.length() > 0){
+//    		sqlbuff.append(" and bill.company = '"+companynumber+"'");
+//    	}
+    	
     	//收据(历史数据情况)
     	StringBuffer sqlbuff = new StringBuffer();
     	sqlbuff.append("SELECT bill.ID billid,org.companyName billcompany," );
@@ -990,21 +994,30 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
     	sqlbuff.append("	left join t_org org on bill.company = org.dgtNo " );
     	sqlbuff.append("	left join t_feeitem fee on entry.expenseNo = fee.id " );
     	sqlbuff.append("	left join t_othcustomer oth on bill.sd_channel = oth.id " );
-    	sqlbuff.append(" where entry.orderdate BETWEEN  STR_TO_DATE('2021-01-01','%Y-%m-%d') and STR_TO_DATE('2021-01-31','%Y-%m-%d') and (bill.company = '066' ) and entry.type =0 " );
+    	sqlbuff.append(" where entry.type =0 " );
+//    	sqlbuff.append(" and entry.orderdate BETWEEN  STR_TO_DATE('2021-01-01','%Y-%m-%d') and STR_TO_DATE('2021-01-31','%Y-%m-%d') and (bill.company = '066' )  " );
     	if(numbers != null && numbers.length() > 0){
     		sqlbuff.append(" and bill.receiptNo = '"+numbers+"'");
     	}
+    	if(companynumber != null && companynumber.length() > 0){
+    		sqlbuff.append(" and bill.company = '"+companynumber+"'");
+    	}
+    	
     	//对账单
     	StringBuffer duizhangSqlBuff = new StringBuffer();
     	duizhangSqlBuff.append("select bill.company companyno ,bill.bizDate billdate ,bill.bizNo billno,bill.recAmount billrecamount,");
     	duizhangSqlBuff.append(" bill.actualRec billactualrec,bill.recTypeNo billrectypeno,bill.recTypeName billrectypename,bill.serviceFee billfee,bill.instalmentFee instalmentFee,");
     	duizhangSqlBuff.append(" bill.recordNo billrecordno,org.companyName companyname ,receipt.sd_channel othcustomerid");
     	duizhangSqlBuff.append(" from t_reconciliation bill left join t_org org on bill.company = org.dgtNo ");
-    	duizhangSqlBuff.append(" left join t_receipt receipt on bill.bizNo = receipt.receiptNo ");
-    	duizhangSqlBuff.append(" where  bill.bizDate BETWEEN  STR_TO_DATE('2021-01-01','%Y-%m-%d') and STR_TO_DATE('2021-01-31','%Y-%m-%d') and (bill.company = '066')");
+    	duizhangSqlBuff.append(" left join t_receipt receipt on bill.bizNo = receipt.receiptNo where 1=1 ");
     	if(numbers != null && numbers.length() > 0){
     		duizhangSqlBuff.append(" and bill.bizNo = '"+numbers+"'");
     	}
+    	if(companynumber != null && companynumber.length() > 0){
+    		duizhangSqlBuff.append(" and bill.company = '"+companynumber+"'");
+    	}
+//    	duizhangSqlBuff.append("  and bill.bizDate BETWEEN  STR_TO_DATE('2021-01-01','%Y-%m-%d') and STR_TO_DATE('2021-01-31','%Y-%m-%d') and (bill.company = '066')");
+    	
     	//补交情况
     	StringBuffer bjsqlbuff = new StringBuffer();
     	bjsqlbuff.append("SELECT bill.ID billid,org.companyName billcompany," );
@@ -1019,9 +1032,13 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
     	bjsqlbuff.append("	left join t_org org on bill.company = org.dgtNo " );
     	bjsqlbuff.append("	left join t_feeitem fee on entry.expenseNo = fee.id " );
     	bjsqlbuff.append("	left join t_othcustomer oth on bill.sd_channel = oth.id " );
-    	bjsqlbuff.append(" where bill.bizDate BETWEEN  STR_TO_DATE('2021-01-01','%Y-%m-%d') and STR_TO_DATE('2021-01-31','%Y-%m-%d') and (bill.company = '066' ) and entry2.actualpay >0 " );
+    	bjsqlbuff.append(" where entry2.actualpay >0 " );
+//    	bjsqlbuff.append(" and bill.bizDate BETWEEN  STR_TO_DATE('2021-01-01','%Y-%m-%d') and STR_TO_DATE('2021-01-31','%Y-%m-%d') and (bill.company = '066' ) " );
     	if(numbers != null && numbers.length() > 0){
     		bjsqlbuff.append(" and bill.receiptNo = '"+numbers+"'");
+    	}
+    	if(companynumber != null && companynumber.length() > 0){
+    		bjsqlbuff.append(" and bill.company = '"+companynumber+"'");
     	}
     	String msg = "";
     	mysqlConnectionUtil sqlutil = new mysqlConnectionUtil();

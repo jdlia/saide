@@ -20,6 +20,6 @@ public interface IInitInfoFacade extends IBizCtrl
     public void syncOthcustomer() throws BOSException, EASBizException;
     public void syncCustomer() throws BOSException, EASBizException;
     public void syncGetmark(String id) throws BOSException, EASBizException;
-    public void initBillInfo(String numbers) throws BOSException, EASBizException;
+    public void initBillInfo(String numbers, String companynumber) throws BOSException, EASBizException;
     public void syncDoctor() throws BOSException, EASBizException;
 }
