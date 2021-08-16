@@ -23,6 +23,14 @@ public class OUListUICTEx extends OUListUI{
 	@Override
 	public void actionRefresh_actionPerformed(ActionEvent e) throws Exception {
 		
+<<<<<<< HEAD
+
+		System.out.println("重写币别刷新方法1");
+		IInitTreatmentNodeIncomeFacade  aa = InitTreatmentNodeIncomeFacadeFactory.getRemoteInstance();
+		aa.initTreatmentInfo();
+
+=======
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 //		com.kingdee.eas.ma.budget.IBudgetCtrlFacade ibf = com.kingdee.eas.ma.budget.BudgetCtrlFacadeFactory.getRemoteInstance();
 //		ibf = ibf;
 //		System.out.println("重写币别刷新方法1");
@@ -49,9 +57,12 @@ public class OUListUICTEx extends OUListUI{
 		
 //		Iupdateadjustfacade ad = updateadjustfacadeFactory.getRemoteInstance();
 //		ad.updateadjust();
+<<<<<<< HEAD
+=======
 //		
 		IInitTreatmentNodeIncomeFacade trenode = InitTreatmentNodeIncomeFacadeFactory.getRemoteInstance();
 		trenode.initTreatmentInfo();
+>>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 		
 		
 	}
