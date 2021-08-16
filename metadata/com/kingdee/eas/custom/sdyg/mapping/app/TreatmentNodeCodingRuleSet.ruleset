@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.sdyg.mapping.app</package>
+    <name>TreatmentNodeCodingRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.TreatmentNodeCodingRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.TreatmentNodeCodingRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>bb583b08-76f6-4242-8f12-cc7c6df54baa</id>
+            <parentID />
+            <source>easTreatmentTypeCode2=EasTreatmentTypeCode.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>39d253f7-9bab-4f70-b952-96df9dce6c68</id>
+            <parentID>bb583b08-76f6-4242-8f12-cc7c6df54baa</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>55c71f98-9204-4273-a67a-8cc3661c0eac</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>55c71f98-9204-4273-a67a-8cc3661c0eac</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txteasTreatmentTypeCode2</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>edd02472-b5dc-4b32-8412-124124670db0</id>
+            <parentID>bb583b08-76f6-4242-8f12-cc7c6df54baa</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>ee5863ca-d6b7-421f-beab-909e081916ad</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>cba0f871-5f89-48be-9304-78d209d34f25</id>
+                        <expressionID>f1924d38-e6ac-4fc6-8f11-7996519e5222</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>e0d82c23-cf02-4c8d-b116-9b21e51d9182</id>
+                        <expressionID>d1b58128-5c20-460d-b3cc-1040a6e263e2</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ee5863ca-d6b7-421f-beab-909e081916ad</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f1924d38-e6ac-4fc6-8f11-7996519e5222</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>d443a942-d5d6-4157-bfb4-5c660f8ac159</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d443a942-d5d6-4157-bfb4-5c660f8ac159</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtEasTreatmentTypeCode</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d1b58128-5c20-460d-b3cc-1040a6e263e2</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>b74b0aec-6f78-48e0-871e-d726915aa3d3</id>
+            <parentID />
+            <source>easNodeTypeCode2=ratio.NodeTypeName.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9a5c2961-68c2-4445-adde-509a889c1f2b</id>
+            <parentID>b74b0aec-6f78-48e0-871e-d726915aa3d3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>5ce1709d-baa6-4eba-92e8-00b348de1792</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5ce1709d-baa6-4eba-92e8-00b348de1792</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txteasNodeTypeCode2</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ac7b736a-d5ca-4ca9-91b1-e9116323b17a</id>
+            <parentID>b74b0aec-6f78-48e0-871e-d726915aa3d3</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>1e6dc5e1-0a51-4ebe-999f-8198c1cd4a7f</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>019da98f-dcda-4604-9bf3-803aaf4b7a96</id>
+                        <expressionID>bc379dab-10c9-4c8d-a5a9-3728abe35b69</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>1ccbc510-7571-46bd-9ec8-573bf9429c9c</id>
+                        <expressionID>924a3cc5-b71a-4176-b7e5-80482c57e908</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1e6dc5e1-0a51-4ebe-999f-8198c1cd4a7f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bc379dab-10c9-4c8d-a5a9-3728abe35b69</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>013cc119-f447-460c-ba9e-54f558b60892</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>013cc119-f447-460c-ba9e-54f558b60892</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtratio</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>924a3cc5-b71a-4176-b7e5-80482c57e908</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>NodeTypeName.name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>03ac97e4-a24a-455b-996f-dff40fa6d15b</id>
+            <name>TreatmentNodeCoding_easTreatmentTypeCode2_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.TreatmentNodeCodingRuleSet].actions.action[TreatmentNodeCoding_easTreatmentTypeCode2_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.TreatmentNodeCodingRuleSet].actions.action[TreatmentNodeCoding_easTreatmentTypeCode2_ActionInfo].description</description>
+            <expressionID>bb583b08-76f6-4242-8f12-cc7c6df54baa</expressionID>
+        </action>
+        <action>
+            <id>3146454e-4817-41ae-b414-59f6384c08f1</id>
+            <name>TreatmentNodeCoding_easNodeTypeCode2_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.TreatmentNodeCodingRuleSet].actions.action[TreatmentNodeCoding_easNodeTypeCode2_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.TreatmentNodeCodingRuleSet].actions.action[TreatmentNodeCoding_easNodeTypeCode2_ActionInfo].description</description>
+            <expressionID>b74b0aec-6f78-48e0-871e-d726915aa3d3</expressionID>
+        </action>
+    </actions>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.TreatmentNodeCodingRuleSet].actions.action[TreatmentNodeCoding_easNodeTypeCode2_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_NodeTypeName" />
+            <lang locale="zh_HK" value="攜帶字段屬性_NodeTypeName" />
+            <lang locale="zh_TW" value="攜帶字段屬性_NodeTypeName" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.TreatmentNodeCodingRuleSet].actions.action[TreatmentNodeCoding_easNodeTypeCode2_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.TreatmentNodeCodingRuleSet].actions.action[TreatmentNodeCoding_easTreatmentTypeCode2_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.TreatmentNodeCodingRuleSet].actions.action[TreatmentNodeCoding_easTreatmentTypeCode2_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.TreatmentNodeCodingRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.sdyg.mapping.app.TreatmentNodeCodingRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</ruleSet>
+
