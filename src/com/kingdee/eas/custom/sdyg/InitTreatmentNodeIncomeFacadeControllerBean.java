@@ -100,7 +100,6 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
     	// super._initTreatmentInfo(ctx);
 
     	System.out.println("进入InitTreatmentNodeIncomeFacadeControllerBean");
-    	
     	//[下文代码cd代表初戴 ,bcq代表保持器(结束)]
     	String cdnodes = "";
     	String bcqnodes = "";

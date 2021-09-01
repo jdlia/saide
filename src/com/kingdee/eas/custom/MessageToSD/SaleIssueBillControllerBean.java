@@ -479,7 +479,6 @@ public class SaleIssueBillControllerBean extends AbstractSaleIssueBillController
 			//调用业务系统的删除接口
 			String url ="http://192.168.8.120:8388/matused/delete";
 			String res = HttpClientUtil.sendGet(url, "bizNumber="+bizNumber);
-			
 		}
 	}
 	
