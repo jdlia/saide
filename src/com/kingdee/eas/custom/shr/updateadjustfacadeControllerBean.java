@@ -2,10 +2,7 @@ package com.kingdee.eas.custom.shr;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
-<<<<<<< HEAD
-=======
 import java.sql.Timestamp;
->>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -26,12 +23,9 @@ import com.kingdee.eas.basedata.org.HROrgUnitInfo;
 import com.kingdee.eas.basedata.org.PositionInfo;
 import com.kingdee.eas.basedata.person.PersonInfo;
 import com.kingdee.eas.common.EASBizException;
-<<<<<<< HEAD
-=======
 import com.kingdee.eas.custom.sdyg.mapping.SyncLogEntryInfo;
 import com.kingdee.eas.custom.sdyg.mapping.SyncLogFactory;
 import com.kingdee.eas.custom.sdyg.mapping.SyncLogInfo;
->>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.shr.cmpdesign.AdjustSalaryCauseFactory;
 import com.kingdee.shr.cmpdesign.AdjustSalaryCauseInfo;
@@ -52,12 +46,7 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
         Logger.getLogger("com.kingdee.eas.custom.shr.updateadjustfacadeControllerBean");
     
     @Override
-<<<<<<< HEAD
-	protected void _updateadjust(Context ctx) throws BOSException,
-=======
-	protected void _updateadjust(Context ctx) throws 
->>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
-			EASBizException {
+	protected void _updateadjust(Context ctx) throws BOSException,EASBizException {
 		StringBuilder str = new StringBuilder();
 		str.append(" /*dialect*/ select tt.FID personId, tt.FName_l2 personName, tt.FNumber personNumber,t0.Fid adjustEmpId, t0.FEffectDate effdt, t0.FLeffectDate leffdt, t1.FAssignType, ");
 		str.append(" t2.FName_l2 orgName, t2.FNumber orgNumber,t2.FID orgId, t3.FName_l2 positionName, t3.FNumber positionNumber, t3.FID positionId, ");
@@ -69,14 +58,6 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 		str.append(" inner join T_ORG_Admin t2 on t1.FAdminOrgID = t2.fid ");
 		str.append(" inner join T_ORG_Position t3 on t1.FPositionId = t3.fid ");
 		str.append(" inner join T_HR_EmpEnrollBizBillEntry t4 on t4.FPERSONID = tt.FID  ");
-<<<<<<< HEAD
-		str.append(new StringBuilder().append(" where t4.CFISUPDATE = 0 and t4.FENROLLAGAIN = 0 "));
-		str.append(" order by t1.FAssignType, t0.FEffectDate ");
-		IRowSet rowSet = CmpSQLUtil.executeQuery(ctx, str.toString());
-		try {
-			while (rowSet.next()) {
-				String personId = rowSet.getString("personId");
-=======
 		str.append(new StringBuilder().append(" where t4.CFISUPDATE = 0 and t4.FENROLLAGAIN = 0 and tt.FID not in (select FPERSONID from T_HR_SFIXADJUSTSALARY )"));
 		str.append(" order by t1.FAssignType, t0.FEffectDate ");
 		SyncLogInfo logInfo = new SyncLogInfo();
@@ -99,7 +80,6 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 			while (rowSet.next()) {
 				String personId = rowSet.getString("personId");
 				String personName = rowSet.getString("personName");
->>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 				String orgId = rowSet.getString("orgId");
 				String positionId = rowSet.getString("positionId");
 				String empEnrollId = rowSet.getString("empEnrollFid");
@@ -109,11 +89,7 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				map.put("orgId", orgId);
 				map.put("positionId", positionId);
 				map.put("adjustEmpId", adjustEmpId);
-<<<<<<< HEAD
-				/**
-=======
 /**
->>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 				1、转正前基本工资 = 入职单查询的转正前基本工资 生效日期 = 入职日期	失效日期 = 预计调薪日期的前一天
 				2、技能工资 = 入职单查询的技能工资 生效日期 = 入职日期	失效日期 = 2199-12-31
 				3、绩效基数 = 入职单查询的绩效基数 生效日期 = 入职日期	失效日期 = 2199-12-31
@@ -122,7 +98,6 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				6、转正前合同工资 = 入职单查询的转正前合同工资 生效日期 = 入职日期	失效日期 = 预计调薪日期的前一天
 				7、转正后基本工资 = 入职单查询的转正后基本工资 生效日期 = 预计调薪日期	失效日期 = 2199-12-31
 				8、转正后合同工资 = 入职单查询的转正后合同工资 生效日期 = 预计调薪日期	失效日期 = 2199-12-31
-<<<<<<< HEAD
 	t4.CFBEFOREBASICSALARY beforebasicsalary ,
 	t4.CFBEFORESKILLSALARY beforeskillsalary, 
 	t4.CFBEFOREMERITSSALARY beforeremeritssalary,
@@ -131,7 +106,6 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 	t4.CFBEFORESUMAMOUNT beforesumamount, 
 	t4.CFAFTERBASICSALARY afterbasicsalary,
 	t4.CFAFTERSUMAMOUNT aftersumamount,
-=======
 				t4.CFBEFOREBASICSALARY beforebasicsalary ,
 				t4.CFBEFORESKILLSALARY beforeskillsalary, 
 				t4.CFBEFOREMERITSSALARY beforeremeritssalary,
@@ -140,7 +114,6 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				t4.CFBEFORESUMAMOUNT beforesumamount, 
 				t4.CFAFTERBASICSALARY afterbasicsalary,
 				t4.CFAFTERSUMAMOUNT aftersumamount,
->>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 */
 				FixAdjustSalaryInfo beforebasicsalaryInfo = getFixAdjustSalaryInfo(map, ctx);
 				FixAdjustSalaryInfo beforeskillsalaryInfo = getFixAdjustSalaryInfo(map, ctx);
@@ -154,15 +127,12 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				//预计调薪日期
 				Date planformaldate = rowSet.getDate("planformaldate");
 				if(planformaldate == null){
-<<<<<<< HEAD
-=======
 					msg = personName + " 预计调薪日未填写！";
 					logEntryInfo = new SyncLogEntryInfo();
 					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
 					logEntryInfo.setLoginfo(msg);
 					logEntryInfo.setParent(logInfo);
 					logInfo.getEntrys().add(logEntryInfo);
->>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 					continue;
 				}
 				//预计调薪日期前一天
@@ -187,9 +157,7 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				beforebasicsalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("DX001",ctx));
 				if(beforebasicsalaryInfo.getMoney().longValue() > 0 ){
 //					beforesalaryID = FixAdjustSalaryFactory.getLocalInstance(ctx).save(beforebasicsalaryInfo);
-<<<<<<< HEAD
 					beforesalaryID = new ObjectUuidPK(execute.save(ctx, beforebasicsalaryInfo));
-=======
 					try {
 						beforesalaryID = new ObjectUuidPK(execute.save(ctx, beforebasicsalaryInfo));
 					} catch (Exception e) {
@@ -200,7 +168,6 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 						logEntryInfo.setParent(logInfo);
 						logInfo.getEntrys().add(logEntryInfo);
 					}
->>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 				}
 				//技能工资
 				String beforeskillsalary = rowSet.getString("beforeskillsalary");
@@ -249,9 +216,7 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				beforesumamountInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("DX001",ctx));
 				if(beforesumamountInfo.getMoney().longValue() > 0 ){
 //					beforesumamountID = FixAdjustSalaryFactory.getLocalInstance(ctx).save(beforesumamountInfo);
-<<<<<<< HEAD
 					beforesumamountID = new ObjectUuidPK(execute.save(ctx, beforesumamountInfo));
-=======
 					try {
 						beforesumamountID = new ObjectUuidPK(execute.save(ctx, beforesumamountInfo));
 					} catch (Exception e) {
@@ -262,7 +227,6 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 						logEntryInfo.setParent(logInfo);
 						logInfo.getEntrys().add(logEntryInfo);
 					}
->>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 				}
 				//转正后基本工资
 				String afterbasicsalary = rowSet.getString("afterbasicsalary");
@@ -274,9 +238,7 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				afterbasicsalaryInfo.setLeffectDay(getLeffectDay());
 				afterbasicsalaryInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("DX002",ctx));
 				if(beforesalaryID != null){
-<<<<<<< HEAD
 					afterbasicsalaryInfo.setOldFixAdjustSalary(FixAdjustSalaryFactory.getLocalInstance(ctx).getFixAdjustSalaryInfo(beforesalaryID));
-=======
 					try {
 						afterbasicsalaryInfo.setOldFixAdjustSalary(FixAdjustSalaryFactory.getLocalInstance(ctx).getFixAdjustSalaryInfo(beforesalaryID));
 					} catch (Exception e) {
@@ -287,7 +249,6 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 						logEntryInfo.setParent(logInfo);
 						logInfo.getEntrys().add(logEntryInfo);
 					}
->>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 				}
 				//转正后合同工资
 				String aftersumamount = rowSet.getString("aftersumamount");
@@ -299,7 +260,6 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 				aftersumamountInfo.setLeffectDay(getLeffectDay());
 				aftersumamountInfo.setAdjustSalaryCause(getAdjustSalaryCauseInfoByNumber("DX002",ctx));
 				if(beforesumamountID != null){
-<<<<<<< HEAD
 					aftersumamountInfo.setOldFixAdjustSalary(FixAdjustSalaryFactory.getLocalInstance(ctx).getFixAdjustSalaryInfo(beforesumamountID));
 				}
 				if(beforeskillsalaryInfo.getMoney().longValue() > 0 ){
@@ -327,14 +287,6 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 					execute.save(ctx, aftersumamountInfo);
 				}
 				updateIsUpdatearchives(empEnrollId, ctx);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-			logger.error(e);
-		} catch (EASBizException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-=======
 					try {
 						aftersumamountInfo.setOldFixAdjustSalary(FixAdjustSalaryFactory.getLocalInstance(ctx).getFixAdjustSalaryInfo(beforesumamountID));
 					} catch (Exception e) {
@@ -345,7 +297,6 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 						logEntryInfo.setParent(logInfo);
 						logInfo.getEntrys().add(logEntryInfo);
 					}
-				}
 				if(beforeskillsalaryInfo.getMoney().longValue() > 0 ){
 //					FixAdjustSalaryFactory.getLocalInstance(ctx).save(beforeskillsalaryInfo);
 					try {
@@ -442,7 +393,6 @@ public class updateadjustfacadeControllerBean extends Abstractupdateadjustfacade
 		} catch (SQLException e) {
 			e.printStackTrace();
 			logger.error(e);
->>>>>>> f0ec66ba6436d98004127d189c2726a0cf62e52c
 		}
 	}
 	/**

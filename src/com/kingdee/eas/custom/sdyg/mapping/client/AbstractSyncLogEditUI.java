@@ -268,7 +268,6 @@ public abstract class AbstractSyncLogEditUI extends com.kingdee.eas.framework.cl
 		registerBindings();
 		registerUIState();
 
-
     }
 
 	public com.kingdee.bos.ctrl.swing.KDToolBar[] getUIMultiToolBar(){

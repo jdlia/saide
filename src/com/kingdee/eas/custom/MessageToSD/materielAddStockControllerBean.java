@@ -85,19 +85,19 @@ public class materielAddStockControllerBean extends AbstractmaterielAddStockCont
 		// "SELECT * FROM T_BD_MaterialInventory where FOrgUnit ='"
 		// + orgCode + "'";
 		System.out.println("执行sql");
-		String sql = "SELECT me.FNumber as fbnumber,me.FName_l2 as fbname,ma.*,inv.FOrgUnit FROM T_bd_material as ma left join T_BD_MaterialInventory as inv on ma.FID = inv.FMaterialID RIGHT JOIN T_BD_MeasureUnit as me on ma.FBaseUnit = me.FID where inv.FOrgUnit = '" + id + "'";
+		String sql = "SELECT me.FNumber as fbnumber,me.FName_l2 as fbname,ma.FNumber,ma.FName_l2,ma.FModel,ma.CFPRICE,ma.CFwlywfl,inv.FOrgUnit FROM T_bd_material as ma left join T_BD_MaterialInventory as inv on ma.FID = inv.FMaterialID left JOIN T_BD_MeasureUnit as me on ma.FBaseUnit = me.FID where inv.FOrgUnit = '" + id + "'";
 		// String FBaseUnit = "";//基本计量单位对象id
 		System.out.println("sql==>"+sql);
 		IRowSet executeQuery = DbUtil.executeQuery(ctx, sql);
 		System.out.println("是否有数据：》"+executeQuery.size());
 		try {
 			while (executeQuery.next()) {
-				System.out.println("进入getString数据");
+//				System.out.println("进入getString数据");
 				Map<String, Object> account = new HashMap<String, Object>();
 				succ = true;
 				msg = "查询成功";
 				number = executeQuery.getString("FNumber");// 物料编码
-				System.out.print(this.getClass().getName() + "**********number********" + number);
+//				System.out.print(this.getClass().getName() + "**********number********" + number);
 				name = executeQuery.getString("FName_l2");// 物料名称
 				model = executeQuery.getString("FModel");// 物料规格
 				// FBaseUnit = executeQuery.getString("FBaseUnit");//基本计量单位对象id

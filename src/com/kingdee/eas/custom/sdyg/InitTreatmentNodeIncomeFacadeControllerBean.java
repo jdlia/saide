@@ -100,7 +100,6 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
     	// super._initTreatmentInfo(ctx);
 
     	System.out.println("进入InitTreatmentNodeIncomeFacadeControllerBean");
-    	
     	//[下文代码cd代表初戴 ,bcq代表保持器(结束)]
     	String cdnodes = "";
     	String bcqnodes = "";
@@ -148,6 +147,7 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 
     	//查询正畸中间表数据t_ortho   todo 2021.07.08 去掉 t.isHandled IS NULL   and t.company in ('066','080') and t.bizDate != STR_TO_DATE  and t.bizDate >= STR_TO_DATE('2020-01-01 00:00:00','%Y-%m-%d %H:%i:%s')
 		sqlbuff = new StringBuffer();
+		/**
 		sqlbuff.append("select t.* ,t1.bizDate cdBizDate,t2.bizDate bcqBizDate,t1.node cdNode,t2.node bcqNode,t1.feeTypeDetail cdfeeTypeDetail,t2.feeTypeDetail bcqfeeTypeDetail,");
 		sqlbuff.append(" t3.specialAmount jmjSpecialAmount ,t3.bizDate jmjBizDate,t1.company cdCompany ,t2.company bcqCompany,chudai.discountAmount chudaiamount,jieshu.discountAmount jieshuamount");  
 		sqlbuff.append(" ,chudai.expenseNo chudaiexpenseNo ,jieshu.expenseNo jieshuexpenseNo");  
@@ -157,8 +157,22 @@ public class InitTreatmentNodeIncomeFacadeControllerBean extends AbstractInitTre
 	    sqlbuff.append(" left join ( select * from t_ortho  where isSpecial = '1' ) t3  on t.expenseID = t3.expenseID");
 	    sqlbuff.append(" left join  (select expenseNo,discountAmount,feeagreementid from t_agreement where expenseName like '%戴%') chudai on t.feeagreementid = chudai.feeagreementid ");
 	    sqlbuff.append(" left join  (select expenseNo,discountAmount,feeagreementid from t_agreement where expenseName like '%复%') jieshu on t.feeagreementid = jieshu.feeagreementid ORDER BY t.bizDate asc");
-        //sqlbuff.append(" where t.feeagreementid = '7fceece6-ffe0-4066-99db-98b809939c7c'");
 	    System.out.println("正畸中间表SQL："+sqlbuff.toString());
+**/
+		sqlbuff.append("select * from (select t.* ,t1.bizDate cdBizDate,t2.bizDate bcqBizDate,t1.node cdNode,t2.node bcqNode," +
+				"t1.feeTypeDetail cdfeeTypeDetail,t2.feeTypeDetail bcqfeeTypeDetail, t3.specialAmount jmjSpecialAmount ," +
+				"t3.bizDate jmjBizDate,t1.company cdCompany ,t2.company bcqCompany,chudai.discountAmount chudaiamount," +
+				"jieshu.discountAmount jieshuamount ,chudai.expenseNo chudaiexpenseNo ,jieshu.expenseNo jieshuexpenseNo " +
+				"FROM ( select * from t_ortho t where (t.company <> '' OR t.isSpecial = '1') and (t.isHandled is null or t.isHandled = '0')  and t.bizDate is not null and t.docNo !='' )t  " +
+				"left join ( select * from t_ortho  where isSpecial != '1' and feeTypeDetail in('4','3','5','2','2','1','2') " +
+				"and node in ('firstWear','firstWear','firstWear','firstWearHalf1','firstWear','firstWear','firstWearHalf2') " +
+				"and company <> '' ) t1 on t.expenseID = t1.expenseID left join ( select * from t_ortho  " +
+				"where isSpecial != '1' and feeTypeDetail in('3','2','1','4','5') " +
+				"and node in ('finish','finish','finish','finish','finish') and company <> '' ) t2 " +
+				"on t.expenseID = t2.expenseID left join ( select * from t_ortho  where isSpecial = '1' ) t3  " +
+				"on t.expenseID = t3.expenseID left join  (select expenseNo,discountAmount,feeagreementid from t_agreement where expenseName like '%戴%') chudai " +
+				"on t.feeagreementid = chudai.feeagreementid  left join  (select expenseNo,discountAmount,feeagreementid from t_agreement where expenseName like '%复%') jieshu " +
+				"on t.feeagreementid = jieshu.feeagreementid ORDER BY t.bizDate asc ) a ");
     	String msg = "";
     	mysqlConnectionUtil sqlutil = new mysqlConnectionUtil();
     	Connection conn = null;

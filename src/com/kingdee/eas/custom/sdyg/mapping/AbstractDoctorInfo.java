@@ -72,6 +72,17 @@ public class AbstractDoctorInfo extends com.kingdee.eas.framework.DataBaseInfo i
     {
         put("stafflevel", item);
     }
+    /**
+     * Object:医生员工映射's 前台property 
+     */
+    public boolean isQiantai()
+    {
+        return getBoolean("qiantai");
+    }
+    public void setQiantai(boolean item)
+    {
+        setBoolean("qiantai", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("9E676503");

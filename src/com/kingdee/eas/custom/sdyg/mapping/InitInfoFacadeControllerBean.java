@@ -49,6 +49,8 @@ import com.kingdee.bos.service.IServiceContext;
 import com.kingdee.eas.base.btp.BTPManagerFactory;
 import com.kingdee.eas.base.btp.BTPTransformResult;
 import com.kingdee.eas.base.btp.IBTPManager;
+import com.kingdee.eas.base.codingrule.CodingRuleManagerFactory;
+import com.kingdee.eas.base.codingrule.ICodingRuleManager;
 import com.kingdee.eas.base.permission.UserCollection;
 import com.kingdee.eas.base.permission.UserFactory;
 import com.kingdee.eas.base.permission.UserInfo;
@@ -106,6 +108,7 @@ import com.kingdee.eas.basedata.org.PurchaseOrgUnitInfo;
 import com.kingdee.eas.basedata.org.SaleOrgUnitCollection;
 import com.kingdee.eas.basedata.org.SaleOrgUnitFactory;
 import com.kingdee.eas.basedata.org.SaleOrgUnitInfo;
+import com.kingdee.eas.basedata.person.PersonInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.cp.bc.ExpenseTypeCollection;
 import com.kingdee.eas.cp.bc.ExpenseTypeFactory;
@@ -149,6 +152,7 @@ import com.kingdee.eas.fi.cas.CasRecPayBillTypeEnum;
 import com.kingdee.eas.fi.cas.IReceivingBill;
 import com.kingdee.eas.fi.cas.ReceivingBill;
 import com.kingdee.eas.fi.cas.ReceivingBillEntry;
+import com.kingdee.eas.fi.cas.ReceivingBillEntryCollection;
 import com.kingdee.eas.fi.cas.ReceivingBillEntryInfo;
 import com.kingdee.eas.fi.cas.ReceivingBillFactory;
 import com.kingdee.eas.fi.cas.ReceivingBillInfo;
@@ -241,7 +245,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		ICodingRuleManager iCodingRuleManager = CodingRuleManagerFactory.getLocalInstance(ctx);
 		// 循环查询结果
 		StringBuffer strIDbuff = new StringBuffer();
 		try {
@@ -258,6 +262,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 				doctorInfo.setBizid(bizID);//业务系统主键
 				doctorInfo.setBiznumber(resultSet.getString("name"));
 				doctorInfo.setBizname(resultSet.getString("userName"));
+				doctorInfo.setNumber(iCodingRuleManager.getNumber(doctorInfo, ""));
 				DoctorFactory.getLocalInstance(ctx).addnew(doctorInfo);
 			}
 		} catch (EASBizException e) {
@@ -983,19 +988,18 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
     	//收据(历史数据情况)
     	StringBuffer sqlbuff = new StringBuffer();
     	sqlbuff.append("SELECT bill.ID billid,org.companyName billcompany," );
-    	sqlbuff.append("	bill.receiptNo billreceiptno,entry.orderdate billdate,bill.recTypeNo billrectypeno,");
-    	sqlbuff.append("	bill.recTypeName billrectypename, bill.account billaccount, entry.orderdate billbizdate,bill.recordCompany billrecordcompany,");
+    	sqlbuff.append("	bill.receiptNo billreceiptno,bill.billDate billdate,bill.recTypeNo billrectypeno,");
+    	sqlbuff.append("	bill.recTypeName billrectypename, bill.account billaccount, bill.bizDate billbizdate,bill.recordCompany billrecordcompany,");
     	sqlbuff.append("	bill.sd_channel billchannel,bill.charge_id billchargeid,entry.aramount billtatalpay,entry.amount billtatalactualpay,bill.VIPNo billVipNo,");
     	sqlbuff.append("	entry.entryID entryID,entry.expenseNo entryexpenseno,entry.expenseName entryexpensename,entry.qty entryqty,entry.ARAmount entryaramount,");
     	sqlbuff.append("	entry.docNo entrydocno,entry.amount entryamount, entry.type entrytype,entry.VIPRight entryvipright,entry.detailID entrydetailid,entry.receiptNO entryreceiptno,");
     	sqlbuff.append("	entry.charge_id entrychargeid,entry.charge_detail_id entrychargedetailid,fee.itemNo feeitemNo,oth.bizType othbizType");
     	sqlbuff.append(" FROM t_receipt bill INNER JOIN t_receipt_ety entry ON bill.ID = entry.ID  " );
-//    	sqlbuff.append(" LEFT JOIN ( select id,sum(ARAmount) aramount,sum(amount) actualpay from t_receipt_ety where type = 0 GROUP BY id ) entry2 on bill.ID = entry2.ID  " );
     	sqlbuff.append("	left join t_org org on bill.company = org.dgtNo " );
     	sqlbuff.append("	left join t_feeitem fee on entry.expenseNo = fee.id " );
     	sqlbuff.append("	left join t_othcustomer oth on bill.sd_channel = oth.id " );
-    	sqlbuff.append(" where entry.type =0 " );
-//    	sqlbuff.append(" and entry.orderdate BETWEEN  STR_TO_DATE('2021-01-01','%Y-%m-%d') and STR_TO_DATE('2021-01-31','%Y-%m-%d') and (bill.company = '066' )  " );
+    	sqlbuff.append(" where entry.type =0  " );
+    	sqlbuff.append(" and bill.billDate BETWEEN  STR_TO_DATE('2021-12-01','%Y-%m-%d') and STR_TO_DATE('2022-02-28','%Y-%m-%d') " );
     	if(numbers != null && numbers.length() > 0){
     		sqlbuff.append(" and bill.receiptNo = '"+numbers+"'");
     	}
@@ -1007,16 +1011,19 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
     	StringBuffer duizhangSqlBuff = new StringBuffer();
     	duizhangSqlBuff.append("select bill.company companyno ,bill.bizDate billdate ,bill.bizNo billno,bill.recAmount billrecamount,");
     	duizhangSqlBuff.append(" bill.actualRec billactualrec,bill.recTypeNo billrectypeno,bill.recTypeName billrectypename,bill.serviceFee billfee,bill.instalmentFee instalmentFee,");
-    	duizhangSqlBuff.append(" bill.recordNo billrecordno,org.companyName companyname ,receipt.sd_channel othcustomerid");
+    	duizhangSqlBuff.append(" bill.recordNo billrecordno,org.companyName companyname ,receipt.sd_channel othcustomerid,");
+    	duizhangSqlBuff.append(" entry.expenseNo entryexpenseno,entry.qty entryqty,entry.ARAmount entryaramount,entry.docNo entrydocno,entry.amount entryamount");
     	duizhangSqlBuff.append(" from t_reconciliation bill left join t_org org on bill.company = org.dgtNo ");
-    	duizhangSqlBuff.append(" left join t_receipt receipt on bill.bizNo = receipt.receiptNo where 1=1 ");
+    	duizhangSqlBuff.append(" left join t_receipt receipt on bill.bizNo = receipt.receiptNo  ");
+    	duizhangSqlBuff.append(" left JOIN t_receipt_ety entry ON receipt.ID = entry.ID ");
+    	duizhangSqlBuff.append(" where 1=1 ");
     	if(numbers != null && numbers.length() > 0){
     		duizhangSqlBuff.append(" and bill.bizNo = '"+numbers+"'");
     	}
     	if(companynumber != null && companynumber.length() > 0){
     		duizhangSqlBuff.append(" and bill.company = '"+companynumber+"'");
     	}
-//    	duizhangSqlBuff.append("  and bill.bizDate BETWEEN  STR_TO_DATE('2021-01-01','%Y-%m-%d') and STR_TO_DATE('2021-01-31','%Y-%m-%d') and (bill.company = '066')");
+    	duizhangSqlBuff.append(" and bill.bizDate BETWEEN  STR_TO_DATE('2021-12-01','%Y-%m-%d') and STR_TO_DATE('2022-02-28','%Y-%m-%d') ");
     	
     	//补交情况
     	StringBuffer bjsqlbuff = new StringBuffer();
@@ -1032,8 +1039,8 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
     	bjsqlbuff.append("	left join t_org org on bill.company = org.dgtNo " );
     	bjsqlbuff.append("	left join t_feeitem fee on entry.expenseNo = fee.id " );
     	bjsqlbuff.append("	left join t_othcustomer oth on bill.sd_channel = oth.id " );
-    	bjsqlbuff.append(" where entry2.actualpay >0 " );
-//    	bjsqlbuff.append(" and bill.bizDate BETWEEN  STR_TO_DATE('2021-01-01','%Y-%m-%d') and STR_TO_DATE('2021-01-31','%Y-%m-%d') and (bill.company = '066' ) " );
+    	bjsqlbuff.append(" where entry2.actualpay > 0 " );
+    	bjsqlbuff.append(" and bill.bizDate BETWEEN  STR_TO_DATE('2021-12-01','%Y-%m-%d') and STR_TO_DATE('2022-02-28','%Y-%m-%d')  " );
     	if(numbers != null && numbers.length() > 0){
     		bjsqlbuff.append(" and bill.receiptNo = '"+numbers+"'");
     	}
@@ -1117,16 +1124,23 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 				i = Integer.parseInt(stri);
 				//收费项目编码
 				String feeitemNo = rs.getString("feeitemNo");
-				//4.2	治疗业务对接流程图（现金/支票/个人转账）   收据-->中间表-->应收单/收款单
+				//将需要处理的收据信息转换到yingshouMap集合中，然后遍历MAP集合进行处理
 				if(i == PayTypeEnum.XIANJIN_VALUE || i == PayTypeEnum.ZHIPIAO_VALUE || i == PayTypeEnum.GERENZHUANZHANG_VALUE
 						|| i == PayTypeEnum.YIBAO_VALUE || i == PayTypeEnum.GONGDUIGONG_VALUE || i == PayTypeEnum.BAOXIAN_VALUE
-						|| (i == PayTypeEnum.QUDAO_VALUE && "渠道付款".equalsIgnoreCase(rs.getString("othbizType")))
+						|| ((i == PayTypeEnum.QUDAO_VALUE || i == PayTypeEnum.XIGUAMAIDAN_VALUE )&& "渠道付款".equalsIgnoreCase(rs.getString("othbizType")))
 						|| i == PayTypeEnum.ZHIFUBAO_VALUE || i == PayTypeEnum.WEIXIN_VALUE || i == PayTypeEnum.GUONEISHUAKA_VALUE || i == PayTypeEnum.GUOWAISHUAKA_VALUE
-						|| i == PayTypeEnum.YUE_VALUE ){
+						|| i == PayTypeEnum.YUE_VALUE || i == PayTypeEnum.HUIYUANKA_VALUE || i == PayTypeEnum.TIAOZHANG_VALUE){
 					try {
-						getYingshouMap(ctx, rs);
+				    	/**
+				    	 * 20211201  jiandong_li
+				    	 * 如果费用编码以999开头的，则为会员卡充值，直接生成收款信息
+				    	 */
+//						if(feeitemNo.startsWith("999") && (i == PayTypeEnum.XIANJIN_VALUE || i == PayTypeEnum.ZHIPIAO_VALUE || i == PayTypeEnum.GERENZHUANZHANG_VALUE)) {
+//							getShoukuanMap(ctx, rs);
+//						}else {
+							getYingshouMap(ctx, rs);
+//						}
 					} catch (Exception e) {
-						// 结果集转换到应收的MAP
 						msg = "收据编号："+billNo+"   错误信息："+e.getMessage()+"\n";
 				    	logEntryInfo = new SyncLogEntryInfo();
 						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
@@ -1135,6 +1149,8 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 						logInfo.getEntrys().add(logEntryInfo);
 					}
 				}
+				/** 20211130 jiandong_li  
+				 *  此部分逻辑错误，会员卡消费时的收款单的债权转移应找到会员卡充值时的记录，通过充值记录进行债权转移
 				//4.12	会员卡
 				if(i == PayTypeEnum.HUIYUANKA_VALUE ){
 					//"999"开头属于会员卡充值流程
@@ -1172,11 +1188,22 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 						}
 					}
 				}
+				*/
 			}
 		} catch (NumberFormatException e1) {
-			e1.printStackTrace();
+			msg = e1.getMessage();
+	    	logEntryInfo = new SyncLogEntryInfo();
+			logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+			logEntryInfo.setLoginfo(msg);
+			logEntryInfo.setParent(logInfo);
+			logInfo.getEntrys().add(logEntryInfo);
 		} catch (SQLException e1) {
-			e1.printStackTrace();
+			msg = e1.getMessage();
+	    	logEntryInfo = new SyncLogEntryInfo();
+			logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+			logEntryInfo.setLoginfo(msg);
+			logEntryInfo.setParent(logInfo);
+			logInfo.getEntrys().add(logEntryInfo);
 		}
 
 		//对账单
@@ -1186,7 +1213,12 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 				try {
 					stri = duizhangrs.getString("billrectypeno");
 				} catch (SQLException e1) {
-					e1.printStackTrace();
+					msg = e1.getMessage();
+			    	logEntryInfo = new SyncLogEntryInfo();
+					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+					logEntryInfo.setLoginfo(msg);
+					logEntryInfo.setParent(logInfo);
+					logInfo.getEntrys().add(logEntryInfo);
 				}
 				//业务单据编码
 				String billNo = duizhangrs.getString("billno");
@@ -1202,7 +1234,8 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 						logEntryInfo.setParent(logInfo);
 						logInfo.getEntrys().add(logEntryInfo);
 					}
-				}else if(i == PayTypeEnum.QUDAO_VALUE || i == PayTypeEnum.ZHIFUBAO_VALUE || i == PayTypeEnum.WEIXIN_VALUE || i == PayTypeEnum.GUONEISHUAKA_VALUE || i == PayTypeEnum.GUOWAISHUAKA_VALUE){
+				}else if(i == PayTypeEnum.QUDAO_VALUE || i == PayTypeEnum.XIGUAMAIDAN_VALUE || i == PayTypeEnum.ZHIFUBAO_VALUE 
+						|| i == PayTypeEnum.WEIXIN_VALUE || i == PayTypeEnum.GUONEISHUAKA_VALUE || i == PayTypeEnum.GUOWAISHUAKA_VALUE){
 					try {
 						getShoukuanMapFromDuizhang(ctx, duizhangrs);
 					} catch (Exception e) {
@@ -1237,9 +1270,19 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 				}
 			}
 		} catch (NumberFormatException e1) {
-			e1.printStackTrace();
+			msg = e1.getMessage();
+	    	logEntryInfo = new SyncLogEntryInfo();
+			logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+			logEntryInfo.setLoginfo(msg);
+			logEntryInfo.setParent(logInfo);
+			logInfo.getEntrys().add(logEntryInfo);
 		} catch (SQLException e1) {
-			e1.printStackTrace();
+			msg = e1.getMessage();
+	    	logEntryInfo = new SyncLogEntryInfo();
+			logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+			logEntryInfo.setLoginfo(msg);
+			logEntryInfo.setParent(logInfo);
+			logInfo.getEntrys().add(logEntryInfo);
 		}
 
 		//补交
@@ -1250,7 +1293,12 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 				try {
 					stri = bjrs.getString("billrectypeno");
 				} catch (SQLException e1) {
-					e1.printStackTrace();
+					msg = e1.getMessage();
+			    	logEntryInfo = new SyncLogEntryInfo();
+					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+					logEntryInfo.setLoginfo(msg);
+					logEntryInfo.setParent(logInfo);
+					logInfo.getEntrys().add(logEntryInfo);
 				}
 				//业务单据编码
 				String billNo = bjrs.getString("billreceiptno");
@@ -1275,14 +1323,29 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 					try {
 						getBujiaoMap(ctx, bjrs);
 					} catch (Exception e) {
-						e.printStackTrace();
+						msg = e.getMessage();
+				    	logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
 					}
 				}
 			}
 		} catch (NumberFormatException e1) {
-			e1.printStackTrace();
+			msg = e1.getMessage();
+	    	logEntryInfo = new SyncLogEntryInfo();
+			logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+			logEntryInfo.setLoginfo(msg);
+			logEntryInfo.setParent(logInfo);
+			logInfo.getEntrys().add(logEntryInfo);
 		} catch (SQLException e1) {
-			e1.printStackTrace();
+			msg = e1.getMessage();
+	    	logEntryInfo = new SyncLogEntryInfo();
+			logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+			logEntryInfo.setLoginfo(msg);
+			logEntryInfo.setParent(logInfo);
+			logInfo.getEntrys().add(logEntryInfo);
 		}
 		//遍历应收Map并保存
 		IOtherBill iob = null;
@@ -1290,26 +1353,44 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 			iob = OtherBillFactory.getLocalInstance(ctx);
 //			iob = OtherBillFactory.getRemoteInstance();
 		} catch (BOSException e1) {
-			e1.printStackTrace();
+			msg = e1.getMessage();
+	    	logEntryInfo = new SyncLogEntryInfo();
+			logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+			logEntryInfo.setLoginfo(msg);
+			logEntryInfo.setParent(logInfo);
+			logInfo.getEntrys().add(logEntryInfo);
 		}
     	IReceivingBill irb = null;
 		try {
 			irb = ReceivingBillFactory.getLocalInstance(ctx);
 		} catch (BOSException e1) {
-			e1.printStackTrace();
+			msg = e1.getMessage();
+	    	logEntryInfo = new SyncLogEntryInfo();
+			logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+			logEntryInfo.setLoginfo(msg);
+			logEntryInfo.setParent(logInfo);
+			logInfo.getEntrys().add(logEntryInfo);
 		}
+		
+		//20211201  jiandong_li
+		//应收MAP中的key为业务系统的表头ID+分录ID的形式，所以value值中的应收单只会存在一条分录的情况
+    	//1、费用项目为全科时，累加全科分录的应收作为整单的应收
+    	//2、当费用类型为“其他”，为会员卡的充值业务，直接在集团下面生成对客户的收款单并记录会员卡号
 		if(yingshouMap.size() > 0){
 	    	Set pkset = new HashSet();
 			for (Iterator localIterator = this.yingshouMap.keySet().iterator(); localIterator.hasNext(); ) 
 		    {
 		    	Object key = localIterator.next();
-		    	//费用项目为全科时，累加全科分录的应收作为整单的应收
 		    	BigDecimal yingshouAmount = BigDecimal.ZERO;
 		    	OtherBillInfo otherBillInfo = (OtherBillInfo)this.yingshouMap.get(key);
 		    	//当获取的应收单分录的费用项目有全科和非全科的费用类型时，只取费用类型为全科的进行累加生成应收
 		    	OtherBillentryCollection entryInfoCollection = (OtherBillentryCollection) otherBillInfo.getEntries();
 		    	OtherBillPlanInfo planInfo = ((OtherBillPlanCollection) otherBillInfo.getPlans()).get(0);
 		    	if(entryInfoCollection != null && entryInfoCollection.size()>0){
+		    		/**
+		    		 *20211201  jiandong_li
+		    		 *应收MAP中的key为业务系统的表头ID+分录ID的形式，所以value值中的应收单只会存在一条分录的情况
+		    		 *修改为将原有的遍历逻辑注释掉
 		    		for (int j = 0; j < entryInfoCollection.size(); j++) {
 		    			OtherBillentryInfo entryInfo = entryInfoCollection.get(j);
 		    			OperationTypeInfo operationTypeInfo = null;
@@ -1320,11 +1401,56 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 						}
 		    			if(operationTypeInfo.getName().equals("全科")){
 		    				yingshouAmount = yingshouAmount.add(entryInfo.getAmount());
+		    			}else if(operationTypeInfo.getName().equals("其他")) {
+		    				// 费用类型为其他即会员卡充值业务时，直接将应收单信息转换为收款单信息
+		    				
 		    			}else{
 		    				entryInfoCollection.remove(entryInfo);
 		    				j = j-1;
 		    			}
 					}
+					*/
+		    		OtherBillentryInfo entryInfo = entryInfoCollection.get(0);
+		    		OperationTypeInfo operationTypeInfo = null;
+					ReceivingBillInfo receivingBillInfo = null;
+					boolean isqiantai = false;
+		    		BigDecimal shijifukuanAmount = (BigDecimal) entryInfo.get("shijifukuanAmount");
+					try {
+						operationTypeInfo = getOperationTypeInfoF7FromID(ctx,entryInfo.getExpenseItem().getOperationId().toString());
+					} catch (Exception e) {
+						msg = e.getMessage();
+				    	logEntryInfo = new SyncLogEntryInfo();
+						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+						logEntryInfo.setLoginfo(msg);
+						logEntryInfo.setParent(logInfo);
+						logInfo.getEntrys().add(logEntryInfo);
+					}
+//					取应收单中doctor信息，并根据业务系统名称判断是否为前台
+					DoctorInfo doctorInfo = (DoctorInfo) otherBillInfo.get("doctor");
+					if(doctorInfo !=null) {
+						if(doctorInfo.getBizname().contains("前台")) {
+							isqiantai = true;
+						}
+					}
+					//根据应收单人员信息取医生映射表信息
+//					try {
+//						if(otherBillInfo.getPerson() != null) {
+//							doctorInfo = getDoctorInfoByPerson(ctx, otherBillInfo.getPerson());
+//							if(doctorInfo.getBizname().contains("前台")) {
+//								isqiantai = true;
+//							}
+//							isqiantai = doctorInfo.isQiantai();
+//						}
+//					} catch (Exception e1) {
+//						msg = e1.getMessage();
+//				    	logEntryInfo = new SyncLogEntryInfo();
+//						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+//						logEntryInfo.setLoginfo(msg);
+//						logEntryInfo.setParent(logInfo);
+//						logInfo.getEntrys().add(logEntryInfo);
+//					}
+					
+					yingshouAmount = yingshouAmount.add(entryInfo.getAmount());
 		    		if(yingshouAmount == BigDecimal.ZERO){
 		    			continue;
 		    		}
@@ -1354,81 +1480,208 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 			    	planInfo.setUnVerifyAmount(yingshouAmount);
 			    	//未结算金额本位币
 			    	planInfo.setUnVerifyAmountLocal(yingshouAmount);
-		    	}
-		    	//保存应收单
-		    	IObjectPK pk = null;
-				try {
-					pk = iob.save(otherBillInfo);
-					//提交
-					iob.submit(pk);
-					//审核
-					iob.audit(pk);
-				} catch (EASBizException e) {
-					msg = "生成应收单出错  "+otherBillInfo.getCompany().getName()+ " 错误信息："+e.getMessage()+"\n";
-			    	logEntryInfo = new SyncLogEntryInfo();
-					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
-					logEntryInfo.setLoginfo(msg);
-					logEntryInfo.setParent(logInfo);
-					logInfo.getEntrys().add(logEntryInfo);
-				} catch (BOSException e) {
-					msg = "生成应收单出错  "+otherBillInfo.getCompany().getName()+ " 错误信息："+e.getMessage()+"\n";
-			    	logEntryInfo = new SyncLogEntryInfo();
-					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
-					logEntryInfo.setLoginfo(msg);
-					logEntryInfo.setParent(logInfo);
-					logInfo.getEntrys().add(logEntryInfo);
-				}
-		    	//下推收款单
-		    	if(otherBillInfo.getAbstractName().equalsIgnoreCase("现金") 
-		    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("支票")
-		    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("个人转账")){
-		    		IObjectPK repk = null;
-					try {
-						repk = createReceivingBill(ctx,pk,false,"AR008AUTO");
-					} catch (EASBizException e) {
-						msg = "应收单下推收款单出错 "+otherBillInfo.getCompany().getName()+" 错误信息："+e.getMessage()+"\n";
-				    	logEntryInfo = new SyncLogEntryInfo();
-						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
-						logEntryInfo.setLoginfo(msg);
-						logEntryInfo.setParent(logInfo);
-						logInfo.getEntrys().add(logEntryInfo);
-					} catch (BOSException e) {
-						msg = "应收单下推收款单出错 "+otherBillInfo.getCompany().getName()+" 错误信息："+e.getMessage()+"\n";
-				    	logEntryInfo = new SyncLogEntryInfo();
-						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
-						logEntryInfo.setLoginfo(msg);
-						logEntryInfo.setParent(logInfo);
-						logInfo.getEntrys().add(logEntryInfo);
-					}
-					if(repk != null){
-						pkset.add(repk.toString());
-					}
-		    	}
-		    	//下推应收单
-		    	if(otherBillInfo.getAbstractName().equalsIgnoreCase("商保") 
-		    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("保险")
-		    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("公对公转账")
-		    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("渠道付款")
-		    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("会员卡")){
-		    		try {
-						IObjectPK botpPK = createOtherBill(ctx,pk,false,"AR012AUTO");
-					} catch (EASBizException e) {
-						msg = "应收单下推应收单出错 "+otherBillInfo.getNumber()+" 错误信息："+e.getMessage()+"\n";
-				    	logEntryInfo = new SyncLogEntryInfo();
-						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
-						logEntryInfo.setLoginfo(msg);
-						logEntryInfo.setParent(logInfo);
-						logInfo.getEntrys().add(logEntryInfo);
-					} catch (BOSException e) {
-						msg = "应收单下推应收单出错 "+otherBillInfo.getNumber()+" 错误信息："+e.getMessage()+"\n";
-				    	logEntryInfo = new SyncLogEntryInfo();
-						logEntryInfo.setId(BOSUuid.create("3575EC2D"));
-						logEntryInfo.setLoginfo(msg);
-						logEntryInfo.setParent(logInfo);
-						logInfo.getEntrys().add(logEntryInfo);
-					}
+	    			if(operationTypeInfo.getName().equals("全科") ){
+				    	//保存应收单
+				    	IObjectPK pk = null;
+						try {
+							pk = iob.save(otherBillInfo);
+							//提交
+							iob.submit(pk);
+							//审核
+							iob.audit(pk);
+						} catch (EASBizException e) {
+							msg = "生成应收单出错  "+otherBillInfo.getCompany().getName()+ " 错误信息："+e.getMessage()+"\n";
+					    	logEntryInfo = new SyncLogEntryInfo();
+							logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+							logEntryInfo.setLoginfo(msg);
+							logEntryInfo.setParent(logInfo);
+							logInfo.getEntrys().add(logEntryInfo);
+						} catch (BOSException e) {
+							msg = "生成应收单出错  "+otherBillInfo.getCompany().getName()+ " 错误信息："+e.getMessage()+"\n";
+					    	logEntryInfo = new SyncLogEntryInfo();
+							logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+							logEntryInfo.setLoginfo(msg);
+							logEntryInfo.setParent(logInfo);
+							logInfo.getEntrys().add(logEntryInfo);
+						}
+				    	//下推收款单
+				    	if(otherBillInfo.getAbstractName().equalsIgnoreCase("现金") 
+				    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("支票")
+				    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("个人转账")){
+				    		IObjectPK repk = null;
+							try {
+								repk = createReceivingBill(ctx,pk,false,"AR008AUTO");
+							} catch (EASBizException e) {
+								msg = "应收单下推收款单出错 "+otherBillInfo.getCompany().getName()+" 错误信息："+e.getMessage()+"\n";
+						    	logEntryInfo = new SyncLogEntryInfo();
+								logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+								logEntryInfo.setLoginfo(msg);
+								logEntryInfo.setParent(logInfo);
+								logInfo.getEntrys().add(logEntryInfo);
+							} catch (BOSException e) {
+								msg = "应收单下推收款单出错 "+otherBillInfo.getCompany().getName()+" 错误信息："+e.getMessage()+"\n";
+						    	logEntryInfo = new SyncLogEntryInfo();
+								logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+								logEntryInfo.setLoginfo(msg);
+								logEntryInfo.setParent(logInfo);
+								logInfo.getEntrys().add(logEntryInfo);
+							}
+							if(repk != null){
+								pkset.add(repk.toString());
+							}
+				    	}
+				    	//下推应收单
+				    	if(otherBillInfo.getAbstractName().equalsIgnoreCase("商保") 
+				    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("保险")
+				    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("公对公转账")
+				    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("渠道付款")
+				    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("西瓜买单")
+				    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("会员卡")){
+				    		try {
+								IObjectPK botpPK = createOtherBill(ctx,pk,false,"AR012AUTO");
+							} catch (EASBizException e) {
+								msg = "应收单下推应收单出错 "+otherBillInfo.getNumber()+" 错误信息："+e.getMessage()+"\n";
+						    	logEntryInfo = new SyncLogEntryInfo();
+								logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+								logEntryInfo.setLoginfo(msg);
+								logEntryInfo.setParent(logInfo);
+								logInfo.getEntrys().add(logEntryInfo);
+							} catch (BOSException e) {
+								msg = "应收单下推应收单出错 "+otherBillInfo.getNumber()+" 错误信息："+e.getMessage()+"\n";
+						    	logEntryInfo = new SyncLogEntryInfo();
+								logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+								logEntryInfo.setLoginfo(msg);
+								logEntryInfo.setParent(logInfo);
+								logInfo.getEntrys().add(logEntryInfo);
+							}
+				    	}
+	    			}else if((operationTypeInfo.getName().equals("其他") || operationTypeInfo.getName().equals("正畸"))
+	    					&& (otherBillInfo.getAbstractName().equalsIgnoreCase("现金")
+			    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("支票")
+			    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("个人转账")) 
+			    			&& (shijifukuanAmount.compareTo(BigDecimal.ZERO)>0)) {
+	    				//会员卡充值且收费方式为现金类的直接由应收信息转换为收款信息,金额为实收金额
+	    				try {
+	    					if(operationTypeInfo.getName().equals("其他")) {
+	    						otherBillInfo.setCompany(getCompanyOrgUnitInfoF7(ctx, "北京赛德阳光医院管理集团有限公司"));
+	    					}
+							receivingBillInfo = transYingshouToShoukuan(ctx,otherBillInfo);
+							//保存收款单
+					    	IObjectPK pk = irb.save(receivingBillInfo);
+							//提交
+					    	irb.submitBill(pk);
+					    	pkset.add(pk.toString());
+						} catch (Exception e) {
+							msg = "收款单处理出错："+receivingBillInfo.getNumber()+" 错误信息："+e.getMessage()+"\n";
+					    	logEntryInfo = new SyncLogEntryInfo();
+							logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+							logEntryInfo.setLoginfo(msg);
+							logEntryInfo.setParent(logInfo);
+							logInfo.getEntrys().add(logEntryInfo);
+						}
+	    			}else if ( operationTypeInfo.getName().equals("种植") ) {
+	    				//正畸、种植且收费方式为现金、支票、个人转账的直接由应收信息转换为收款信息,金额为实收金额
+	    				if((otherBillInfo.getAbstractName().equalsIgnoreCase("现金") 
+	    			    		|| otherBillInfo.getAbstractName().equalsIgnoreCase("支票")
+	    			    		|| otherBillInfo.getAbstractName().equalsIgnoreCase("个人转账"))
+	    			    		&& (shijifukuanAmount.compareTo(BigDecimal.ZERO)>0)) {
+		    				try {
+								receivingBillInfo = transYingshouToShoukuan(ctx,otherBillInfo);
+								//保存收款单
+						    	IObjectPK pk = irb.save(receivingBillInfo);
+								//提交
+						    	irb.submitBill(pk);
+						    	pkset.add(pk.toString());
+							} catch (Exception e) {
+								msg = "收款单处理出错："+receivingBillInfo.getNumber()+" 错误信息："+e.getMessage()+"\n";
+						    	logEntryInfo = new SyncLogEntryInfo();
+								logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+								logEntryInfo.setLoginfo(msg);
+								logEntryInfo.setParent(logInfo);
+								logInfo.getEntrys().add(logEntryInfo);
+							}
+						//支付方式：调账  费用类型：种植    调账并且为前台，按照调入方（实收金额>0）生成应收单
+	    				}else if(otherBillInfo.getAbstractName().equalsIgnoreCase("调账")&& (otherBillInfo.getAmount().compareTo(BigDecimal.ZERO)>0)) {
+							IObjectPK pk = null;
+	    					try {
+								pk = iob.save(otherBillInfo);
+								iob.submit(pk);
+								iob.audit(pk);
+							} catch (EASBizException e) {
+								msg = "生成应收单出错  "+otherBillInfo.getCompany().getName()+ " 错误信息："+e.getMessage()+"\n";
+						    	logEntryInfo = new SyncLogEntryInfo();
+								logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+								logEntryInfo.setLoginfo(msg);
+								logEntryInfo.setParent(logInfo);
+								logInfo.getEntrys().add(logEntryInfo);
+							} catch (BOSException e) {
+								msg = "生成应收单出错  "+otherBillInfo.getCompany().getName()+ " 错误信息："+e.getMessage()+"\n";
+						    	logEntryInfo = new SyncLogEntryInfo();
+								logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+								logEntryInfo.setLoginfo(msg);
+								logEntryInfo.setParent(logInfo);
+								logInfo.getEntrys().add(logEntryInfo);
+							}
+	    				//不为前台
+						}else if((otherBillInfo.getAbstractName().equalsIgnoreCase("支付宝") 
+	    			    		|| otherBillInfo.getAbstractName().equalsIgnoreCase("微信")
+	    			    		|| otherBillInfo.getAbstractName().equalsIgnoreCase("国外刷卡")
+	    			    		|| otherBillInfo.getAbstractName().equalsIgnoreCase("国内刷卡")
+	    			    		|| otherBillInfo.getAbstractName().equalsIgnoreCase("渠道付款")
+	    			    		|| otherBillInfo.getAbstractName().equalsIgnoreCase("西瓜买单")
+	    			    		|| otherBillInfo.getAbstractName().equalsIgnoreCase("医保")
+	    			    		|| otherBillInfo.getAbstractName().equalsIgnoreCase("保险")
+	    			    		|| otherBillInfo.getAbstractName().equalsIgnoreCase("公对公转账")) && (!isqiantai)) {
+							IObjectPK pk = null;
+							try {
+								pk = iob.save(otherBillInfo);
+								iob.submit(pk);
+								iob.audit(pk);
+							} catch (EASBizException e) {
+								msg = "生成应收单出错  "+otherBillInfo.getCompany().getName()+ " 错误信息："+e.getMessage()+"\n";
+						    	logEntryInfo = new SyncLogEntryInfo();
+								logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+								logEntryInfo.setLoginfo(msg);
+								logEntryInfo.setParent(logInfo);
+								logInfo.getEntrys().add(logEntryInfo);
+							} catch (BOSException e) {
+								msg = "生成应收单出错  "+otherBillInfo.getCompany().getName()+ " 错误信息："+e.getMessage()+"\n";
+						    	logEntryInfo = new SyncLogEntryInfo();
+								logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+								logEntryInfo.setLoginfo(msg);
+								logEntryInfo.setParent(logInfo);
+								logInfo.getEntrys().add(logEntryInfo);
+							}
+					    	//下推应收单
+					    	if(otherBillInfo.getAbstractName().equalsIgnoreCase("商保") 
+					    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("保险")
+					    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("公对公转账")
+					    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("渠道付款")
+					    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("西瓜买单")
+					    			|| otherBillInfo.getAbstractName().equalsIgnoreCase("会员卡")){
+					    		try {
+									IObjectPK botpPK = createOtherBill(ctx,pk,false,"AR012AUTO");
+								} catch (EASBizException e) {
+									msg = "应收单下推应收单出错 "+otherBillInfo.getNumber()+" 错误信息："+e.getMessage()+"\n";
+							    	logEntryInfo = new SyncLogEntryInfo();
+									logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+									logEntryInfo.setLoginfo(msg);
+									logEntryInfo.setParent(logInfo);
+									logInfo.getEntrys().add(logEntryInfo);
+								} catch (BOSException e) {
+									msg = "应收单下推应收单出错 "+otherBillInfo.getNumber()+" 错误信息："+e.getMessage()+"\n";
+							    	logEntryInfo = new SyncLogEntryInfo();
+									logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+									logEntryInfo.setLoginfo(msg);
+									logEntryInfo.setParent(logInfo);
+									logInfo.getEntrys().add(logEntryInfo);
+								}
+					    	}
+						}
+	    			}
 		    	}
 		    }
+			
 	    	//审核收款单
 	    	if(pkset.size()>0){
 	    		try {
@@ -1461,6 +1714,64 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		    {
 		    	Object key = localIterator.next();
 		    	ReceivingBillInfo receivingBillInfo = (ReceivingBillInfo)this.shoukuanMap.get(key);
+		    	ReceivingBillEntryCollection receivingBillEntryCollection = receivingBillInfo.getEntries();
+		    	//收款单存在分录，遍历分录信息进行收款单分录的实收金额和手续费的拆分
+		    	BigDecimal billActAmount = receivingBillInfo.getActRecAmt();   //单据实收金额
+		    	BigDecimal billtatalpay = receivingBillInfo.getAmount(); 	//单据应收金额
+		    	BigDecimal tempAmount =  BigDecimal.ZERO; 
+		    	BigDecimal rate = billActAmount.divide(billtatalpay,4,BigDecimal.ROUND_HALF_UP);
+		    	try {
+			    	if(receivingBillEntryCollection != null && receivingBillEntryCollection.size() > 0 ) {
+			    		for (int j = 0; j < receivingBillEntryCollection.size(); j++) {
+					    	BigDecimal entryActAmount = BigDecimal.ZERO;   				//分录实收金额
+					    	BigDecimal entryActAmountNew = BigDecimal.ZERO;   			//分配后的分录金额
+			    			ReceivingBillEntryInfo receivingBillEntryInfo = receivingBillEntryCollection.get(j);
+			    			OperationTypeInfo operationTypeInfo = null;
+							try {
+								operationTypeInfo = getOperationTypeInfoF7FromID(ctx,receivingBillEntryInfo.getExpenseType().getOperationId().toString());
+								receivingBillEntryInfo.setCoreBillNumber(operationTypeInfo.getNumber());
+							} catch (Exception e) {
+								msg = e.getMessage();
+						    	logEntryInfo = new SyncLogEntryInfo();
+								logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+								logEntryInfo.setLoginfo(msg);
+								logEntryInfo.setParent(logInfo);
+								logInfo.getEntrys().add(logEntryInfo);
+							}
+	//						if("全科".equals(operationTypeInfo.getName())) {
+	//							entryActAmount = receivingBillEntryInfo.getAmount();
+	//							entryActAmountNew =  entryActAmount.multiply(rate).setScale(2,BigDecimal.ROUND_HALF_UP);
+	//						}
+							entryActAmount = receivingBillEntryInfo.getAmount();
+							if( j ==  receivingBillEntryCollection.size() -1) {
+								entryActAmountNew = billActAmount.subtract(tempAmount);
+							}else {
+								entryActAmountNew =  entryActAmount.multiply(rate).setScale(2,BigDecimal.ROUND_HALF_UP);
+								tempAmount = tempAmount.add(entryActAmountNew);
+							}
+							receivingBillEntryInfo.setBgCtrlAmt(entryActAmountNew);
+							receivingBillEntryInfo.setUnLockLocAmt(entryActAmountNew);
+							receivingBillEntryInfo.setUnLockAmt(entryActAmountNew);
+							receivingBillEntryInfo.setUnVcLocAmount(entryActAmountNew);
+							receivingBillEntryInfo.setUnVcAmount(entryActAmountNew);
+							receivingBillEntryInfo.setLocalAmt(entryActAmountNew);
+							receivingBillEntryInfo.setAmount(entryActAmountNew);
+							receivingBillEntryInfo.setActualLocAmt(entryActAmountNew);
+							receivingBillEntryInfo.setActualAmt(entryActAmountNew);
+			    		}
+			    	}
+	
+					receivingBillInfo.setLocalAmt(billActAmount);
+					receivingBillInfo.setAmount(billActAmount);
+		    	}catch (Exception e) {
+					msg = "收款单处理出错   错误信息："+e.getMessage()+"\n";
+			    	logEntryInfo = new SyncLogEntryInfo();
+					logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+					logEntryInfo.setLoginfo(msg);
+					logEntryInfo.setParent(logInfo);
+					logInfo.getEntrys().add(logEntryInfo);
+		    		
+		    	}
 			    try {
 					Set pkset = new HashSet();
 			    	//保存收款单
@@ -1473,10 +1784,10 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 					//收款
 					irb.rec(pkset);
 			    	//下推收款单
-			    	if(receivingBillInfo.getDescription().equalsIgnoreCase("会员卡")){
-			    		IObjectPK botpPK = receiveCreateReceivingBill(ctx,pk,false,"AR36AUTO");
-			    		botppkset.add(botpPK);
-			    	}
+//			    	if(receivingBillInfo.getDescription().equalsIgnoreCase("会员卡")){
+//			    		IObjectPK botpPK = receiveCreateReceivingBill(ctx,pk,false,"AR36AUTO");
+//			    		botppkset.add(botpPK);
+//			    	}
 				} catch (EASBizException e) {
 					msg = "收款单处理出错   错误信息："+e.getMessage()+"\n";
 			    	logEntryInfo = new SyncLogEntryInfo();
@@ -1523,13 +1834,64 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		try {
 			yingfu = com.kingdee.eas.fi.ap.OtherBillFactory.getLocalInstance(ctx);
 		} catch (BOSException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			msg = e1.getMessage();
+	    	logEntryInfo = new SyncLogEntryInfo();
+			logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+			logEntryInfo.setLoginfo(msg);
+			logEntryInfo.setParent(logInfo);
+			logInfo.getEntrys().add(logEntryInfo);
 		}
 		if(yingfuMap.size() > 0){
 			for (Iterator localIterator = this.yingfuMap.keySet().iterator(); localIterator.hasNext(); ) 
 		    {
 		    	Object key = localIterator.next();
+		    	com.kingdee.eas.fi.ap.OtherBillInfo otherBillInfo = (com.kingdee.eas.fi.ap.OtherBillInfo) this.yingfuMap.get(key);
+		    	com.kingdee.eas.fi.ap.OtherBillentryCollection entryColl = otherBillInfo.getEntry();
+		    	BigDecimal billActAmount = otherBillInfo.getThisApAmount();  //单据实收金额
+		    	BigDecimal entryActAmountNew = BigDecimal.ZERO;   			//分配后的分录金额
+		    	BigDecimal tempAmount =  BigDecimal.ZERO; 
+		    	if(entryColl != null && entryColl.size() > 0 ) {
+		    		
+		    		for (int j = 0; j < entryColl.size(); j++) {
+				    	BigDecimal entryActAmount = BigDecimal.ZERO;   				//分录实收金额
+		    			com.kingdee.eas.fi.ap.OtherBillentryInfo entryInfo = entryColl.get(j);
+		    			OperationTypeInfo operationTypeInfo = null;
+						try {
+							operationTypeInfo = getOperationTypeInfoF7FromID(ctx,entryInfo.getExpenseItem().getOperationId().toString());
+							entryInfo.setCoreBillNumber(operationTypeInfo.getNumber());
+						} catch (Exception e) {
+							msg = e.getMessage();
+					    	logEntryInfo = new SyncLogEntryInfo();
+							logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+							logEntryInfo.setLoginfo(msg);
+							logEntryInfo.setParent(logInfo);
+							logInfo.getEntrys().add(logEntryInfo);
+						}
+						entryActAmount = entryInfo.getAmount();
+						if( j ==  entryColl.size() -1) {
+							entryActAmountNew = billActAmount.subtract(tempAmount);
+							entryInfo.setUnApportionAmount(entryActAmountNew);
+							entryInfo.setUnInvoiceReqAmountLocal(entryActAmountNew);
+							entryInfo.setUnInvoiceReqAmount(entryActAmountNew);
+							entryInfo.setLocalUnwriteOffAmount(entryActAmountNew);
+							entryInfo.setAmountLocal(entryActAmountNew);
+							entryInfo.setAmount(entryActAmountNew);
+							entryInfo.setActualPrice(entryActAmountNew);
+							entryInfo.setTaxPrice(entryActAmountNew);
+							entryInfo.setRealPrice(entryActAmountNew);
+							entryInfo.setPrice(entryActAmountNew);
+							entryInfo.setLockUnVerifyAmtLocal(entryActAmountNew);
+							entryInfo.setLockUnVerifyAmt(entryActAmountNew);
+							entryInfo.setUnVerifyAmountLocal(entryActAmountNew);
+							entryInfo.setUnVerifyAmount(entryActAmountNew);
+							entryInfo.setRecievePayAmountLocal(entryActAmountNew);
+							entryInfo.setRecievePayAmount(entryActAmountNew);
+						}else {
+							tempAmount = tempAmount.add(entryInfo.getAmount());
+						}
+		    		}
+		    	}
+		    	
 			    try {
 			    	//保存应收单
 			    	IObjectPK pk = yingfu.save((com.kingdee.eas.fi.ap.OtherBillInfo)this.yingfuMap.get(key));
@@ -1573,7 +1935,12 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 						try {
 							operationTypeInfo = getOperationTypeInfoF7FromID(ctx,entryInfo.getExpenseItem().getOperationId().toString());
 						} catch (Exception e) {
-							e.printStackTrace();
+							msg = e.getMessage();
+					    	logEntryInfo = new SyncLogEntryInfo();
+							logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+							logEntryInfo.setLoginfo(msg);
+							logEntryInfo.setParent(logInfo);
+							logInfo.getEntrys().add(logEntryInfo);
 						}
 		    			if(operationTypeInfo.getName().equals("全科") && (entryInfo.get("etrcharge_detail_id") != null)){
 		    				yingshouAmount = yingshouAmount.add(entryInfo.getAmount());
@@ -1827,6 +2194,10 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 
     //应收MAP
     protected void getYingshouMap (Context ctx,ResultSet rs) throws Exception{
+
+		BigDecimal exchangeRate = new BigDecimal(1.00);
+		BigDecimal zero = new BigDecimal(0.00);
+		BigDecimal one = new BigDecimal(1.00);   
     	//*********表头*************
     	String billid = rs.getString("billid");
     	String entryID = rs.getString("entryID");
@@ -1862,10 +2233,10 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		//--根据中间表客户编码取客户信息--
 		CustomerInfo othcustomerInfo = null;
 		if(i == PayTypeEnum.YIBAO_VALUE || i == PayTypeEnum.BAOXIAN_VALUE || i == PayTypeEnum.GONGDUIGONG_VALUE
-			|| i == PayTypeEnum.QUDAO_VALUE){
+			|| i == PayTypeEnum.QUDAO_VALUE || i == PayTypeEnum.XIGUAMAIDAN_VALUE){
 			othcustomerInfo = getOthcustomerInfoF7(ctx,billchannel);
 		}
-		if("会员卡".equalsIgnoreCase(billrectypename)){
+		if(i == PayTypeEnum.HUIYUANKA_VALUE ){
 			othcustomerInfo = getCustomerInfoF7(ctx,"A10");
 		}
 		DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -1879,6 +2250,9 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		String entryexpensename = rs.getString("entryexpensename");
 		//数量
 		BigDecimal entryqty = rs.getBigDecimal("entryqty");
+		if(entryqty.compareTo(zero)==0) {
+			entryqty = one;
+		}
 		//应收金额
 		BigDecimal entryaramount = rs.getBigDecimal("entryaramount");
 		//金额（实收）
@@ -1887,10 +2261,11 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		String entrychargeid = rs.getString("entrychargeid");
 		//分录收款明细ID
 		String entrychargedetailid = rs.getString("entrychargedetailid");
-		//*********公共*************
-		BigDecimal exchangeRate = new BigDecimal(1.00);
-		BigDecimal zero = new BigDecimal(0.00);
-		BigDecimal one = new BigDecimal(1.00);    	
+		//医生ID
+		String docNo = rs.getString("entrydocno");
+		DoctorInfo doctorInfo = getDoctorInfoF7(ctx, docNo);
+		
+		//*********公共************* 	
 		OtherBillInfo otherBillInfo = null;
 		OrgmapInfo orgmapInfo = getOrgmapInfoF7(ctx, billcompany);
 		CompanyOrgUnitInfo companyInfo =  orgmapInfo.getOrg();
@@ -1899,6 +2274,9 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
     		//摘要
     		otherBillInfo.setAbstractName(billrectypename);
 //    		getCompanyOrgUnitInfoF7(ctx,billcompany);
+    		//人员
+    		otherBillInfo.setPerson(doctorInfo.getPerson());
+    		otherBillInfo.put("doctor", doctorInfo);
     		//财务组织
     		otherBillInfo.setCompany(companyInfo);
     		//管理单元
@@ -2036,6 +2414,8 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
     		
     		otherBillInfo.put("othcustomer",othcustomerInfo);
     		otherBillInfo.put("charge_id",billchargeid);
+    		//业务系统收据编号
+    		otherBillInfo.put("bizNo", billNo);
     		
     		this.yingshouMap.put(mapid, otherBillInfo);
 
@@ -2065,7 +2445,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
     	}else{
     		otherBillInfo = (OtherBillInfo) yingshouMap.get(mapid);
     	}
-//分录
+    	//分录
     	OtherBillentryInfo otherBillentryInfo = new OtherBillentryInfo();
     	CustomerInfo customerInfo = getCustomerInfoF7(ctx,billaccount);
     	//是否完全核销
@@ -2209,6 +2589,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 //    	otherBillentryInfo.setParent(otherBillInfo);
     	otherBillentryInfo.put("etycharge_id", entrychargeid);
     	otherBillentryInfo.put("etrcharge_detail_id", entrychargedetailid);
+    	otherBillentryInfo.put("shijifukuanAmount", entryamount);
     	//表头
     	otherBillentryInfo.setHead(otherBillInfo);
     	otherBillInfo.getEntry().add(otherBillentryInfo);
@@ -2254,16 +2635,24 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		BigDecimal entryaramount = rs.getBigDecimal("entryaramount");
 		//金额（实收）
 		BigDecimal entryamount = rs.getBigDecimal("entryamount");
+		//收费项目编码
+		String feeitemNo = rs.getString("feeitemNo");
 		//*********公共*************
 		ReceivingBillInfo receivingBillInfo = null;
 		CustomerInfo customerInfo = getCustomerInfoF7(ctx,billaccount);
 		CustomerInfo othcustomerInfo = null;
-		if("会员卡".equalsIgnoreCase(billrectypename)){
-			othcustomerInfo = getCustomerInfoF7(ctx,"A10");
-		}
 		OrgmapInfo orgmapInfo = getOrgmapInfoF7(ctx, billcompany);
 		CompanyOrgUnitInfo companyInfo =  orgmapInfo.getOrg();
+		/**
+		 * 20211201  jiandong_li
+		 * 会员卡充值时生成集团下面的收款单
+		 */
+		if(feeitemNo.startsWith("999")) {
+			companyInfo = getCompanyOrgUnitInfoF7(ctx, "北京赛德阳光医院管理集团有限公司");
+			billrectypename = "会员卡充值";
+		}
 		AccountBankInfo accountBankInfo = getAccountBankInfoF7(ctx, companyInfo.getId().toString());
+		
 		if(this.shoukuanMap.get(billNo) == null ){
 			receivingBillInfo = new ReceivingBillInfo(); 
 //			receivingBillInfo.setrecBillClaim	收款认领信息	对象	FRecBillClaim
@@ -2604,7 +2993,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		//--根据中间表客户编码取客户信息--
 		CustomerInfo othcustomerInfo = null;
 		if(i == PayTypeEnum.YIBAO_VALUE || i == PayTypeEnum.BAOXIAN_VALUE || i == PayTypeEnum.GONGDUIGONG_VALUE
-			|| i == PayTypeEnum.QUDAO_VALUE){
+			|| i == PayTypeEnum.QUDAO_VALUE || i == PayTypeEnum.XIGUAMAIDAN_VALUE){
 			othcustomerInfo = getOthcustomerInfoF7(ctx,billchannel);
 		}
 		if("会员卡".equalsIgnoreCase(billrectypename)){
@@ -2985,6 +3374,18 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		BigDecimal instalmentFee = rs.getBigDecimal("instalmentFee");
 		//客户转移
 		String billchannel = rs.getString("othcustomerid");
+		//分录
+		//费用项目编码
+		String entryexpenseno = rs.getString("entryexpenseno");
+		//数量
+		BigDecimal entryqty = rs.getBigDecimal("entryqty");
+		//应收金额
+		BigDecimal entryaramount = rs.getBigDecimal("entryaramount");
+		//金额（实收）
+		BigDecimal entryamount = rs.getBigDecimal("entryamount");
+		//医生ID
+		String docNo = rs.getString("entrydocno");
+		DoctorInfo doctorInfo = getDoctorInfoF7(ctx, docNo);
 		//--根据中间表客户编码取客户信息--
 //		CustomerInfo othcustomerInfo = getOthcustomerInfoF7(ctx,billchannel);
 		DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -2995,7 +3396,8 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		//*********公共*************
 		ReceivingBillInfo receivingBillInfo = null;
 		CustomerInfo customerInfo = null;
-		if(i == PayTypeEnum.ZHIFUBAO_VALUE || i == PayTypeEnum.WEIXIN_VALUE || i == PayTypeEnum.GUONEISHUAKA_VALUE || i == PayTypeEnum.GUOWAISHUAKA_VALUE){
+		if(i == PayTypeEnum.ZHIFUBAO_VALUE || i == PayTypeEnum.WEIXIN_VALUE 
+			|| i == PayTypeEnum.GUONEISHUAKA_VALUE || i == PayTypeEnum.GUOWAISHUAKA_VALUE){
 			customerInfo = getCustomerInfoF7(ctx,billaccount);
 		}else{
 			customerInfo = getOthcustomerInfoF7(ctx,billchannel);
@@ -3006,6 +3408,10 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		if(this.shoukuanMap.get(billNo) == null ){
 			receivingBillInfo = new ReceivingBillInfo(); 
 //			receivingBillInfo.setrecBillClaim	收款认领信息	对象	FRecBillClaim
+//			人员	对象	FPersonId	
+			if(doctorInfo.getPerson()!=null) {
+				receivingBillInfo.setPerson(doctorInfo.getPerson());
+			}
 //			receivingBillInfo.setbillClaimStatus	单据认领状态	业务枚举	FBillClaimStatus	是	10
 			receivingBillInfo.setBillClaimStatus(BillClaimStatusEnum.getEnum(BillClaimStatusEnum.UNCLAIM_VALUE));
 //			receivingBillInfo.setisSmart	是否智能核算	业务枚举	FIsSmart	是	1
@@ -3145,12 +3551,11 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 //			receivingBillInfo.setsummary	款项说明	字符串	FSummary		
 //			receivingBillInfo.setconceit	打回意见	字符串	FConceit		
 //			receivingBillInfo.setaccessoryAmt	附件数	整数	FAccessoryAmt		
-//			receivingBillInfo.setperson	人员	对象	FPersonId		
 //			receivingBillInfo.setadminOrgUnit	部门	对象	FAdminOrgUnitId		
 //			receivingBillInfo.setlocalAmt	应收（付）本位币金额	数字	FLocalAmount	是	
-			receivingBillInfo.setLocalAmt(billtatalactualpay);
+			receivingBillInfo.setLocalAmt(billtatalpay);
 //			receivingBillInfo.setamount	应收（付）金额	数字	FAmount	是	
-			receivingBillInfo.setAmount(billtatalactualpay);
+			receivingBillInfo.setAmount(billtatalpay);
 //			receivingBillInfo.setisImport	是否导入	布尔	FIsImport	
 			receivingBillInfo.setIsImport(false);
 //			receivingBillInfo.setfundType	收付款方式	业务枚举	FFundType	
@@ -3204,6 +3609,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 			receivingBillInfo.setCreateTime(new Timestamp(billbizdate.getTime()));
 //			receivingBillInfo.setcreator	创建者	对象	FCreatorID	是	
 //			receivingBillInfo.setid	ID	BOSUUID	FID	是	
+			receivingBillInfo.put("bizNo", billNo);
 			this.shoukuanMap.put(billNo, receivingBillInfo);
 		}else{
 			receivingBillInfo = (ReceivingBillInfo) this.shoukuanMap.get(billNo);
@@ -3220,8 +3626,9 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		receivingBillEntryInfo.setMatchedAmount(BigDecimal.ZERO);	
 //		receivingBillEntryInfo.setrecBillType	分录收款类型	对象	FRecBillTypeID	是	
 		receivingBillEntryInfo.setRecBillType(getReceivingBillTypeInfoF7(ctx,"预收款"));
-//		receivingBillEntryInfo.setassItemsEntries	核算项目组合	集合			
-//		receivingBillEntryInfo.setexpenseType	费用项目	对象	FExpenseTypeID		
+//		receivingBillEntryInfo.setassItemsEntries	核算项目组合	集合		
+//		费用项目	对象	FExpenseTypeID;			
+		receivingBillEntryInfo.setExpenseType(getExpenseTypeInfoF7(ctx,entryexpenseno));	
 //		receivingBillEntryInfo.setreceiptID	关联生成收据的ID	BOSUUID	FReceiptID		
 //		receivingBillEntryInfo.setreceiptNumber	收据号	字符串	FReceiptNumber		
 //		receivingBillEntryInfo.setcustomerBillNum	客方单据号	字符串	FCustomerBillNum		
@@ -3230,7 +3637,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		receivingBillEntryInfo.setBizDate(billbizdate);
 //		receivingBillEntryInfo.setreceivingBill	收款单头	集合	FReceivingBillID	是	
 //		receivingBillEntryInfo.setbgCtrlAmt	预算控制金额	数字	FBgCtrlAmt	是	
-		receivingBillEntryInfo.setBgCtrlAmt(billtatalactualpay);
+		receivingBillEntryInfo.setBgCtrlAmt(entryamount);
 //		receivingBillEntryInfo.setmbgName	辅助维度名称	字符串	FMbgName		
 //		receivingBillEntryInfo.setmbgNumber	辅助维度编码	字符串	FMbgNumber		
 //		receivingBillEntryInfo.setfundFlowItem	资金流量项目	对象	FFundFlowItemID		
@@ -3264,9 +3671,9 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 //		receivingBillEntryInfo.setsourceBillEntryId	源单据分录ID	字符串	FSourceBillEntryId		
 //		receivingBillEntryInfo.setsourceBillId	源单据ID	字符串	FSourceBillId		
 //		receivingBillEntryInfo.setunLockLocAmt	未锁定本位币金额	数字	FUnLockLocAmt	是	
-		receivingBillEntryInfo.setUnLockLocAmt(billtatalactualpay);
+		receivingBillEntryInfo.setUnLockLocAmt(entryamount);
 //		receivingBillEntryInfo.setunLockAmt	未锁定金额	数字	FUnLockAmt	是	
-		receivingBillEntryInfo.setUnLockAmt(billtatalactualpay);
+		receivingBillEntryInfo.setUnLockAmt(entryamount);
 //		receivingBillEntryInfo.setlockLocAmt	锁定本位币金额	数字	FLockLocAmt		
 		receivingBillEntryInfo.setLockLocAmt(BigDecimal.ZERO);
 //		receivingBillEntryInfo.setlockAmt	锁定金额	数字	FLockAmt	
@@ -3275,11 +3682,11 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 //		receivingBillEntryInfo.setactualLocAmtVc	实收（付）本位币金额累计核销	数字	FActualLocAmtVc		
 		receivingBillEntryInfo.setActualLocAmtVc(BigDecimal.ZERO);
 //		receivingBillEntryInfo.setactualLocAmt	实收（付）本位币金额	数字	FActualLocAmt	是	
-		receivingBillEntryInfo.setActualLocAmt(billtatalactualpay);
+		receivingBillEntryInfo.setActualLocAmt(entryamount);
 //		receivingBillEntryInfo.setactualAmtVc	实收（付）金额累计核销	数字	FActualAmtVc	
 		receivingBillEntryInfo.setActualAmtVc(BigDecimal.ZERO);
 //		receivingBillEntryInfo.setactualAmt	实收（付）金额	数字	FActualAmt	是
-		receivingBillEntryInfo.setActualAmt(billtatalactualpay);
+		receivingBillEntryInfo.setActualAmt(entryamount);
 //		receivingBillEntryInfo.setrebateLocAmtVc	折扣本位币金额累计核销	数字	FRebateLocAmtVc	
 		receivingBillEntryInfo.setRebateLocAmtVc(BigDecimal.ZERO);
 //		receivingBillEntryInfo.setrebateLocAmt	折扣本位币金额	数字	FRebateLocAmt	
@@ -3291,17 +3698,17 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 //		receivingBillEntryInfo.setunVerifyExgRateLoc	未结算调汇本位币金额	数字	FUnVerifyExgRateLoc		
 		receivingBillEntryInfo.setUnVerifyExgRateLoc(BigDecimal.ZERO);
 //		receivingBillEntryInfo.setunVcLocAmount	应收（付）未核销本位币金额	数字	FUnVcLocAmount	是	
-		receivingBillEntryInfo.setUnVcLocAmount(billtatalpay);
+		receivingBillEntryInfo.setUnVcLocAmount(entryamount);
 //		receivingBillEntryInfo.setunVcAmount	应收（付）未核销金额	数字	FUnVcAmount	是	
-		receivingBillEntryInfo.setUnVcAmount(billtatalpay);
+		receivingBillEntryInfo.setUnVcAmount(entryamount);
 //		receivingBillEntryInfo.setlocalAmtVc	应收（付）本位币累计核销	数字	FLocalAmtVc	
 		receivingBillEntryInfo.setLocalAmtVc(BigDecimal.ZERO);
 //		receivingBillEntryInfo.setlocalAmt	应收（付）本位币金额	数字	FLocalAmount	是	
-		receivingBillEntryInfo.setLocalAmt(billtatalpay);
+		receivingBillEntryInfo.setLocalAmt(entryamount);
 //		receivingBillEntryInfo.setamountVc	应收（付）金额累计核销	数字	FAmountVc	
 		receivingBillEntryInfo.setAmountVc(BigDecimal.ZERO);
 //		receivingBillEntryInfo.setamount	应收（付）金额	数字	FAmount	是	
-		receivingBillEntryInfo.setAmount(billtatalpay);
+		receivingBillEntryInfo.setAmount(entryamount);
 //		receivingBillEntryInfo.setseq	单据分录序列号	整数	FSeq		
 //		receivingBillEntryInfo.setid	ID	BOSUUID	FID		
 
@@ -3331,8 +3738,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		BigDecimal billtatalpay = rs.getBigDecimal("billrecamount");
 		//实际收款总金额
 		BigDecimal billtatalactualpay = rs.getBigDecimal("billactualrec");
-		//手续费
-		BigDecimal billfee = rs.getBigDecimal("billfee");
+
 		//分期手续费
 		BigDecimal instalmentFee = rs.getBigDecimal("instalmentFee");
 		//手续费客户
@@ -3342,6 +3748,22 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		int year = Integer.parseInt(billbizdateStr.substring(0,4));
 		int month = Integer.parseInt(billbizdateStr.substring(5,7));
 		//*********分录*************
+		//费用项目编码
+		String entryexpenseno = rs.getString("entryexpenseno");
+		//数量
+		BigDecimal entryqty = rs.getBigDecimal("entryqty");
+		//应收金额
+		BigDecimal entryaramount = rs.getBigDecimal("entryaramount");
+		//金额（实收）
+		BigDecimal entryamount = rs.getBigDecimal("entryamount");
+
+    	BigDecimal rate = entryamount.divide(billtatalactualpay,4,BigDecimal.ROUND_HALF_UP);
+		//手续费
+		BigDecimal billfee1 = rs.getBigDecimal("billfee");
+		BigDecimal billfee = billfee1.multiply(rate).setScale(2,BigDecimal.ROUND_HALF_UP);
+		//医生ID
+		String docNo = rs.getString("entrydocno");
+		DoctorInfo doctorInfo = getDoctorInfoF7(ctx, docNo);
 		//*********公共*************
 		com.kingdee.eas.fi.ap.OtherBillInfo otherBillInfo = null;
 //		CustomerInfo customerInfo = getCustomerInfoF7(ctx,billaccount);
@@ -3358,20 +3780,20 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		}
 		if(this.yingfuMap.get(billNo) == null ){
 			otherBillInfo = new com.kingdee.eas.fi.ap.OtherBillInfo(); 
+//    		otherBillInfo.setthisApAmount	本次应付金额	数字	FthisApAmount	88
+    		otherBillInfo.setThisApAmount(billfee1);
 //    		otherBillInfo.setinvoiceCode	发票代码	字符串	FInvoiceCode	0
 //    		otherBillInfo.setinvoiceNumber	发票号码	字符串	FInvoiceNumber	0
 //    		otherBillInfo.setinvoiceType	发票类型	业务枚举	FInvoiceType	-1
 //    		otherBillInfo.setisMatchGenerate	发票匹配	布尔	FIsMatchGenerate	0
 //    		otherBillInfo.setprePayBillEntryIDs	预付单分录ID串	字符串	FPrePayBillEntryIDs	0
 //    		otherBillInfo.setprePayAmountString	预锁定金额明细	字符串	FPrePayAmountString	0
-//    		otherBillInfo.setthisApAmount	本次应付金额	数字	FthisApAmount	88
-    		otherBillInfo.setThisApAmount(billfee);
 //    		otherBillInfo.setprePayAmount	预付金额	数字	FPrePayAmount	0
 //    		otherBillInfo.setprePayBillNumber	预付款单编号（可支持多选）	字符串	FPrePayBillNumber	0
 //    		otherBillInfo.setpayerAmountLoc	付款金额本位币	数字	FPayerAmountLoc	88
-    		otherBillInfo.setPayerAmountLoc(billfee);
+    		otherBillInfo.setPayerAmountLoc(billfee1);
 //    		otherBillInfo.setpayerAmount	付款金额	数字	FPayerAmount	88
-    		otherBillInfo.setPayerAmount(billfee);
+    		otherBillInfo.setPayerAmount(billfee1);
 //    		otherBillInfo.setpayerExchangeRate	付款汇率	数字	FPayerExchangeRate	1
     		otherBillInfo.setPayerExchangeRate(BigDecimal.ONE);
 //    		otherBillInfo.setpayerCurrency	付款币别	对象	FPayerCurrencyID	dfd38d11-00fd-1000-e000-1ebdc0a8100dDEB58FDC
@@ -3397,7 +3819,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 //    		otherBillInfo.setpcaVouchered	是否生成利润中心凭证	布尔	FpcaVouchered	0
 //    		otherBillInfo.settotalTaxLocal	税额本位币	数字	FTotalTaxLocal	0
 //    		otherBillInfo.settotalAmountLocal	金额本位币	数字	FTotalAmountLocal	88
-    		otherBillInfo.setTotalAmountLocal(billfee);
+    		otherBillInfo.setTotalAmountLocal(billfee1);
 //    		otherBillInfo.setisTransPoint	是否转移指定	布尔	FIsTransPoint	0
 //    		otherBillInfo.setisTransOtherBill	是否转应收应付	布尔	FIsTransOtherBill	0
 //    		otherBillInfo.setbillRelationOption	整单关联算法	业务枚举	FBillRelationOption	0
@@ -3434,7 +3856,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 //    		otherBillInfo.settotalTaxAmount	价税合计（费用金额合计）	数字	FTotalTaxAmount	0
 //    		otherBillInfo.settotalTax	税额合计	数字	FTotalTax	0
 //    		otherBillInfo.settotalAmount	金额合计	数字	FTotalAmount	88
-    		otherBillInfo.setTotalAmount(billfee);
+    		otherBillInfo.setTotalAmount(billfee1);
 //    		otherBillInfo.setlastExhangeRate	最后调汇汇率	数字	FLastExhangeRate	1
     		otherBillInfo.setLastExhangeRate(BigDecimal.ONE);
 //    		otherBillInfo.setpayCondition	收（付）款条件	对象	FPayConditionId	0
@@ -3454,17 +3876,17 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 //    		otherBillInfo.setfiVouchered	是否已生成凭证	布尔	FFiVouchered	0
 //    		otherBillInfo.setauditDate	审核日期	日期	FAuditDate	0
 //    		otherBillInfo.setunVerifyAmountLocal	未结算本位币金额	数字	FUnVerifyAmountLocal	88
-    		otherBillInfo.setUnVerifyAmountLocal(billfee);
+    		otherBillInfo.setUnVerifyAmountLocal(billfee1);
 //    		otherBillInfo.setunVerifyAmount	未结算金额	数字	FUnVerifyAmount	88
-    		otherBillInfo.setUnVerifyAmount(billfee);
+    		otherBillInfo.setUnVerifyAmount(billfee1);
 //    		otherBillInfo.setverifyAmountLocal	已结算金额本位币	数字	FVerifyAmountLocal	0
 //    		otherBillInfo.setverifyAmount	已结算金额	数字	FVerifyAmount	0
 //    		otherBillInfo.setabstractName	摘要	字符串	FAbstractName	0
     		otherBillInfo.setAbstractName(billrectypename);
 //    		otherBillInfo.setamountLocal	应收（付）金额本位币	数字	FAmountLocal	88
-    		otherBillInfo.setAmountLocal(billfee);
+    		otherBillInfo.setAmountLocal(billfee1);
 //    		otherBillInfo.setamount	应收（付）金额	数字	FAmount	88
-    		otherBillInfo.setAmount(billfee);
+    		otherBillInfo.setAmount(billfee1);
 //    		otherBillInfo.setsettleType	结算方式	对象	FSettleTypeID	0
 //    		otherBillInfo.setexchangeRate	汇率	数字	FExchangeRate	1
     		otherBillInfo.setExchangeRate(BigDecimal.ONE);
@@ -3619,7 +4041,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		otherBillentryInfo.setRecievePayAmount(billfee);
 //		otherBillentryInfo.setisPresent	是否赠品	布尔	FIsPresent	0
 //		otherBillentryInfo.setexpenseItem	费用项目	对象	FExpenseItemID	8i0AAAAA3nR45LyU
-		otherBillentryInfo.setExpenseItem(getExpenseTypeInfoF7FromNumber(ctx,"FY002001"));
+		otherBillentryInfo.setExpenseItem(getExpenseTypeInfoF7(ctx,entryexpenseno));
 //		otherBillentryInfo.setassistProperty	辅助属性	对象	FAssistPropertyID	0
 //		otherBillentryInfo.setmeasureUnit	计量单位	对象	FMeasureUnitID	0
 //		otherBillentryInfo.setmaterialName	物料名称	字符串	FMaterialName	0
@@ -3698,7 +4120,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 	}
 	
 	/**
-	 * 财务组织映射表取公司F7	CompanyOrgUnitInfo
+	 * 财务组织映射表取公司F7	OrgmapInfo
 	 * @param ctx
 	 * @param number
 	 * @return
@@ -3720,7 +4142,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 	}
 	
 	/**
-	 * 费用项目映射表取费用项目F7	CompanyOrgUnitInfo
+	 * 费用项目映射表取费用项目F7	
 	 * @param ctx
 	 * @param number
 	 * @return
@@ -3859,7 +4281,7 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 	protected AccountBankInfo getAccountBankInfoF7(Context ctx,String companyid) throws Exception {
 		AccountBankInfo accountBankInfo = new AccountBankInfo();
 		try {
-			AccountBankCollection accountBankCollection = AccountBankFactory.getLocalInstance(ctx).getAccountBankCollection(" where ACCOUNTTYPE = 0 and company ='"+companyid+"'");
+			AccountBankCollection accountBankCollection = AccountBankFactory.getLocalInstance(ctx).getAccountBankCollection(" where (ACCOUNTTYPE = 0 or ACCOUNTTYPE = 2) and company ='"+companyid+"'");
 			if ((accountBankCollection  != null) && (accountBankCollection.size() > 0)) {
 				accountBankInfo = accountBankCollection.get(0);
 			} else {
@@ -4033,6 +4455,49 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		}
 		return customerInfo;
 	}
+	/**
+	  * 医生映射表取员工F7 
+	  * @param ctx
+	  * @param number
+	  * @return
+	  * @throws Exception 
+	  */
+	 protected DoctorInfo getDoctorInfoF7(Context ctx, String number) throws Exception {
+	  DoctorInfo doctorInfo = new DoctorInfo();
+	  try {
+		  	DoctorCollection doctorCollection = DoctorFactory.getLocalInstance(ctx).getDoctorCollection( " where bizid = '"+number+"'");
+	   if ((doctorCollection  != null) && (doctorCollection.size() > 0)) {
+		   doctorInfo = doctorCollection.get(0);
+	   } else {
+	    throw new Exception("医生编码："+number+"未在EAS中找到对应的员工");
+	   }
+	  } catch (BOSException e) {
+	   e.printStackTrace();
+	  }
+	  return doctorInfo;
+	 }
+	 
+	/**
+	  * 根据员工信息取医生映射表信息 
+	  * @param ctx
+	  * @param number
+	  * @return
+	  * @throws Exception 
+	  */
+	 protected DoctorInfo getDoctorInfoByPerson(Context ctx, PersonInfo personinfo) throws Exception {
+	  DoctorInfo doctorInfo = new DoctorInfo();
+	  try {
+		  	DoctorCollection doctorCollection = DoctorFactory.getLocalInstance(ctx).getDoctorCollection( " where person = '"+personinfo.getId().toString()+"'");
+	   if ((doctorCollection  != null) && (doctorCollection.size() > 0)) {
+		   doctorInfo = doctorCollection.get(0);
+	   } else {
+	    throw new Exception("人员信息："+ personinfo.getName() +"未在EAS医生映射表中找到对应的信息");
+	   }
+	  } catch (BOSException e) {
+	   e.printStackTrace();
+	  }
+	  return doctorInfo;
+	 }
 	/**
 	 * 付款方式F7		CustomerInfo
 	 * @param ctx
@@ -4235,6 +4700,123 @@ public class InitInfoFacadeControllerBean extends AbstractInitInfoFacadeControll
 		return otherBillInfo;
 	}
 	
+    //收款MAP
+    protected ReceivingBillInfo transYingshouToShoukuan (Context ctx,OtherBillInfo otherBillInfo) throws Exception{
+    	//*********表头*************
+    	OtherBillentryCollection entryInfoCollection = (OtherBillentryCollection) otherBillInfo.getEntries();
+    	OtherBillentryInfo entryInfo = entryInfoCollection.get(0);
+		//收费方式名称
+		String billrectypename = otherBillInfo.getAbstractName();
+		//业务日期
+		Date billbizdate = otherBillInfo.getBizDate();
+		//病历归属门诊号
+		//总应付
+		BigDecimal billtatalpay = (BigDecimal) entryInfo.get("shijifukuanAmount");
+		//总实付
+		BigDecimal billtatalactualpay = (BigDecimal) entryInfo.get("shijifukuanAmount");
+		DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		String billbizdateStr = sdf.format(billbizdate);
+		int year = Integer.parseInt(billbizdateStr.substring(0,4));
+		int month = Integer.parseInt(billbizdateStr.substring(5,7));
+		//*********分录*************
+		//应收金额
+		BigDecimal entryaramount = (BigDecimal) entryInfo.get("shijifukuanAmount");
+		//金额（实收）
+		BigDecimal entryamount = (BigDecimal) entryInfo.get("shijifukuanAmount");
+		//*********公共*************
+		ReceivingBillInfo receivingBillInfo = null;
+		CustomerInfo customerInfo = getCustomerInfoF7(ctx,otherBillInfo.getAsstActNumber());
+		CustomerInfo othcustomerInfo = null;
+		CompanyOrgUnitInfo companyInfo =  otherBillInfo.getCompany();
+		AccountBankInfo accountBankInfo = getAccountBankInfoF7(ctx, companyInfo.getId().toString());
+	
+		receivingBillInfo = new ReceivingBillInfo(); 
+		receivingBillInfo.setBillClaimStatus(BillClaimStatusEnum.getEnum(BillClaimStatusEnum.UNCLAIM_VALUE));
+		receivingBillInfo.setIsSmart(SmartType.getEnum(SmartType.OPEN_VALUE));
+		receivingBillInfo.setIsHasRefundPay(false);
+		receivingBillInfo.setIsRefundmentPay(false);
+		receivingBillInfo.setPrintCount(1);
+		receivingBillInfo.setPaymentType(getPaymentTypeInfoF7(ctx,"赊销"));
+		receivingBillInfo.setIsReverseLockAmount(true);
+		receivingBillInfo.setReceivingBillType(CasRecPayBillTypeEnum.getEnum(CasRecPayBillTypeEnum.COMMONTYPE_VALUE));
+		receivingBillInfo.setRecBillType(getReceivingBillTypeInfoF7(ctx,"预收款"));
+		receivingBillInfo.setBgAmount(BigDecimal.ZERO);
+		receivingBillInfo.setRecDate(billbizdate);
+		receivingBillInfo.setPayerName(customerInfo.getName());
+		receivingBillInfo.setPayerNumber(customerInfo.getNumber());
+		receivingBillInfo.setPayerID(customerInfo.getId().toString());
+		receivingBillInfo.setPayerType(getAsstActTypeInfoF7(ctx,"客户"));
+		receivingBillInfo.setPayeeAccount(accountBankInfo.getAccount());
+		receivingBillInfo.setPayeeAccountBank(accountBankInfo);
+		receivingBillInfo.setPayeeBank(accountBankInfo.getBank());
+		receivingBillInfo.setActRecLocAmtVc(BigDecimal.ZERO);
+		receivingBillInfo.setActRecLocAmt(billtatalactualpay);
+		receivingBillInfo.setActRecAmtVc(BigDecimal.ZERO);
+		receivingBillInfo.setActRecAmt(billtatalactualpay);
+		receivingBillInfo.setVerifyStatus(com.kingdee.eas.fi.cas.verifyStatusEnum.getEnum(com.kingdee.eas.fi.cas.verifyStatusEnum.SOME_VERIFIED_VALUE));
+		receivingBillInfo.setIsPreVerify(false);
+		receivingBillInfo.setBgCtrlAmt(billtatalactualpay);
+		receivingBillInfo.setUnVerifiedAmtLoc(billtatalactualpay);
+		receivingBillInfo.setVerifiedAmtLoc(BigDecimal.ZERO);
+		receivingBillInfo.setUnVerifiedAmt(billtatalactualpay);
+		receivingBillInfo.setVerifiedAmt(BigDecimal.ZERO);
+		receivingBillInfo.setIsNeedVoucher(true);
+		receivingBillInfo.setIsTransOtherBill(false);
+		receivingBillInfo.setIsRedBill(false);
+		receivingBillInfo.setLocalAmt(billtatalactualpay);
+		receivingBillInfo.setAmount(billtatalactualpay);
+		receivingBillInfo.setIsImport(false);
+		receivingBillInfo.setFundType(BizTypeEnum.getEnum(BizTypeEnum.CASH_VALUE));
+		receivingBillInfo.setSettlementStatus(SettlementStatusEnum.getEnum(SettlementStatusEnum.UNSUBMIT_VALUE));
+		receivingBillInfo.setBillStatus(com.kingdee.eas.fi.cas.BillStatusEnum.getEnum(com.kingdee.eas.fi.cas.BillStatusEnum.AUDITED_VALUE));
+		receivingBillInfo.setIsCommitSettle(false);
+		receivingBillInfo.setSettlementType(getSettlementTypeInfoF7(ctx,"现金"));
+		receivingBillInfo.setLastExhangeRate(BigDecimal.ONE);
+		receivingBillInfo.setIsExchanged(false);
+		receivingBillInfo.setExchangeRate(BigDecimal.ONE);
+		receivingBillInfo.setCurrency(getCurrencyInfoF7(ctx,"BB01"));
+		receivingBillInfo.setSourceType(SourceTypeEnum.getEnum(SourceTypeEnum.AR_VALUE));
+		receivingBillInfo.setSourceSysType(SourceTypeEnum.getEnum(SourceTypeEnum.AR_VALUE));
+		receivingBillInfo.setCompany(companyInfo);
+		receivingBillInfo.setDescription(billrectypename);
+		receivingBillInfo.setBizDate(billbizdate);
+		receivingBillInfo.setCU(companyInfo.getCU());
+		receivingBillInfo.setCreateTime(new Timestamp(billbizdate.getTime()));
+		receivingBillInfo.put("othcustomer",othcustomerInfo);
+
+		ReceivingBillEntryInfo receivingBillEntryInfo = new ReceivingBillEntryInfo();
+		receivingBillEntryInfo.setMatchedAmountLoc(BigDecimal.ZERO);
+		receivingBillEntryInfo.setMatchedAmount(BigDecimal.ZERO);
+		receivingBillEntryInfo.setRecBillType(getReceivingBillTypeInfoF7(ctx,"预收款"));
+		receivingBillEntryInfo.setBizDate(billbizdate);
+		receivingBillEntryInfo.setBgCtrlAmt(entryamount);
+		receivingBillEntryInfo.setCurrency(getCurrencyInfoF7(ctx,"BB01"));
+		receivingBillEntryInfo.setHisUnVcLocAmount(BigDecimal.ZERO);
+		receivingBillEntryInfo.setHisUnVcAmount(BigDecimal.ZERO);
+		receivingBillEntryInfo.setUnLockLocAmt(entryamount);
+		receivingBillEntryInfo.setUnLockAmt(entryamount);
+		receivingBillEntryInfo.setLockLocAmt(BigDecimal.ZERO);
+		receivingBillEntryInfo.setLockAmt(BigDecimal.ZERO);
+		receivingBillEntryInfo.setActualLocAmtVc(BigDecimal.ZERO);
+		receivingBillEntryInfo.setActualLocAmt(entryamount);
+		receivingBillEntryInfo.setActualAmtVc(BigDecimal.ZERO);
+		receivingBillEntryInfo.setActualAmt(entryamount);
+		receivingBillEntryInfo.setRebateLocAmtVc(BigDecimal.ZERO);
+		receivingBillEntryInfo.setRebateLocAmt(BigDecimal.ZERO);
+		receivingBillEntryInfo.setRebateAmtVc(BigDecimal.ZERO);
+		receivingBillEntryInfo.setRebate(BigDecimal.ZERO);
+		receivingBillEntryInfo.setUnVerifyExgRateLoc(BigDecimal.ZERO);
+		receivingBillEntryInfo.setUnVcLocAmount(entryamount);
+		receivingBillEntryInfo.setUnVcAmount(entryamount);
+		receivingBillEntryInfo.setLocalAmtVc(BigDecimal.ZERO);
+		receivingBillEntryInfo.setLocalAmt(entryamount);
+		receivingBillEntryInfo.setAmountVc(BigDecimal.ZERO);
+		receivingBillEntryInfo.setAmount(entryamount);
+
+		receivingBillEntryInfo.setReceivingBill(receivingBillInfo);
+		receivingBillInfo.getEntries().add(receivingBillEntryInfo);
+		return receivingBillInfo;
+    }
 	
 	
 }

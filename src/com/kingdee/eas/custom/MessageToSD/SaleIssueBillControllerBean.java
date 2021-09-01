@@ -65,6 +65,9 @@ import com.kingdee.eas.custom.sdyg.mapping.OrgmapCollection;
 import com.kingdee.eas.custom.sdyg.mapping.OrgmapFactory;
 import com.kingdee.eas.custom.sdyg.mapping.OrgmapInfo;
 import com.kingdee.eas.custom.sdyg.mapping.OthCustomerInfo;
+import com.kingdee.eas.custom.sdyg.mapping.SyncLogEntryInfo;
+import com.kingdee.eas.custom.sdyg.mapping.SyncLogFactory;
+import com.kingdee.eas.custom.sdyg.mapping.SyncLogInfo;
 import com.kingdee.eas.scm.common.BillBaseStatusEnum;
 import com.kingdee.eas.scm.common.EntryBaseStatusEnum;
 import com.kingdee.eas.scm.im.inv.OtherIssueBillEntryInfo;
@@ -95,17 +98,17 @@ public class SaleIssueBillControllerBean extends AbstractSaleIssueBillController
 		JSONObject jsonDataInfo = JSONObject.parseObject(datajsonDataInfo.getString("dataInfo"));
 		//本地
 //		JSONObject jsonDataInfo = JSONObject.parseObject(dataInfo);
-		System.out.println("jsonDataInfo  "+jsonDataInfo);
+//		System.out.println("jsonDataInfo  "+jsonDataInfo);
 		String bizNumber = jsonDataInfo.getString("bizNumber");//业务系统单据编码
-		System.out.println("业务系统单据编码:"+bizNumber);
+//		System.out.println("业务系统单据编码:"+bizNumber);
 		String bizDate = jsonDataInfo.getString("bizDate");//业务日期
-		System.out.println("业务日期:"+bizDate);
+//		System.out.println("业务日期:"+bizDate);
 		String bizOrg = jsonDataInfo.getString("bizOrg");//门诊编码
-		System.out.println("门诊编码:"+bizOrg);
+//		System.out.println("门诊编码:"+bizOrg);
 		String doctor = jsonDataInfo.getString("doctor");//医生编码
-		System.out.println("医生编码:"+doctor);
+//		System.out.println("医生编码:"+doctor);
 		String customer = jsonDataInfo.getString("customer");//患者编码
-		System.out.println("患者编码:"+customer);
+//		System.out.println("患者编码:"+customer);
 		JSONArray entry = jsonDataInfo.getJSONArray("entry");//业务系统明细分录
 		//JSONObject entry = jsonDataInfo.getJSONObject("entry");//业务系统明细分录
 		//JSONObject entryId = entry.getJSONObject("entryId");//分录id业务系统明细分录ID
@@ -246,7 +249,7 @@ public class SaleIssueBillControllerBean extends AbstractSaleIssueBillController
 		otherIssueBillInfo.setBillType(billTypeInfo);
 		//单据编号
 //		AdminOrgUnitInfo currentAdminUnit = ContextUtil.getCurrentAdminUnit(ctx);
-		System.out.println("单据编号--开始生成");
+//		System.out.println("单据编号--开始生成");
 		CodingRuleManager codingRuleManage = new CodingRuleManager();
 		ICodingRuleManager ic = CodingRuleManagerFactory.getLocalInstance(ctx);
 		String billnumber = "";
@@ -259,9 +262,10 @@ public class SaleIssueBillControllerBean extends AbstractSaleIssueBillController
 			}
 		}
 		otherIssueBillInfo.setNumber(billnumber);
-		System.out.println("单据编号--结束");
+//		System.out.println("单据编号--结束");
 		List<Map<String, Object>> accountList = new ArrayList<Map<String, Object>>();
 		Map<String, Object> entrys = new HashMap<String, Object>();
+		boolean isSave = true;
 		if (entry.size() > 0) {
 			for (int i = 0; i < entry.size(); i++) {
 				JSONObject datas = (JSONObject)entry.get(i);
@@ -276,7 +280,25 @@ public class SaleIssueBillControllerBean extends AbstractSaleIssueBillController
 				}
 				flot = datas.getString("flot");
 				qty = datas.getString("qty");
-
+				//基本计量单位
+				MeasureUnitInfo unitInfo = new MeasureUnitInfo();
+				//辅助计量单位
+				MeasureUnitInfo assistUnitInfo = new MeasureUnitInfo();
+				try {
+					unitInfo = MeasureUnitFactory.getLocalInstance(ctx).getMeasureUnitInfo(new ObjectUuidPK(materialInfo.getBaseUnit().getId()));
+				} catch (EASBizException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				}
+				int qtyprecision = unitInfo.getQtyPrecision();
+				int xsws = 0;
+//				2.0001
+				if(qty.indexOf(".") > 0) {
+					xsws = qty.length()-1-qty.indexOf(".");
+				}
+				if(qtyprecision - xsws <0) {
+					isSave = false;
+				}
 				//分录
 				OtherIssueBillEntryInfo otherIssueBillEntry = new OtherIssueBillEntryInfo();
 				otherIssueBillEntry.setId(BOSUuid.create("F56602D7"));
@@ -356,16 +378,7 @@ public class SaleIssueBillControllerBean extends AbstractSaleIssueBillController
 				otherIssueBillEntry.setBaseQty(new BigDecimal(qty));
 				//辅助数量
 				BigDecimal assistQty = BigDecimal.ZERO;
-				//基本计量单位
-				MeasureUnitInfo unitInfo = new MeasureUnitInfo();
-				//辅助计量单位
-				MeasureUnitInfo assistUnitInfo = new MeasureUnitInfo();
-				try {
-					unitInfo = MeasureUnitFactory.getLocalInstance(ctx).getMeasureUnitInfo(new ObjectUuidPK(materialInfo.getBaseUnit().getId()));
-				} catch (EASBizException e2) {
-					// TODO Auto-generated catch block
-					e2.printStackTrace();
-				}
+				
 				if(materialInfo.getAssistUnit() != null){
 					try {
 						assistUnitInfo =  MeasureUnitFactory.getLocalInstance(ctx).getMeasureUnitInfo(new ObjectUuidPK(materialInfo.getAssistUnit().getId()));
@@ -434,23 +447,28 @@ public class SaleIssueBillControllerBean extends AbstractSaleIssueBillController
 		IObjectPK addnew = null;
 		Map<String, Object> responseBody = new HashMap<String, Object>();
 		Boolean succ = true;
-		try {
-			addnew = OtherIssueBillFactory.getLocalInstance(ctx).addnew(otherIssueBillInfo);
-			OtherIssueBillFactory.getLocalInstance(ctx).submit(addnew.toString());
-			if(addnew != null){
-				succ = true;
-				msg = "出库单传输成功！";
-			}
-		} catch (EASBizException e) {
-			succ = false;
-			msg = "错误信息：" + e.getMessage();
+		if(isSave) {
 			try {
-				OtherIssueBillFactory.getLocalInstance(ctx).delete(addnew);
-			} catch (EASBizException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				addnew = OtherIssueBillFactory.getLocalInstance(ctx).addnew(otherIssueBillInfo);
+				OtherIssueBillFactory.getLocalInstance(ctx).submit(addnew.toString());
+				if(addnew != null){
+					succ = true;
+					msg = "出库单传输成功！";
+				}
+			} catch (EASBizException e) {
+				succ = false;
+				msg = "错误信息：" + e.getMessage();
+				try {
+					OtherIssueBillFactory.getLocalInstance(ctx).delete(addnew);
+				} catch (EASBizException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				e.printStackTrace();
 			}
-			e.printStackTrace();
+		}else {
+			succ = false;
+			msg = "出库数量与计量单位精度不一致，请检查！";
 		}
 		//返回
 		Map<String, Object> date = new HashMap<String, Object>();
@@ -477,9 +495,28 @@ public class SaleIssueBillControllerBean extends AbstractSaleIssueBillController
 			String bizNumber = otherIssueBillInfo.get("bizNumber").toString();
 			System.out.println("业务系统编码"+bizNumber);
 			//调用业务系统的删除接口
-			String url ="http://192.168.8.120:8388/matused/delete";
+			String url ="http://192.168.8.151:8388/matused/delete";			
 			String res = HttpClientUtil.sendGet(url, "bizNumber="+bizNumber);
-			
+			SyncLogInfo logInfo = new SyncLogInfo();
+	    	logInfo.setId(BOSUuid.create("59A5EF45"));//日志业务日期
+	    	logInfo.setBizDate(new Date());
+	    	//日志创建时间
+	    	logInfo.setCreateTime(new Timestamp(Calendar.getInstance().getTimeInMillis()));
+	    	logInfo.setDescription("其他出库单删除操作");
+	    	SyncLogEntryInfo logEntryInfo = new SyncLogEntryInfo();
+			logEntryInfo.setId(BOSUuid.create("3575EC2D"));
+			logEntryInfo.setLoginfo("金蝶编号:"+otherIssueBillInfo.getNumber()+" 预约系统ID:"+bizNumber +" 结果:"+res);
+			logEntryInfo.setParent(logInfo);
+			logInfo.getEntrys().add(logEntryInfo);
+			if(logInfo != null){
+				try {
+					SyncLogFactory.getLocalInstance(ctx).save(logInfo);
+				} catch (EASBizException e) {
+					e.printStackTrace();
+				} catch (BOSException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 	

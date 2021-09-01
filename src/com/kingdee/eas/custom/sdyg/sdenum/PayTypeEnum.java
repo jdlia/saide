@@ -37,6 +37,7 @@ public class PayTypeEnum extends IntEnum
     public static final int TUIKUANGNSK_VALUE = 32;//alias=退款国内刷卡
     public static final int TUIKUANGWSK_VALUE = 36;//alias=退款国外刷卡
     public static final int TUIKUANHYK_VALUE = 12;//alias=退款会员卡
+    public static final int XIGUAMAIDAN_VALUE = 23;//alias=西瓜买单
 
     public static final PayTypeEnum xianjin = new PayTypeEnum("xianjin", XIANJIN_VALUE);
     public static final PayTypeEnum guoneishuaka = new PayTypeEnum("guoneishuaka", GUONEISHUAKA_VALUE);
@@ -62,6 +63,7 @@ public class PayTypeEnum extends IntEnum
     public static final PayTypeEnum tuikuanGNSK = new PayTypeEnum("tuikuanGNSK", TUIKUANGNSK_VALUE);
     public static final PayTypeEnum tuikuanGWSK = new PayTypeEnum("tuikuanGWSK", TUIKUANGWSK_VALUE);
     public static final PayTypeEnum tuikuanHYK = new PayTypeEnum("tuikuanHYK", TUIKUANHYK_VALUE);
+    public static final PayTypeEnum xiguamaidan = new PayTypeEnum("xiguamaidan", XIGUAMAIDAN_VALUE);
 
     /**
      * construct function
