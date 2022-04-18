@@ -57,8 +57,13 @@ public class OUListUICTEx extends OUListUI{
 		
 //		Iupdateadjustfacade ad = updateadjustfacadeFactory.getRemoteInstance();
 //		ad.updateadjust();
+<<<<<<< HEAD
 //		IInitTreatmentNodeIncomeFacade trenode = InitTreatmentNodeIncomeFacadeFactory.getRemoteInstance();
 //		trenode.initTreatmentInfo();
+=======
+		IInitTreatmentNodeIncomeFacade trenode = InitTreatmentNodeIncomeFacadeFactory.getRemoteInstance();
+		trenode.initTreatmentInfo();
+>>>>>>> ccaf296443bec55fdf809ae15c044e88e4779e5d
 		
 		
 	}
