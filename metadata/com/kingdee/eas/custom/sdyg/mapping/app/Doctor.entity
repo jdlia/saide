@@ -266,6 +266,26 @@
                 <key name="name" value="R_Doctor_DoctorLevel_stafflevel" />
             </relationship>
         </linkProperty>
+        <ownProperty>
+            <name>qiantai</name>
+            <alias>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].alias</alias>
+            <description>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Boolean</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>1</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFQiantai" />
+            </mappingField>
+        </ownProperty>
     </properties>
     <logicalKey>
         <name>id</name>
@@ -818,6 +838,74 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[biznumber].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="前台" />
+            <lang locale="zh_HK" value="前台" />
+            <lang locale="zh_TW" value="前台" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="前台" />
+            <lang locale="zh_HK" value="前台" />
+            <lang locale="zh_TW" value="前台" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="前台" />
+            <lang locale="zh_HK" value="前台" />
+            <lang locale="zh_TW" value="前台" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.custom.sdyg.mapping.app.Doctor].properties.ownProperty[qiantai].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

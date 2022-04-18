@@ -820,6 +820,37 @@
                 <key name="name" value="DoctorQuery" />
             </query>
         </propertyUnit>
+        <queryField>
+            <name>qiantai</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.queryField[qiantai].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ccd5a3ba-57a3-4ef1-baef-561bb06eaddd</key>
+                    <parentUnit>
+                        <key name="name" value="qiantai" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Doctor" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="qiantai" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.sdyg.mapping.app" />
+                <key name="name" value="DoctorQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -1511,6 +1542,22 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.queryField[person.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.queryField[qiantai].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="前台" />
+            <lang locale="zh_HK" value="前台" />
+            <lang locale="zh_TW" value="前台" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.queryField[qiantai].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.sdyg.mapping.app.DoctorQuery].units.queryField[qiantai].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

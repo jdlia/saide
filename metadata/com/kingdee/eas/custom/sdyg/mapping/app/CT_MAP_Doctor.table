@@ -217,6 +217,20 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFQiantai</name>
+            <alias>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Doctor].columns.column[CFQiantai].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Doctor].columns.column[CFQiantai].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_MAP_DoctorIb0o</name>
@@ -382,6 +396,18 @@
             <lang locale="zh_CN" value="EAS员工" />
             <lang locale="zh_HK" value="EAS員工" />
             <lang locale="zh_TW" value="EAS員工" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Doctor].columns.column[CFQiantai].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="前台" />
+            <lang locale="zh_HK" value="前台" />
+            <lang locale="zh_TW" value="前台" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Doctor].columns.column[CFQiantai].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="前台" />
+            <lang locale="zh_HK" value="前台" />
+            <lang locale="zh_TW" value="前台" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.custom.sdyg.mapping.app.CT_MAP_Doctor].columns.column[CFStafflevelID].alias">
             <lang locale="en_US" value="null" />

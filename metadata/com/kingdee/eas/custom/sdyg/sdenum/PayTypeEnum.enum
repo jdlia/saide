@@ -152,6 +152,12 @@
             <userDefined>true</userDefined>
             <value>12</value>
         </enumValue>
+        <enumValue>
+            <name>xiguamaidan</name>
+            <alias>bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[xiguamaidan].alias</alias>
+            <userDefined>true</userDefined>
+            <value>23</value>
+        </enumValue>
     </enumValues>
     <resource>
         <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].alias">
@@ -285,6 +291,12 @@
             <lang locale="zh_CN" value="现金" />
             <lang locale="zh_HK" value="現金" />
             <lang locale="zh_TW" value="現金" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[xiguamaidan].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="西瓜买单" />
+            <lang locale="zh_HK" value="西瓜買單" />
+            <lang locale="zh_TW" value="西瓜買單" />
         </rs>
         <rs key="bizEnum[com.kingdee.eas.custom.sdyg.sdenum.PayTypeEnum].enumValues.enumValue[yibao].alias">
             <lang locale="en_US" value="null" />
